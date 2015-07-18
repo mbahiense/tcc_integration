@@ -1,0 +1,36 @@
+\section{Aterisk}
+A ferramenta de código aberto Asterisk desenvolvida pela Digium, disponibiliza as principais funcionalidades que um \textit{Call Center} necessita, dentre elas a criação de Ramais, Troncos, Rotas, configuração Plano de Discagens, Gravação de Voz, Conferência, Filas, Unidade de Resposta Audível entre diversos outros recursos que podem ser explorados e utilizados, podendo ser utilizado como um PABX IP, assim como se integrado a soluções VoIP ou a rede de telefonia publica.
+Com tantos recursos disponíveis e sendo multiplataforma a ferramenta Asterisk está muito bem preparada para atender as expectativas, principalmente pelo fato de disponibilizar protocolos de comunicação com sistemas externos, por exemplo, o protocolo AGI (\textit{Asterisk Gateway Interface}), permite o consumo de recursos externos ao Asterisk, já o protocolo AMI (\textit{Asterisk Manager Interface}) permite que aplicações externas enviem ordens para serem executadas no Asterisk, dessa forma a solução pode ser muito bem integrada a sistemas legados.
+
+
+\subsection{Asterisk Conceitos}
+
+A ferramenta tem como base o Plano de Discagem, sendo ele responsável em definir o que deve acontecer, seja no momento em que for recepcionada uma ligação ou quando for digitado algum número. No plano de discagem podemos definir separações lógicas denominadas contextos, responsáveis em definir um comportamento utilizando os recursos nativos para determinar as instruções (extensões), por exemplo, podemos criar um contexto para definir o que deve acontecer ao receber ligações da rede pública e outro para definir o comportamento para as ligações advindas de ramais internos:
+
+\begin{flushleft}
+
+\textbf{[PSTN]} \\
+\textit{exten => 2000,1,Answer();} \\
+Contexto chamado “PSTN”, utiliza a extensão 2000, com prioridade 1 e aplicação Answer.\\
+
+\textbf{[RAMAIS\_INTERNOS]} \\
+exten => 2001,1, Playback(AVISO\_GERAL); \\
+Contexto chamado “RAMAIS\_INTERNOS”, utiliza a extensão 2001, com prioridade 1 e aplicação Playback para tocar o áudio AVISO\_GERAL.\\
+\end{flushleft}
+
+O número 2000 no contexto “PSTN” utilizando na extensão representa o número informado pelo Originador da chamada, a prioridade trata-se de um parâmetro que representa a ordem de execução das aplicações, normalmente descritos de forma sequencial, já as aplicações são utilizadas para realizar uma ação qualquer. Em cada extensão (exten), podemos utilizar recursos de aplicativos nativos da ferramenta, sejam eles para atender, desligar, gravar o áudio entre outros recursos, dessa forma podemos definir o comportamento para o contexto, assim como realizar a transferência para outros contextos.
+
+
+\subsection{Asterisk Instalação}
+
+A instalação do Asterisk muita das vezes é uma tarefa cansativa e exige bastante atenção, pois a configuração deve ser realizada em arquivos de texto em uma sintaxe estabelecida pela ferramenta, atualmente existem diversas soluções que fornecem uma interface gráfica para tornar esse processo mais intuitivo e prático, neste trabalho foi utilizada uma distribuição chamada Disc-OS na versão 2.0, que disponibiliza uma interface web para realizar a configuração do Asterisk 1.4, para realizar o processo de instalação do Disc-OS, foram seguidos os passos descritos por Jilsimaico Darú (DARÚ, 2008), após a realização dos procedimentos, ao iniciar a distribuição Disc-OS automaticamente será iniciado o serviço do Asterisk, dessa forma para acessar o sistema basta digitar no navegador o endereço IP do terminal que está executando o sistema, visualizando a página conforme a figura 8 abaixo:
+
+
+\textit{IMAGEM PENDENTE} \\
+%\includegraphics[scale=1]{figuras/pagina_inicial_asterisk}
+\centering Figura 8: Acessando página inicial da Interface WEB do Disc-OS \\
+\centering Fonte: Autoria Própria \\
+
+Para acessar as funcionalidades do sistema basta inserir a seguinte credencial de acesso:\\
+\textbf{Login}: admin\\
+\textbf{Senha}: disc-os\\
