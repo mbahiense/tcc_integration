@@ -21,4 +21,47 @@ Conforme ilustrado acima, o sistema GSAN irá prover uma interface de serviços 
 \section{Tecnologias Utilizadas}
 O processo de integração será composto por tecnologias com paradigmas diferenciados, no entanto para melhorar o entendimento dos detalhes de compatibilidades adotados segue abaixo a tabela 3 das tecnologias utilizadas e versões correspondentes.
 
-TABELA
+
+\begin{table}[htb]
+	\center
+	\footnotesize
+	\begin{tabular}{|p{4cm}|p{7cm}|p{2cm}|}
+		\hline
+		\textbf{Software} & \textbf{Finalidade} & \textbf{Versão} \\
+		\hline
+		Java Platform, \textit{Enterprise Edition} 5 (JEE) & Conjunto de Tecnologias e Serviços para implementar soluções da Plataforma Java com estabilidade, segurança e escalabilidade. & 5 \\
+		\hline
+		JBoss & Servidor de aplicação que implementa especificações JEE. & 4.0.1 sp1 \\
+		\hline
+		Hibernate & Framework utilizado para fazer o mapeamento objeto-relacional. É responsável pela camada de persistência. & 3.1 \\
+		\hline
+		PostgreSQL & Banco de dados relacional. & 9.3.4 \\
+		\hline
+		Apache Ant & Geração de \textit{Enterprise Application Resources} (EAR) deploy’s. & 1.6.2 \\
+		\hline
+		JasperReports & Tecnologia utilizada para criação de relatórios em PDF, HTML, XLS, CSV e XM.L & 1.2.2 \\
+		\hline
+		Struts & Framework para controle de navegação e validação Web. & 1.1	 \\
+		\hline
+		Disc-OS & Distribuição CentOS 2.6 que implementa interface web para a ferramenta Asterisk. & 2.0-1 \\
+		\hline
+		Asterisk & Software livre que permite a criação de PABX com diversos recursos. & 1.4 \\		
+		\hline
+		Asterisk-Java & Framework para comunicação com o Asterisk via protocolo AGI. & 1.0 \\				
+	\end{tabular}
+\end{table}
+
+\begin{center}
+	Tabela 3: Tecnologias utilizadas 
+	Fonte: Autoria Própria
+\end{center}
+
+
+\section{Etapas da Integração}
+O processo de integração entre os sistemas será composto por três etapas principais, das quais serão necessários para compor a solução escolhida, conforme definido abaixo e descrito nas sessões seguintes:
+
+\begin{itemize}
+	\item Implementar WebServices no Sistema GSAN 
+	\item Desenvolver Middleware
+	\item Customizar o Asterisk	
+\end{itemize}
