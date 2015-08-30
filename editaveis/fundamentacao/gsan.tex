@@ -5,14 +5,15 @@
 
 
 \section{GSAN}
-O sistema de código aberto GSAN (Sistema Integrado de Gestão de Serviços de Saneamento) desenvolvido inicialmente pela empresa IPAD (Instituto de Planejamento e Apoio ao Desenvolvimento Tecnológico e Científico) em 2005 por meio do Programa de Modernização do Ministério da Cidades, atualmente mantido e disponibilizado pelo Portal de Software Livre Brasileiro, sendo constantemente melhorado e aperfeiçoado pelos prestadores de serviços e interessados. Propõem-se em atender as principais demandas de gestão de operações comerciais e controle de execução de serviços nas companhias de saneamento do Brasil, que atualmente utilizam o sistema em grande escala, conforme exposto a seguir pela figura:
+O sistema de código aberto GSAN (Sistema Integrado de Gestão de Serviços de Saneamento) desenvolvido inicialmente pela empresa IPAD (Instituto de Planejamento e Apoio ao Desenvolvimento Tecnológico e Científico) em 2005 por meio do Programa de Modernização do Ministério da Cidades, atualmente mantido e disponibilizado pelo Portal de Software Livre Brasileiro, sendo constantemente melhorado e aperfeiçoado pelos prestadores de serviços e interessados. Propõem-se em atender as principais demandas de gestão de operações comerciais e controle de execução de serviços nas companhias de saneamento do Brasil, que atualmente utilizam o sistema em grande escala, conforme exposto a seguir pela figura \ref{figura:implantacaoSistemaGSAN}:
 
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics{figuras/implantacaoGSAN.png}
 	\caption{Implantações do Sistema GSAN}	
-	Fonte - Portal do Software Público Brasileiro, 2014
+	\label{figura:implantacaoSistemaGSAN}
+	Fonte – Portal do Software Público Brasileiro, 2014
 \end{figure}
 
 
@@ -84,13 +85,14 @@ As solicitações realizadas pelos clientes aos atendentes são denominadas Regi
 \subsection{GSAN Arquitetura}
 	
 O Sistema GSAN foi desenvolvido fundamentalmente utilizando a plataforma JEE (\textit{Java Enterprise Edition}), propriedade da \textit{Oracle Corporation}, em sua versão 5, na época a mais recente. Utiliza os principais serviços e tecnologias oferecidos pela plataforma, como por exemplo, \textit{Enterprise Java Beans} (EJB), \textit{Java Message Service} (JMS) API, \textit{Java Server Pages} 2.1, entre outros.
-O GSAN possui uma arquitetura que implementa diversos padrões de projeto, visando facilitar a manutenibilidade e manter a organização dos componentes, segue abaixo o diagrama de componentes conforme a figura 3:
+O GSAN possui uma arquitetura que implementa diversos padrões de projeto, visando facilitar a manutenibilidade e manter a organização dos componentes, segue abaixo o diagrama de componentes conforme a figura \ref{figura:arquiteturaDetalhada}:
 
-\begin{figure}[!h]
+\begin{figure}[t!]
 	\centering
 	\includegraphics[width=\paperwidth]{figuras/gsan_arquitetura.png}
 	\caption{Arquitetura Detalhada do Sistema GSAN}	
-	Fonte - Autoria Própria
+	\label{figura:arquiteturaDetalhada}
+	Fonte – Autoria Própria
 \end{figure}
 
 	
@@ -103,47 +105,51 @@ O sistema GSAN foi projetado para ser independente da solução de Banco de Dado
 	
 \subsection{GSAN Configuração}
 A configuração do ambiente de desenvolvimento se trata de um passo fundamental para execução deste trabalho prático. Primeiramente será preciso obter a versão do sistema que se encontra disponível no site do Portal do Software Livre, que atualmente disponibiliza o código fonte do sistema GSAN e demais arquivos de configuração do ambiente, no github para a comunidade de desenvolvedores e interessados.  Com o código fonte em mãos será necessário o auxílio de uma IDE (\textit{Integrated Development Environment}) de desenvolvimento para realizar a manutenção e construção dos novos serviços, foi utilizado neste trabalho a IDE Eclipse Juno para realizar esta tarefa, o processo de configuração da IDE pode ser visto descrito nos anexos deste trabalho.
-O processo de empacotamento para geração do EAR (\textit{Enterprise Archive}) para disponibilização, utiliza a ferramenta Apache Ant versão 1.6.2, normalmente a versão disponibilizada pela comunidade já possui alguns scripts de build para serem executados, no entanto é preciso configurar os locais adequados para geração do pacote, conforme segue o exemplo abaixo na figura:
+O processo de empacotamento para geração do EAR (\textit{Enterprise Archive}) para disponibilização, utiliza a ferramenta Apache Ant versão 1.6.2, normalmente a versão disponibilizada pela comunidade já possui alguns scripts de build para serem executados, no entanto é preciso configurar os locais adequados para geração do pacote, conforme segue o exemplo abaixo na figura \ref{figura:configuracaoScriptBuild}:
 
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics{figuras/build_properties.png}
-	\caption{Exemplo de configuração do script build}	
-	Fonte - Autoria Própria
+	\caption{Exemplo de configuração do script build}
+	\label{figura:configuracaoScriptBuild}	
+	Fonte – Autoria Própria
 \end{figure}
 	
-A execução do script pode ser realizada dentro da IDE executando o seguinte procedimento, após localizar o arquivo build.xml dentro na raiz do projeto, ao clicar com o botão esquerdo e selecionar a opção \textit{Run as > Ant Build}, será acionado a execução da instrução \textit{make} padrão do script, para construção do pacote a ser disponibilizado, conforme visto na figura 5:	
+A execução do script pode ser realizada dentro da IDE executando o seguinte procedimento, após localizar o arquivo build.xml dentro na raiz do projeto, ao clicar com o botão esquerdo e selecionar a opção \textit{Run as > Ant Build}, será acionado a execução da instrução \textit{make} padrão do script, para construção do pacote a ser disponibilizado, conforme visto na figura \ref{figura:execucaoScriptBuild}:	
 		
 \begin{figure}[!htb]
 	\centering
 	\includegraphics{figuras/build_ant.png}
 	\caption{Execução do script de build}	
-	Fonte - Autoria Própria
+	\label{figura:execucaoScriptBuild}
+	Fonte – Autoria Própria
 \end{figure}
 
 Para executar a aplicação faz-se necessário a utilização de um servidor de aplicação que implemente as principais interfaces de serviços da plataforma JEE que serão consumidos pela aplicação, neste trabalho foi utilizado o projeto \textit{Open Source Jboss Community} na versão 4.0.1, compatível com as tecnologias utilizadas no GSAN, a configuração deste Servidor de Aplicação Web pode ser consultado nos anexos deste trabalho.
-Para executar o sistema GSAN, utilizando o terminal de comando do sistema operacional (\textit{Command Prompt}) basta digitar run e pressionar a tecla Enter será iniciado o servidor de aplicação e executará o sistema GSAN, visto na figura 6:
+Para executar o sistema GSAN, utilizando o terminal de comando do sistema operacional (\textit{Command Prompt}) basta digitar run e pressionar a tecla Enter será iniciado o servidor de aplicação e executará o sistema GSAN, visto na figura \ref{figura:execucaoSistemaGSAN}:
 
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics{figuras/executando_jboss.png}
 	\caption{Executando o sistema GSAN}	
-	Fonte - Autoria Própria
+	\label{figura:execucaoSistemaGSAN}
+	Fonte – Autoria Própria
 \end{figure}
 
 
 A solução adotada para banco de dados neste trabalho será o PostgreSQL na versão 9.3.4 e PgAdmin versão 1.18.1 como SGBD (Sistema de Gerenciamento de Banco de Dados), no próprio site existe o guia de instalação para desenvolvedores tornando esse passo bem intuitivo.
 
 Na versão do sistema GSAN disponibilizada para a comunidade, existe um diretório chamado \textbf{\textit{migrations}} que contém os scripts de banco de dados necessários para criação das tabelas principais que o sistema exige para funcionar corretamente, e também disponibiliza todas instruções necessárias para a configuração dos datasources comercial e gerencial que serão utilizados no sistema GSAN.
-Para acessar o sistema em execução, basta digitar o seguinte endereço no navegador http://127.0.0.1:8080/gsan, caso tudo ocorra bem deverá ser apresentada a página conforme visto na figura 7 abaixo:
+Para acessar o sistema em execução, basta digitar o seguinte endereço no navegador http://127.0.0.1:8080/gsan, caso tudo ocorra bem deverá ser apresentada a página conforme visto na figura \ref{figura:acessoPaginaInicial} abaixo:
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics{figuras/gsan_online.png}
-	\caption{Acessando página inicial do Sistema}	
-	Fonte - Autoria Própria
+	\caption{Acessando página inicial do Sistema}
+	\label{figura:acessoPaginaInicial}	
+	Fonte – Autoria Própria
 \end{figure}
 
 

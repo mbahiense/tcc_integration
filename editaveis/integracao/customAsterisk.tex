@@ -1,25 +1,27 @@
 \subsection{Customizar o Asterisk}
 
 A customização do Asterisk será fundamental para realizar a comunicação entre os sistemas, sendo responsável em disponibilizar de forma padronizada o acesso a URA no atendimento de primeiro nível de todas as chamadas recebidas, e disparar solicitações a recursos externos conforme a necessidade do cliente que efetuou a ligação.
-Primeiramente iremos configurar um ramal, utilizando a interface web do Disc-os, conforme exemplo abaixo na figura 17:
+Primeiramente iremos configurar um ramal, utilizando a interface web do Disc-os, conforme exemplo abaixo na figura \ref{figura:cadastroRamapSIP}:
 
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics{figuras/cadastro_ramal_sip.png}
 	\caption{Cadastro de um Ramal SIP.}	
-	Fonte - Autoria Própria
+	\label{figura:cadastroRamapSIP}
+	Fonte – Autoria Própria
 \end{figure}
 
 
 Conforme visto acima, está sendo configurado o ramal de número 2001, com o nome de FULANO e definido alguns \textit{codecs} que serão permitidos utilizar neste ramal, após isto o Disc-OS se encarregará de alterar o arquivo de propriedades \textit{sip.conf} inserindo o ramal desejado com as características informadas.
-Para a configuração da Unidade de Resposta Audível, será preciso definir claramente quais serão as opções disponíveis e quais serão as possíveis saídas com o seus devidos tratamentos, neste trabalho foi desenvolvido um fluxo de atendimento próprio, demonstrado na figura 18: 
+Para a configuração da Unidade de Resposta Audível, será preciso definir claramente quais serão as opções disponíveis e quais serão as possíveis saídas com o seus devidos tratamentos, neste trabalho foi desenvolvido um fluxo de atendimento próprio, demonstrado na figura \ref{figura:fluxoURA}: 
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics{figuras/fluxo_ura.png}
-	\caption{Diagrama do Fluxo da Unidade de Resposta Audível}	
-	Fonte - Autoria Própria
+	\caption{Diagrama do Fluxo da Unidade de Resposta Audível}
+	\label{figura:fluxoURA}	
+	Fonte – Autoria Própria
 \end{figure}
 
 
@@ -47,23 +49,25 @@ A interface \textit{Web} do Disc-OS permite realizar a configuração da URA, de
 
 Neste trecho é declarado o contexto [PESQUISAR\_CLIENTE], cuja prioridade 1 será anteder a ligação e logo em seguida emitir um áudio chamado beep, foi defini o tempo limite de espera para o primeiro dígito de 7 segundos e o tempo limite de espera para a discagem dos dígitos de 3 segundos, será lido os valores informados pelo Originador da chamada e atribuída a variável CLIENTE\_IMOVEL, após isto será realizada uma requisição via protocolo AGI para o \textit{Middleware}, solicitando o serviço mapeando em pesquisar.imovel.cliente.agi, dependendo do retorno deste serviço será realizado um redirecionamento da ligação para um contexto específico, para consultar a configuração completa da URA encontra-se disponível nos anexos deste trabalho.
 Para tanto, será necessário customizar os arquivos de áudio para serem tocados, conforme as operações disponíveis forem acessadas. Para efetuar a gravação do áudio foi utilizado um recurso do Asterisk, discando para *77, existe um contexto que utiliza aplicativos nativos para realiza a gravação no formato WAV e o disponibiliza no diretório \textit{/var/lib/asterisk/sounds/custom/} para utilização.
-Após as configurações básicas, será preciso ter um dispositivo para efetuar as chamadas e conseguir se comunicar com a URA, neste cenário existe um recurso chamado de \textit{Softphone}, são programas que tornam o computador em um Ramal IP, possibilitando realizar e receber chamadas, com essa finalidade foi utilizado o Zoiper, conforme visto na figura 19:
+Após as configurações básicas, será preciso ter um dispositivo para efetuar as chamadas e conseguir se comunicar com a URA, neste cenário existe um recurso chamado de \textit{Softphone}, são programas que tornam o computador em um Ramal IP, possibilitando realizar e receber chamadas, com essa finalidade foi utilizado o Zoiper, conforme visto na figura \ref{figura:zoiper}:
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics{figuras/zoiper.png}
 	\caption{Softphone Zoiper sendo executado}	
-	Fonte - Autoria Própria
+	\label{figura:zoiper}
+	Fonte – Autoria Própria
 \end{figure}
 
 
-Para adicionar o ramal é preciso definir qual será o protocolo utilizado e inserir os dados configurados no Asterisk conforme visto na figura 20 abaixo:
+Para adicionar o ramal é preciso definir qual será o protocolo utilizado e inserir os dados configurados no Asterisk conforme visto na figura \ref{figura:zoiperConfigRamal} abaixo:
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics{figuras/configurar_ramal_zoiper.png}
-	\caption{Configurar Ramal no Zoiper}	
-	Fonte - Autoria Própria
+	\caption{Configurar Ramal no Zoiper}
+	\label{figura:zoiperConfigRamal}	
+	Fonte – Autoria Própria
 \end{figure}
 
 Após realizar todos estes passos será possível acessar os serviços disponibilizados pela URA, através do Zoiper efetuar as chamadas para percorrer os fluxos previamente definidos.
