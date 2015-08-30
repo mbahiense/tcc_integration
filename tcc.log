@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.22)  20 JUL 2015 23:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.22)  29 AUG 2015 22:32
 entering extended mode
 **tcc.tex
-(C:\Users\mb250482\Desktop\TCC\monografia\tcc.tex
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\tcc.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -13,7 +13,7 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-(C:\Users\mb250482\Desktop\TCC\monografia\fixos/pacotes.tex
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\fixos/pacotes.tex
 (C:\Users\mb250482\AppData\Roaming\MiKTeX\2.9\tex\latex\abntex2\abntex2.cls
 Document Class: abntex2 2015/04/28 v1.9.5 abnTeX2
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
@@ -933,18 +933,18 @@ Package: bold-extra 2001/11/13 v0.1 Use fonts from cm/mf-extra/bold
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
 Package: eso-pic 2015/04/20 v2.0e eso-pic (RN)
 )
-(C:\Users\mb250482\Desktop\TCC\monografia\fixos/comandos.tex)
-(C:\Users\mb250482\Desktop\TCC\monografia\fixos/novosComandos.tex)
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/informacoes.tex)
-(C:\Users\mb250482\Desktop\TCC\monografia\fixos/informacoes.tex)
-(C:\Users\mb250482\Desktop\TCC\monografia\fixos/setup.tex
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\fixos/comandos.tex)
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\fixos/novosComandos.tex)
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/informacoes.tex
+) (C:\Users\mb250482\Desktop\monografia\tcc_integration\fixos/informacoes.tex)
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\fixos/setup.tex
 Package color Info: Redefining color blue on input line 1.
 Package hyperref Info: Option `colorlinks' set `true' on input line 16.
 )
 \tcc@idxfile=\write4
 
 Writing index file tcc.idx 
-(C:\Users\mb250482\Desktop\TCC\monografia\tcc.aux)
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\tcc.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
@@ -1079,7 +1079,8 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!]
-(C:\Users\mb250482\Desktop\TCC\monografia\fixos/fichaCatalografica.tex
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\fixos/fichaCatalografica.
+tex
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
@@ -1115,9 +1116,9 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 30.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 30.
-) (C:\Users\mb250482\Desktop\TCC\monografia\editaveis/errata.texpdfTeX warning 
-(ext4): destination with the same identifier (name{page.2}) has been already us
-ed, duplicate ignored
+) (C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/errata.texpdf
+TeX warning (ext4): destination with the same identifier (name{page.2}) has bee
+n already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.2 E
@@ -1151,7 +1152,8 @@ Non-PDF special ignored!
 
 Non-PDF special ignored!
 Non-PDF special ignored!])
-(C:\Users\mb250482\Desktop\TCC\monografia\fixos/folhaDeAprovacao.tex [5
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\fixos/folhaDeAprovacao.te
+x [5
 Non-PDF special ignored!
 Non-PDF special ignored!
 
@@ -1168,7 +1170,8 @@ Non-PDF special ignored!
 
 Non-PDF special ignored!
 Non-PDF special ignored!])
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/dedicatoria.tex [7
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/dedicatoria.tex
+[7
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -1179,7 +1182,8 @@ Non-PDF special ignored!
 
 Non-PDF special ignored!
 Non-PDF special ignored!])
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/agradecimentos.tex [9
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/agradecimentos.
+tex [9
 Non-PDF special ignored!
 Non-PDF special ignored!
 
@@ -1192,7 +1196,8 @@ Non-PDF special ignored!
 
 Non-PDF special ignored!
 Non-PDF special ignored!])
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/epigrafe.tex [11
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/epigrafe.tex
+[11
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -1205,7 +1210,8 @@ Non-PDF special ignored!
 
 Non-PDF special ignored!
 Non-PDF special ignored!])
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/resumo.tex [13
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/resumo.tex
+[13
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -1220,7 +1226,8 @@ Non-PDF special ignored!
 
 Non-PDF special ignored!
 Non-PDF special ignored!])
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/abstract.tex [15
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/abstract.tex
+[15
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -1235,8 +1242,50 @@ Non-PDF special ignored!
 
 Non-PDF special ignored!
 Non-PDF special ignored!])
-(C:\Users\mb250482\Desktop\TCC\monografia\fixos/listasAutomaticas.tex
-(C:\Users\mb250482\Desktop\TCC\monografia\tcc.lof) [17
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\fixos/listasAutomaticas.t
+ex (C:\Users\mb250482\Desktop\monografia\tcc_integration\tcc.lof) [17
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -1246,8 +1295,8 @@ Non-PDF special ignored!
 
 
 Non-PDF special ignored!
-Non-PDF special ignored!] (C:\Users\mb250482\Desktop\TCC\monografia\tcc.lot)
-[19
+Non-PDF special ignored!]
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\tcc.lot) [19
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -1258,7 +1307,8 @@ Non-PDF special ignored!
 
 Non-PDF special ignored!
 Non-PDF special ignored!])
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/abreviaturas.tex [21
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/abreviaturas.te
+x [21
 Non-PDF special ignored!
 Non-PDF special ignored!
 
@@ -1357,7 +1407,8 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!])
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/simbolos.tex [23
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/simbolos.tex
+[23
 Non-PDF special ignored!
 Non-PDF special ignored!
 
@@ -1379,8 +1430,8 @@ Non-PDF special ignored!
 
 Non-PDF special ignored!
 Non-PDF special ignored!])
-(C:\Users\mb250482\Desktop\TCC\monografia\fixos/indiceAutomatico.tex
-(C:\Users\mb250482\Desktop\TCC\monografia\tcc.toc [25
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\fixos/indiceAutomatico.te
+x (C:\Users\mb250482\Desktop\monografia\tcc_integration\tcc.toc [25
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -1496,15 +1547,18 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!])
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/inicial/introducao.tex
-Overfull \hbox (26.04219pt too wide) in paragraph at lines 4--6
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/inicial/introdu
+cao.tex
+Overfull \hbox (26.04219pt too wide) in paragraph at lines 6--8
 []\T1/lmr/m/n/12 A Se-cre-ta-ria Na-ci-o-nal de Sa-ne-a-mento Am-bi-en-tal do M
 i-nis-té-rio das Ci-da-des (SNSA/MC)
  []
 
-) (C:\Users\mb250482\Desktop\TCC\monografia\editaveis/inicial/problema.tex)
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/inicial/objetivo.tex
-[27
+)
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/inicial/problem
+a.tex)
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/inicial/objetiv
+o.tex [27
 Non-PDF special ignored!
 Non-PDF special ignored!
 
@@ -1526,8 +1580,62 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!])
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/inicial/justificativa.tex
-[29
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/inicial/justifi
+cativa.tex
+<figuras/LigacoesReclamacoes.png, id=320, 338.76563pt x 219.06844pt>
+File: figuras/LigacoesReclamacoes.png Graphic file (type png)
+
+<use figuras/LigacoesReclamacoes.png>
+Package pdftex.def Info: figuras/LigacoesReclamacoes.png used on input line 8.
+(pdftex.def)             Requested size: 338.76479pt x 219.06789pt.
+ [29
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored! <C:/Users/mb250482/Desktop/monografia/tcc_integration/
+figuras/LigacoesReclamacoes.png>])
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/inicial/aspecto
+s.tex)
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/inicial/trabalh
+osRelacionados.tex)
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/inicial/metodos
+.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!] [32
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -1540,14 +1648,8 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!])
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/inicial/aspectos.tex)
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/inicial/trabalhosRelacionad
-os.tex) (C:\Users\mb250482\Desktop\TCC\monografia\editaveis/inicial/metodos.tex
-[30
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!] [31
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/fundamentacao/g
+san.tex [33
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -1555,53 +1657,29 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
+Non-PDF special ignored!] [34
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!])
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/fundamentacao/gsan.tex
-[32
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
+
+
 Non-PDF special ignored!
 Non-PDF special ignored!]
-Underfull \hbox (badness 10000) in paragraph at lines 24--25
+<figuras/implantacaoGSAN.png, id=347, 453.94594pt x 307.1475pt>
+File: figuras/implantacaoGSAN.png Graphic file (type png)
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
-
- []
-
-[33
-Non-PDF special ignored!
-Non-PDF special ignored!
-
-
+<use figuras/implantacaoGSAN.png>
+Package pdftex.def Info: figuras/implantacaoGSAN.png used on input line 13.
+(pdftex.def)             Requested size: 453.94482pt x 307.14674pt.
+ [35
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!]
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored! <C:/Users/mb250482/Desktop/monografia/tcc_integration/
+figuras/implantacaoGSAN.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
@@ -1631,52 +1709,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
-[34
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!] [35
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!]
-Underfull \hbox (badness 10000) in paragraph at lines 87--89
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
@@ -1686,69 +1725,194 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!] [37
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
 Non-PDF special ignored!]
-Underfull \hbox (badness 10000) in paragraph at lines 106--108
+<figuras/gsan_arquitetura.png, id=361, 477.28313pt x 450.9347pt>
+File: figuras/gsan_arquitetura.png Graphic file (type png)
 
+<use figuras/gsan_arquitetura.png>
+Package pdftex.def Info: figuras/gsan_arquitetura.png used on input line 91.
+(pdftex.def)             Requested size: 477.28195pt x 450.9336pt.
+
+Overfull \hbox (22.28195pt too wide) in paragraph at lines 91--92
+ [][] 
  []
 
+[38
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!] [39
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored! <C:/Users/mb250482/Desktop/monografia/tcc_integration/
+figuras/gsan_arquitetura.png>]
+<figuras/build_properties.png, id=370, 469.00218pt x 120.45pt>
+File: figuras/build_properties.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--117
+<use figuras/build_properties.png>
+Package pdftex.def Info: figuras/build_properties.png used on input line 111.
+(pdftex.def)             Requested size: 469.00104pt x 120.44969pt.
 
+Overfull \hbox (14.00104pt too wide) in paragraph at lines 111--112
+ [][] 
  []
 
+<figuras/build_ant.png, id=371, 743.77875pt x 268.75406pt>
+File: figuras/build_ant.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--127
+<use figuras/build_ant.png>
+Package pdftex.def Info: figuras/build_ant.png used on input line 120.
+(pdftex.def)             Requested size: 743.77693pt x 268.7534pt.
 
+Overfull \hbox (288.77693pt too wide) in paragraph at lines 120--121
+ [][] 
  []
 
-[37
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!]
-Underfull \hbox (badness 10000) in paragraph at lines 137--139
+<figuras/executando_jboss.png, id=372, 508.14844pt x 300.3722pt>
+File: figuras/executando_jboss.png Graphic file (type png)
 
+<use figuras/executando_jboss.png>
+Package pdftex.def Info: figuras/executando_jboss.png used on input line 131.
+(pdftex.def)             Requested size: 508.14719pt x 300.37144pt.
+
+Overfull \hbox (53.14719pt too wide) in paragraph at lines 131--132
+ [][] 
+ []
+
+[40
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored! <C:/Users/mb250482/Desktop/monografia/tcc_integration/
+figuras/build_properties.png>]
+
+LaTeX Warning: Text page 41 contains only floats.
+
+[41
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored! <C:/Users/mb250482/Desktop/monografia/tcc_integration/
+figuras/build_ant.png> <C:/Users/mb250482/Desktop/monografia/tcc_integration/fi
+guras/executando_jboss.png>]
+<figuras/gsan_online.png, id=383, 589.4522pt x 453.94594pt>
+File: figuras/gsan_online.png Graphic file (type png)
+
+<use figuras/gsan_online.png>
+Package pdftex.def Info: figuras/gsan_online.png used on input line 144.
+(pdftex.def)             Requested size: 589.45076pt x 453.94482pt.
+
+Overfull \hbox (134.45076pt too wide) in paragraph at lines 144--145
+ [][] 
  []
 
 )
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/fundamentacao/asterisk.tex
-Underfull \vbox (badness 1460) has occurred while \output is active []
-
- [38
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/fundamentacao/a
+sterisk.tex [42
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored! <C:/Users/mb250482/Desktop/monografia/tcc_integration/
+figuras/gsan_online.png>] [43
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!]
-Underfull \hbox (badness 10000) in paragraph at lines 29--31
+<figuras/pagina_inicial_asterisk.png, id=392, 338.76563pt x 322.95656pt>
+File: figuras/pagina_inicial_asterisk.png Graphic file (type png)
+
+<use figuras/pagina_inicial_asterisk.png>
+Package pdftex.def Info: figuras/pagina_inicial_asterisk.png used on input line
+ 31.
+(pdftex.def)             Requested size: 338.76479pt x 322.95576pt.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 37--41
 
  []
 
-[39
+[44
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!])
-Underfull \hbox (badness 10000) in paragraph at lines 36--41
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored! <C:/Users/mb250482/Desktop/monografia/tcc_integration/
+figuras/pagina_inicial_asterisk.png>]
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/revisao/revisao
+Bibliografica.tex [45
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!] [46
+Non-PDF special ignored!
+Non-PDF special ignored!
 
- []
 
-
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/revisao/revisaoBibliografic
-a.tex [40
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!]
 Underfull \hbox (badness 10000) in paragraph at lines 16--18
@@ -1760,266 +1924,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
-[41
+[47
 Non-PDF special ignored!
 Non-PDF special ignored!
-
-
 Non-PDF special ignored!
-Non-PDF special ignored!] [42
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!])
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/integracao/etapas.tex
-[43
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!] [44
-Non-PDF special ignored!
-Non-PDF special ignored!
-
-
-Non-PDF special ignored!
-Non-PDF special ignored!] [45
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!])
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/integracao/webservices.tex
-[46
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!] [47
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!])
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/integracao/middleware.tex
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 1.
-
-
-LaTeX Warning: Command \c invalid in math mode on input line 22.
-
-
-LaTeX Warning: Command \~ invalid in math mode on input line 22.
-
-
-LaTeX Warning: Command \c invalid in math mode on input line 22.
-
-
-LaTeX Warning: Command \~ invalid in math mode on input line 22.
-
-[48
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
+Non-PDF special ignored!] [48
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!]
 
-LaTeX Warning: Command \' invalid in math mode on input line 23.
+LaTeX Warning: Citation `ALMEIDA' on page 49 undefined on input line 42.
+
+)
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/integracao/etap
+as.tex [49
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!] [50
+Non-PDF special ignored!
+Non-PDF special ignored!
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 23.
-
-
-Overfull \hbox (27.79831pt too wide) in paragraph at lines 23--24
-[]$\OML/lmm/m/it/12 digitoInformado \OMS/lmsy/m/n/12  [][] \OML/lmm/m/it/12 can
-al\OT1/lmr/m/n/12 [\OML/lmm/m/it/12 cliente\OT1/lmr/m/n/12 ]  \OML/lmm/m/it/12 
-. obt\OT1/lmr/m/n/12 é\OML/lmm/m/it/12 md\OT1/lmr/m/n/12 í\OML/lmm/m/it/12 gito
-sinformadospelooriginador$ 
- []
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 25.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 28.
-
-
-LaTeX Warning: Command \^ invalid in math mode on input line 28.
-
-
-Overfull \hbox (3.5215pt too wide) in paragraph at lines 28--29
-[]  $\OML/lmm/m/it/12 ws \OMS/lmsy/m/n/12  [][] \OML/lmm/m/it/12 obterWebServic
-e\OT1/lmr/m/n/12 ()  \OML/lmm/m/it/12 . obt\OT1/lmr/m/n/12 é\OML/lmm/m/it/12 mu
-mainst\OT1/lmr/m/n/12 â\OML/lmm/m/it/12 nciadowebservicecliente$ 
- []
-
-
-LaTeX Warning: Command \c invalid in math mode on input line 29.
-
-
-LaTeX Warning: Command \~ invalid in math mode on input line 29.
-
-
-LaTeX Warning: Command \c invalid in math mode on input line 29.
-
-
-Overfull \hbox (242.05988pt too wide) in paragraph at lines 29--30
-[]  $\OML/lmm/m/it/12 retorno \OMS/lmsy/m/n/12  [][] \OML/lmm/m/it/12 ws:pesqui
-sarImovelOuCliente\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 valorInformado\OT1/lmr/m/n/
-12 )  \OML/lmm/m/it/12 . fazarequisi\OT1/lmr/m/n/12 çã\OML/lmm/m/it/12 oparaono
-voservi\OT1/lmr/m/n/12 ç\OML/lmm/m/it/12 odosistemaGSAN$ 
- []
-
-[49
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!])
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/integracao/customAsterisk.t
-ex [50
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!]
+<figuras/diagrama_implantacao.png, id=422, 462.97969pt x 336.50719pt>
+File: figuras/diagrama_implantacao.png Graphic file (type png)
 
-LaTeX Warning: Command \c invalid in math mode on input line 32.
+<use figuras/diagrama_implantacao.png>
+Package pdftex.def Info: figuras/diagrama_implantacao.png used on input line 13
+.
+(pdftex.def)             Requested size: 462.97855pt x 336.50635pt.
 
-
-LaTeX Warning: Command \~ invalid in math mode on input line 32.
-
-
-LaTeX Warning: Command \c invalid in math mode on input line 32.
-
-
-LaTeX Warning: Command \~ invalid in math mode on input line 32.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 33.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 34.
-
-
-Overfull \hbox (3.90962pt too wide) in paragraph at lines 34--35
-[]$\OML/lmm/m/it/12 tempo[]limite[]discagem \OMS/lmsy/m/n/12  [][] \OT1/lmr/m/n
-/12 3  \OML/lmm/m/it/12 . definitempolimitedeesperaentred\OT1/lmr/m/n/12 í\OML/
-lmm/m/it/12 gitos$ 
- []
-
-
-Overfull \hbox (24.93066pt too wide) in paragraph at lines 35--36
-[]$\OML/lmm/m/it/12 tempo[]limite[]resposta \OMS/lmsy/m/n/12  [][] \OT1/lmr/m/n
-/12 7  \OML/lmm/m/it/12 . definitempolimitedeesperadoprimeirodigito$ 
- []
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 36.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 37.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 37.
-
-
-LaTeX Warning: Command \c invalid in math mode on input line 40.
-
-
-LaTeX Warning: Command \~ invalid in math mode on input line 40.
-
-
-LaTeX Warning: Command \c invalid in math mode on input line 42.
-
-
-LaTeX Warning: Command \~ invalid in math mode on input line 42.
-
-
-Overfull \hbox (17.71774pt too wide) in paragraph at lines 42--43
-[] $\OML/lmm/m/it/12 gotoContextoAtendente\OT1/lmr/m/n/12 ()  \OML/lmm/m/it/12 
-. redirecionaaliga\OT1/lmr/m/n/12 çã\OML/lmm/m/it/12 oparafalarcomatendente$ 
+Overfull \hbox (7.97855pt too wide) in paragraph at lines 13--14
+ [][] 
  []
 
 [51
@@ -2028,29 +1967,9 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
 Non-PDF special ignored!])
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/resultado/descricao.tex
-[52
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/integracao/webs
+ervices.tex [52
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -2062,21 +1981,48 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!]
-Overfull \hbox (3.09654pt too wide) in paragraph at lines 14--14
-[]|\T1/lmr/bx/n/10 PROCESSADOR| 
- []
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored! <C:/Users/mb250482/Desktop/monografia/tcc_integration/
+figuras/diagrama_implantacao.png>]
+<figuras/implementacao_servicos.png, id=431, 455.45157pt x 200.24812pt>
+File: figuras/implementacao_servicos.png Graphic file (type png)
 
+<use figuras/implementacao_servicos.png>
+Package pdftex.def Info: figuras/implementacao_servicos.png used on input line 
+30.
+(pdftex.def)             Requested size: 455.45045pt x 200.24763pt.
 
-Overfull \hbox (2.80295pt too wide) in paragraph at lines 14--14
-[]|\T1/lmr/bx/n/10 MEMÓRIA| 
+<figuras/declarando_servlet.png, id=432, 498.36188pt x 127.22531pt>
+File: figuras/declarando_servlet.png Graphic file (type png)
+
+<use figuras/declarando_servlet.png>
+Package pdftex.def Info: figuras/declarando_servlet.png used on input line 40.
+(pdftex.def)             Requested size: 498.36066pt x 127.22499pt.
+
+Overfull \hbox (43.36066pt too wide) in paragraph at lines 40--41
+ [][] 
  []
 
 [53
 Non-PDF special ignored!
 Non-PDF special ignored!
-
-
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -2091,8 +2037,23 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 56.
+<figuras/declaracao_endpoint.png, id=438, 475.02469pt x 137.01187pt>
+File: figuras/declaracao_endpoint.png Graphic file (type png)
+
+<use figuras/declaracao_endpoint.png>
+Package pdftex.def Info: figuras/declaracao_endpoint.png used on input line 50.
+
+(pdftex.def)             Requested size: 475.02351pt x 137.01154pt.
+
+Overfull \hbox (20.02351pt too wide) in paragraph at lines 50--51
+ [][] 
+ []
+
+)
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/integracao/midd
+leware.tex
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 1.
  [54
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -2107,7 +2068,101 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!] [55
+Non-PDF special ignored! <C:/Users/mb250482/Desktop/monografia/tcc_integration/
+figuras/implementacao_servicos.png> <C:/Users/mb250482/Desktop/monografia/tcc_i
+ntegration/figuras/declarando_servlet.png>]
+<figuras/mapeamento_servicos_agi.png, id=443, 450.18187pt x 222.8325pt>
+File: figuras/mapeamento_servicos_agi.png Graphic file (type png)
+
+<use figuras/mapeamento_servicos_agi.png>
+Package pdftex.def Info: figuras/mapeamento_servicos_agi.png used on input line
+ 9.
+(pdftex.def)             Requested size: 450.18077pt x 222.83195pt.
+
+
+LaTeX Warning: Command \c invalid in math mode on input line 23.
+
+
+LaTeX Warning: Command \~ invalid in math mode on input line 23.
+
+
+LaTeX Warning: Command \c invalid in math mode on input line 23.
+
+
+LaTeX Warning: Command \~ invalid in math mode on input line 23.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored! <C:/Users/mb250482/Desktop/monografia/tcc_integration/
+figuras/declaracao_endpoint.png>]
+
+LaTeX Warning: Command \' invalid in math mode on input line 24.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 24.
+
+
+Overfull \hbox (27.79831pt too wide) in paragraph at lines 24--25
+[]$\OML/lmm/m/it/12 digitoInformado \OMS/lmsy/m/n/12  [][] \OML/lmm/m/it/12 can
+al\OT1/lmr/m/n/12 [\OML/lmm/m/it/12 cliente\OT1/lmr/m/n/12 ]  \OML/lmm/m/it/12 
+. obt\OT1/lmr/m/n/12 é\OML/lmm/m/it/12 md\OT1/lmr/m/n/12 í\OML/lmm/m/it/12 gito
+sinformadospelooriginador$ 
+ []
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 26.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 29.
+
+
+LaTeX Warning: Command \^ invalid in math mode on input line 29.
+
+
+Overfull \hbox (3.5215pt too wide) in paragraph at lines 29--30
+[]  $\OML/lmm/m/it/12 ws \OMS/lmsy/m/n/12  [][] \OML/lmm/m/it/12 obterWebServic
+e\OT1/lmr/m/n/12 ()  \OML/lmm/m/it/12 . obt\OT1/lmr/m/n/12 é\OML/lmm/m/it/12 mu
+mainst\OT1/lmr/m/n/12 â\OML/lmm/m/it/12 nciadowebservicecliente$ 
+ []
+
+
+LaTeX Warning: Command \c invalid in math mode on input line 30.
+
+
+LaTeX Warning: Command \~ invalid in math mode on input line 30.
+
+
+LaTeX Warning: Command \c invalid in math mode on input line 30.
+
+
+Overfull \hbox (242.05988pt too wide) in paragraph at lines 30--31
+[]  $\OML/lmm/m/it/12 retorno \OMS/lmsy/m/n/12  [][] \OML/lmm/m/it/12 ws:pesqui
+sarImovelOuCliente\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 valorInformado\OT1/lmr/m/n/
+12 )  \OML/lmm/m/it/12 . fazarequisi\OT1/lmr/m/n/12 çã\OML/lmm/m/it/12 oparaono
+voservi\OT1/lmr/m/n/12 ç\OML/lmm/m/it/12 odosistemaGSAN$ 
+ []
+
+<figuras/gerar_wscliente.png, id=448, 503.63156pt x 127.97812pt>
+File: figuras/gerar_wscliente.png Graphic file (type png)
+
+<use figuras/gerar_wscliente.png>
+Package pdftex.def Info: figuras/gerar_wscliente.png used on input line 39.
+(pdftex.def)             Requested size: 503.63033pt x 127.9778pt.
+
+Overfull \hbox (48.63033pt too wide) in paragraph at lines 39--40
+ [][] 
+ []
+
+[56
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -2137,38 +2192,20 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!] [56
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!])
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/resultado/avaliacao.tex
+Non-PDF special ignored! <C:/Users/mb250482/Desktop/monografia/tcc_integration/
+figuras/mapeamento_servicos_agi.png>]
+<figuras/executar_integrador.png, id=463, 477.28313pt x 170.88844pt>
+File: figuras/executar_integrador.png Graphic file (type png)
+
+<use figuras/executar_integrador.png>
+Package pdftex.def Info: figuras/executar_integrador.png used on input line 59.
+
+(pdftex.def)             Requested size: 477.28195pt x 170.88802pt.
+
+Overfull \hbox (22.28195pt too wide) in paragraph at lines 59--60
+ [][] 
+ []
+
 [57
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -2187,6 +2224,308 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
+Non-PDF special ignored! <C:/Users/mb250482/Desktop/monografia/tcc_integration/
+figuras/gerar_wscliente.png> <C:/Users/mb250482/Desktop/monografia/tcc_integrat
+ion/figuras/executar_integrador.png>])
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/integracao/cust
+omAsterisk.tex
+<figuras/cadastro_ramal_sip.png, id=468, 521.69907pt x 442.65375pt>
+File: figuras/cadastro_ramal_sip.png Graphic file (type png)
+
+<use figuras/cadastro_ramal_sip.png>
+Package pdftex.def Info: figuras/cadastro_ramal_sip.png used on input line 9.
+(pdftex.def)             Requested size: 521.69778pt x 442.65265pt.
+
+Overfull \hbox (66.69778pt too wide) in paragraph at lines 9--10
+ [][] 
+ []
+
+<figuras/fluxo_ura.png, id=469, 533.74406pt x 542.77782pt>
+File: figuras/fluxo_ura.png Graphic file (type png)
+
+<use figuras/fluxo_ura.png>
+Package pdftex.def Info: figuras/fluxo_ura.png used on input line 20.
+(pdftex.def)             Requested size: 533.74275pt x 542.77649pt.
+
+Overfull \hbox (78.74275pt too wide) in paragraph at lines 20--21
+ [][] 
+ []
+
+[58
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!]
+
+LaTeX Warning: Command \c invalid in math mode on input line 33.
+
+
+LaTeX Warning: Command \~ invalid in math mode on input line 33.
+
+
+LaTeX Warning: Command \c invalid in math mode on input line 33.
+
+
+LaTeX Warning: Command \~ invalid in math mode on input line 33.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 34.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 35.
+
+
+Overfull \hbox (3.90962pt too wide) in paragraph at lines 35--36
+[]$\OML/lmm/m/it/12 tempo[]limite[]discagem \OMS/lmsy/m/n/12  [][] \OT1/lmr/m/n
+/12 3  \OML/lmm/m/it/12 . definitempolimitedeesperaentred\OT1/lmr/m/n/12 í\OML/
+lmm/m/it/12 gitos$ 
+ []
+
+
+Overfull \hbox (24.93066pt too wide) in paragraph at lines 36--37
+[]$\OML/lmm/m/it/12 tempo[]limite[]resposta \OMS/lmsy/m/n/12  [][] \OT1/lmr/m/n
+/12 7  \OML/lmm/m/it/12 . definitempolimitedeesperadoprimeirodigito$ 
+ []
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 37.
+
+[59
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored! <C:/Users/mb250482/Desktop/monografia/tcc_integration/
+figuras/cadastro_ramal_sip.png>]
+
+LaTeX Warning: Command \' invalid in math mode on input line 38.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 38.
+
+
+LaTeX Warning: Command \c invalid in math mode on input line 41.
+
+
+LaTeX Warning: Command \~ invalid in math mode on input line 41.
+
+[60
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored! <C:/Users/mb250482/Desktop/monografia/tcc_integration/
+figuras/fluxo_ura.png>]
+
+LaTeX Warning: Command \c invalid in math mode on input line 43.
+
+
+LaTeX Warning: Command \~ invalid in math mode on input line 43.
+
+
+Overfull \hbox (17.71774pt too wide) in paragraph at lines 43--44
+[] $\OML/lmm/m/it/12 gotoContextoAtendente\OT1/lmr/m/n/12 ()  \OML/lmm/m/it/12 
+. redirecionaaliga\OT1/lmr/m/n/12 çã\OML/lmm/m/it/12 oparafalarcomatendente$ 
+ []
+
+<figuras/zoiper.png, id=491, 186.6975pt x 258.9675pt>
+File: figuras/zoiper.png Graphic file (type png)
+ <use figuras/zoiper.png>
+Package pdftex.def Info: figuras/zoiper.png used on input line 54.
+(pdftex.def)             Requested size: 186.69704pt x 258.96684pt.
+
+<figuras/configurar_ramal_zoiper.png, id=492, 343.2825pt x 216.05719pt>
+File: figuras/configurar_ramal_zoiper.png Graphic file (type png)
+
+<use figuras/configurar_ramal_zoiper.png>
+Package pdftex.def Info: figuras/configurar_ramal_zoiper.png used on input line
+ 64.
+(pdftex.def)             Requested size: 343.28165pt x 216.05664pt.
+)
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/resultado/descr
+icao.tex [61
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!] [62
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored! <C:/Users/mb250482/Desktop/monografia/tcc_integration/
+figuras/zoiper.png> <C:/Users/mb250482/Desktop/monografia/tcc_integration/figur
+as/configurar_ramal_zoiper.png>]
+Overfull \hbox (3.09654pt too wide) in paragraph at lines 14--14
+[]|\T1/lmr/bx/n/10 PROCESSADOR| 
+ []
+
+
+Overfull \hbox (2.80295pt too wide) in paragraph at lines 14--14
+[]|\T1/lmr/bx/n/10 MEMÓRIA| 
+ []
+
+[63
+Non-PDF special ignored!
+Non-PDF special ignored!
+
+
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!]
+<figuras/media_atendimentos.png, id=510, 432.11438pt x 328.97906pt>
+File: figuras/media_atendimentos.png Graphic file (type png)
+
+<use figuras/media_atendimentos.png>
+Package pdftex.def Info: figuras/media_atendimentos.png used on input line 40.
+(pdftex.def)             Requested size: 432.11331pt x 328.97826pt.
+ [64
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored! <C:/Users/mb250482/Desktop/monografia/tcc_integration/
+figuras/media_atendimentos.png>]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 57.
+ [65
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!] [66
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!] [67
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -2194,21 +2533,46 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!])
-(C:\Users\mb250482\Desktop\TCC\monografia\editaveis/consideracao/consideracoes.
-tex [58
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/resultado/avali
+acao.tex <figuras/eficiencia_servicos.png, id=529, 374.14781pt x 365.11406pt>
+File: figuras/eficiencia_servicos.png Graphic file (type png)
+
+<use figuras/eficiencia_servicos.png>
+Package pdftex.def Info: figuras/eficiencia_servicos.png used on input line 18.
+
+(pdftex.def)             Requested size: 374.14688pt x 365.11316pt.
+)
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\editaveis/consideracao/co
+nsideracoes.tex [68
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!]) (C:\Users\mb250482\Desktop\TCC\monografia\tcc.bbl
-(C:\Users\mb250482\Desktop\TCC\monografia\tcc.brf)
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!] [69
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored! <C:/Users/mb250482/Desktop/monografia/tcc_integration/
+figuras/eficiencia_servicos.png>] [70
+Non-PDF special ignored!
+Non-PDF special ignored!
+
+
+Non-PDF special ignored!
+Non-PDF special ignored!])
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\tcc.bbl
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\tcc.brf)
 \tf@brf=\write5
- [59
-Non-PDF special ignored!
-Non-PDF special ignored!
-
-
+ [71
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -2218,7 +2582,9 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!] [60
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!] [72
 Non-PDF special ignored!
 Non-PDF special ignored!
 
@@ -2234,7 +2600,7 @@ bibitemlist
 No file tcc.ind.
 
 AED: lastpage setting LastPage
-[61
+[73
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -2266,11 +2632,15 @@ Non-PDF special ignored!]
 \tf@toc=\write8
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 69.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 69.
- (C:\Users\mb250482\Desktop\TCC\monografia\tcc.aux)
+
+(C:\Users\mb250482\Desktop\monografia\tcc_integration\tcc.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 69.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 69.
 Package rerunfilecheck Info: File `tcc.brf' has not changed.
-(rerunfilecheck)             Checksum: AD98EE1D039DF15293826E9C3AB7A245;55.
+(rerunfilecheck)             Checksum: 03528EA27FD36947BE169A8A932C981C;107.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -2278,13 +2648,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 69.
  ) 
 Here is how much of TeX's memory you used:
- 12299 strings out of 493921
- 183493 string characters out of 3144867
- 296435 words of memory out of 3000000
- 15052 multiletter control sequences out of 15000+200000
+ 12452 strings out of 493921
+ 188372 string characters out of 3144867
+ 297435 words of memory out of 3000000
+ 15150 multiletter control sequences out of 15000+200000
  100570 words of font info for 62 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 41i,14n,33p,1835b,565s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,14n,33p,1868b,559s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/
 MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.9/
@@ -2303,9 +2673,9 @@ eX 2.9/fonts/type1/public/lm/lmss17.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/lm/lmss8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
 ic/lm/lmssbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lms
 so12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
-Output written on tcc.pdf (63 pages, 532889 bytes).
+Output written on tcc.pdf (75 pages, 1663105 bytes).
 PDF statistics:
- 744 PDF objects out of 1000 (max. 8388607)
- 170 named destinations out of 1000 (max. 500000)
- 541 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 865 PDF objects out of 1000 (max. 8388607)
+ 203 named destinations out of 1000 (max. 500000)
+ 646 words of extra memory for PDF output out of 10000 (max. 10000000)
 

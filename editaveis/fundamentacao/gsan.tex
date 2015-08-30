@@ -8,12 +8,14 @@
 O sistema de código aberto GSAN (Sistema Integrado de Gestão de Serviços de Saneamento) desenvolvido inicialmente pela empresa IPAD (Instituto de Planejamento e Apoio ao Desenvolvimento Tecnológico e Científico) em 2005 por meio do Programa de Modernização do Ministério da Cidades, atualmente mantido e disponibilizado pelo Portal de Software Livre Brasileiro, sendo constantemente melhorado e aperfeiçoado pelos prestadores de serviços e interessados. Propõem-se em atender as principais demandas de gestão de operações comerciais e controle de execução de serviços nas companhias de saneamento do Brasil, que atualmente utilizam o sistema em grande escala, conforme exposto a seguir pela figura:
 
 
-%\includegraphics[scale=1]{figuras/LigacoesReclamacoes}
-\begin{center}
-	IMAGEM PENDENTE \\
-	Figura 2: Implantações do Sistema GSAN \\
-	Fonte: Portal do Software Público Brasileiro, 2014 \\
-\end{center}
+\begin{figure}[!htb]
+	\centering
+	\includegraphics{figuras/implantacaoGSAN.png}
+	\caption{Implantações do Sistema GSAN}	
+	Fonte - Portal do Software Público Brasileiro, 2014
+\end{figure}
+
+
 Conforme demonstrado acima o sistema está em funcionamento em aproximadamente 1 mil municípios brasileiros, concentrado principalmente na região Nordeste e Norte do Brasil. Atualmente o sistema está preparado para atender companhias de pequeno e médio porte, provendo soluções flexíveis através de parametrizações em tabelas de banco de dados, adequando-se a realidades distintas e tornando-se referência em software para o setor de saneamento básico brasileiro. 
 
 \subsection{GSAN Conceitos}
@@ -84,19 +86,19 @@ As solicitações realizadas pelos clientes aos atendentes são denominadas Regi
 O Sistema GSAN foi desenvolvido fundamentalmente utilizando a plataforma JEE (\textit{Java Enterprise Edition}), propriedade da \textit{Oracle Corporation}, em sua versão 5, na época a mais recente. Utiliza os principais serviços e tecnologias oferecidos pela plataforma, como por exemplo, \textit{Enterprise Java Beans} (EJB), \textit{Java Message Service} (JMS) API, \textit{Java Server Pages} 2.1, entre outros.
 O GSAN possui uma arquitetura que implementa diversos padrões de projeto, visando facilitar a manutenibilidade e manter a organização dos componentes, segue abaixo o diagrama de componentes conforme a figura 3:
 
-\begin{center}
-	%\includegraphics[scale=1]{figuras/gsan_arquitetura}
-	IMAGEM PENDENTE \\
-	Figura 3: Arquitetura Detalhada do Sistema GSAN \\
-	Fonte: Autoria Própria	
-\end{center}
+\begin{figure}[!htb]
+	\centering
+	\includegraphics{figuras/gsan_arquitetura.png}
+	\caption{Arquitetura Detalhada do Sistema GSAN}	
+	Fonte - Autoria Própria
+\end{figure}
 
 	
-A camada de apresentação utiliza recurso nativo da plataforma JEE para Web, sendo a JSP (\textit{Java Server Pages}) para construção dos layouts e páginas a serem exibidas, juntamente com o framework Apache Struts versão 1.2 atuando como controlador das requisições, além de Javascript e CSS para tratar o comportamento e aparência das páginas.
+A camada de apresentação utiliza recurso nativo da plataforma JEE para Web, sendo a JSP (\textit{Java Server Pages}) para construção dos layouts e páginas a serem exibidas, juntamente com o \textit{framework} Apache Struts versão 1.2 atuando como controlador das requisições, além de Javascript e CSS para tratar o comportamento e aparência das páginas.
 A fachada é um ponto de comunicação entre as camadas de apresentação e a camada de negócio e implementa o padrão de projeto \textit{Singleton}. A principal função da fachada é centralizar todas as chamadas de métodos da camada de negócio para que outras aplicações ou outras camadas superiores possam utilizar seus serviços.
 As Classes de Controladores EJB são responsáveis por garantir toda a regra de negócio do sistema, elas são implementadas utilizando a especificação do \textit{Enterprise Java Beans} (EJB) versão 2.1.
 As classes de Repositório são classes da aplicação que utilizam o padrão de projeto \textit{Singleton}, que garante a existência de apenas uma instância desse objeto no sistema, a responsabilidade desta classe consiste em assegurar que todos os métodos de persistência ou serviço de consulta com o banco de dados.
-O sistema GSAN foi projetado para ser independente da solução de Banco de Dados utilizada, acoplado ao framework Hibernate que trata da persistência Objeto/Relacional (ORM), possibilita o isolamento da camada de Persistência. Fazendo uso de padrões de projetos renomados, tornar o código mais organizado e entendível, facilitando futuras manutenções, a utilização do padrão MVC (\textit{Model View Controller}) como estrutura principal faz com que exista isolamentos entre as camadas de Modelo, Visualização e Controler da aplicação, tornando a organização de pacotes bem estruturada, porém  não houve um bom reaproveitamento de templates, por conta disso foram geradas muitas páginas específicas por funcionalidade e consequentemente muitos arquivos de configuração para o framework Struts  que mapeia as requisições via arquivos no formato XML (\textit{eXtensible Markup Language}).
+O sistema GSAN foi projetado para ser independente da solução de Banco de Dados utilizada, acoplado ao \textit{framework} Hibernate que trata da persistência Objeto/Relacional (ORM), possibilita o isolamento da camada de Persistência. Fazendo uso de padrões de projetos renomados, tornar o código mais organizado e entendível, facilitando futuras manutenções, a utilização do padrão MVC (\textit{Model View Controller}) como estrutura principal faz com que exista isolamentos entre as camadas de Modelo, Visualização e Controler da aplicação, tornando a organização de pacotes bem estruturada, porém  não houve um bom reaproveitamento de templates, por conta disso foram geradas muitas páginas específicas por funcionalidade e consequentemente muitos arquivos de configuração para o \textit{framework} Struts  que mapeia as requisições via arquivos no formato XML (\textit{eXtensible Markup Language}).
 	
 	
 \subsection{GSAN Configuração}
@@ -104,46 +106,46 @@ A configuração do ambiente de desenvolvimento se trata de um passo fundamental
 O processo de empacotamento para geração do EAR (\textit{Enterprise Archive}) para disponibilização, utiliza a ferramenta Apache Ant versão 1.6.2, normalmente a versão disponibilizada pela comunidade já possui alguns scripts de build para serem executados, no entanto é preciso configurar os locais adequados para geração do pacote, conforme segue o exemplo abaixo na figura:
 
 
-
-\begin{center}
-	%\includegraphics[scale=1]{figuras/build_properties}
-	IMAGEM PENDENTE \\
-	Figura 4: Exemplo de configuração do script build \\
-	Fonte: Autoria Própria
-\end{center}
+\begin{figure}[!htb]
+	\centering
+	\includegraphics{figuras/build_properties.png}
+	\caption{Exemplo de configuração do script build}	
+	Fonte - Autoria Própria
+\end{figure}
 	
 A execução do script pode ser realizada dentro da IDE executando o seguinte procedimento, após localizar o arquivo build.xml dentro na raiz do projeto, ao clicar com o botão esquerdo e selecionar a opção \textit{Run as > Ant Build}, será acionado a execução da instrução \textit{make} padrão do script, para construção do pacote a ser disponibilizado, conforme visto na figura 5:	
-	
-
-%\includegraphics[scale=1]{figuras/build_ant}
-\begin{center}
-	IMAGEM PENDENTE \\
-	Figura 5: Execução do script de build  \\
-	Fonte: Autoria Própria	
-\end{center}	
+		
+\begin{figure}[!htb]
+	\centering
+	\includegraphics{figuras/build_ant.png}
+	\caption{Execução do script de build}	
+	Fonte - Autoria Própria
+\end{figure}
 
 Para executar a aplicação faz-se necessário a utilização de um servidor de aplicação que implemente as principais interfaces de serviços da plataforma JEE que serão consumidos pela aplicação, neste trabalho foi utilizado o projeto \textit{Open Source Jboss Community} na versão 4.0.1, compatível com as tecnologias utilizadas no GSAN, a configuração deste Servidor de Aplicação Web pode ser consultado nos anexos deste trabalho.
 Para executar o sistema GSAN, utilizando o terminal de comando do sistema operacional (\textit{Command Prompt}) basta digitar run e pressionar a tecla Enter será iniciado o servidor de aplicação e executará o sistema GSAN, visto na figura 6:
 
 
-%\includegraphics[scale=1]{figuras/executando_jboss}
-\begin{center}
-	IMAGEM PENDENTE \\
-	Figura 6: Executando o sistema GSAN  \\
-	Fonte: Autoria Própria \\
-\end{center}
+\begin{figure}[!htb]
+	\centering
+	\includegraphics{figuras/executando_jboss.png}
+	\caption{Executando o sistema GSAN}	
+	Fonte - Autoria Própria
+\end{figure}
+
 
 A solução adotada para banco de dados neste trabalho será o PostgreSQL na versão 9.3.4 e PgAdmin versão 1.18.1 como SGBD (Sistema de Gerenciamento de Banco de Dados), no próprio site existe o guia de instalação para desenvolvedores tornando esse passo bem intuitivo.
 
 Na versão do sistema GSAN disponibilizada para a comunidade, existe um diretório chamado \textbf{\textit{migrations}} que contém os scripts de banco de dados necessários para criação das tabelas principais que o sistema exige para funcionar corretamente, e também disponibiliza todas instruções necessárias para a configuração dos datasources comercial e gerencial que serão utilizados no sistema GSAN.
 Para acessar o sistema em execução, basta digitar o seguinte endereço no navegador http://127.0.0.1:8080/gsan, caso tudo ocorra bem deverá ser apresentada a página conforme visto na figura 7 abaixo:
 
-%\includegraphics[scale=1]{figuras/gsan_online}
-\begin{center}
-	IMAGEM PENDENTE \\
-	Figura 7: Acessando página inicial do Sistema   \\
-	Fonte: Autoria Própria
-\end{center}
+\begin{figure}[!htb]
+	\centering
+	\includegraphics{figuras/gsan_online.png}
+	\caption{Acessando página inicial do Sistema}	
+	Fonte - Autoria Própria
+\end{figure}
+
 
 A credencial de acesso criada por padrão é: \\
 \textbf{Login}: admin \\

@@ -4,12 +4,13 @@ O \textit{Middleware} intermediário denominado Integrador será responsável em
 No cenário da integração proposta o sistema Integrador, deverá ser capaz de comunicar-se com o sistema Asterisk via protocolo AGI, para tanto foi utilizado um projeto \textit{Open Source} chamada Asterisk-Java, que fornece bibliotecas para comunicação com o Asterisk utilizando os protocolos comuns ao sistema, no entanto será preciso mapear as chamadas que serão realizadas.
 Para cada novo serviço a ser disponibilizado, será necessário declarar uma chave de texto que será utilizada no Asterisk, representando o objeto a ser invocado, adicionados em um novo arquivo chamado \textit{fastagi-mapping.properties} da seguinte maneira, conforme a figura 13 abaixo:
 
-\begin{center}
-	% \includegraphics{figuras/mapeamento_servicos_agi}
-	IMAGEM PENDENTE \\
-	Figura 13: Mapeamento dos serviços para consumo via Agi	\\
-	Fonte: Autoria Própria\\	
-\end{center}
+\begin{figure}[!htb]
+	\centering
+	\includegraphics{figuras/mapeamento_servicos_agi.png}
+	\caption{Mapeamento dos serviços para consumo via Agi}	
+	Fonte - Autoria Própria
+\end{figure}
+
 
 Feito isso o integrador já possuirá condições de recepcionar as solicitações originadas pelo \textit{software} Asterisk utilizando o protocolo de comunicação AGI, e direcionar a chamada internamente para uma classe concreta que implemente o protocolo de comunicação utilizado, assim como a lógica de consumo aos novos serviços disponibilizados pelo \textit{WebService} do sistema GSAN.
 
@@ -33,12 +34,12 @@ Para cada classe concreta a ser disponibilizada será necessário estender a cla
 
 Visando facilitar o consumo dos novos serviços, será gerado o \textit{WebService} cliente a partir do WSDL (\textit{Web Services Description Language}) da interface do serviço disponibilizada no sistema GSAN, utilizando o software chamado WSIMPORT disponibilizado pela \textit{Sun Microsystems}, conforme visto na figura 15:
 
-\begin{center}
-	% \includegraphics{figuras/gerar_wscliente}
-	IMAGEM PENDENTE \\
-	Figura 15: Geração do código fonte para consumo do WebService. \\
-	Fonte: Autoria Própria\\		
-\end{center}
+\begin{figure}[!htb]
+	\centering
+	\includegraphics{figuras/gerar_wscliente.png}
+	\caption{Geração do código fonte para consumo do WebService.}	
+	Fonte - Autoria Própria
+\end{figure}
 
 Descrição dos parâmetros utilizados:
 
@@ -53,12 +54,13 @@ Descrição dos parâmetros utilizados:
 
 Com isso será gerado o código fonte de consumo dos serviços atualmente declarados na interface do \textit{EndPoint}, para cada modificação na interface será necessário realizar o procedimento novamente. O sistema Integrador deve ser disponibilizado em um terminal, que seja visível ao Asterisk, para que o mesmo consiga realizar requisições aos objetos mapeados anteriormente, neste trabalho o Integrador será executado no mesmo hospedeiro do Asterisk, conforme visto na figura 16 abaixo:
 
-\begin{center}
-	% \includegraphics{figuras/executar_integrador}
-	IMAGEM PENDENTE \\
-	Figura 16: Executando o sistema Integrador \\
-	Fonte: Autoria Própria \\			
-\end{center}
+\begin{figure}[!htb]
+	\centering
+	\includegraphics{figuras/executar_integrador.png}
+	\caption{Executando o sistema Integrador.}	
+	Fonte - Autoria Própria
+\end{figure}
+
 
 A instrução realizada acima executa a classe principal do \textit{framework} Asterisk-Java a \textit{ org.asteriskjava.fastagi.DefaultAgiServer}, inicializando o serviço de comunicação via AGI, sob a JVM (\textit{Java Virtual Machine}) da plataforma Java, passando como \textit{classpath} as seguintes bibliotecas: 
 %Citar classpath - pendente
