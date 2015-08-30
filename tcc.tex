@@ -12,18 +12,18 @@
 \imprimircapa
 \imprimirfolhaderosto*
 
-\input{fixos/fichaCatalografica}
-\input{editaveis/errata}
-\input{fixos/folhaDeAprovacao}
-\input{editaveis/dedicatoria}
-\input{editaveis/agradecimentos}
-\input{editaveis/epigrafe}
-\input{editaveis/resumo}
-\input{editaveis/abstract}
-\input{fixos/listasAutomaticas}
-\input{editaveis/abreviaturas}
-\input{editaveis/simbolos}
-\input{fixos/indiceAutomatico}
+%\input{fixos/fichaCatalografica}
+%\input{editaveis/errata}
+%\input{fixos/folhaDeAprovacao}
+\include{editaveis/dedicatoria}
+\include{editaveis/agradecimentos}
+\include{editaveis/epigrafe}
+\include{editaveis/resumo}
+\include{editaveis/abstract}
+\include{fixos/listasAutomaticas}
+\include{editaveis/abreviaturas}
+%\input{editaveis/simbolos}
+\include{fixos/indiceAutomatico}
 
 \textual
 % INTRODUÇÃO 
@@ -62,6 +62,8 @@
 \postextual
 
 \bibliography{bibliografia} 
+\bibliographystyle{acm}
+%acm, alpha, ieeetr, pain, sian, abbrv
 %\input{editaveis/apendices}
 %\input{editaveis/anexos}
 \printindex
