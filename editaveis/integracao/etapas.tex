@@ -8,7 +8,8 @@
 
 Após o estudo aprofundado sobre o sistema GSAN e software Asterisk foram identificadas diversas formas de realizar a integração, entre os sistemas pelo fato da existência de várias protocolos possíveis de comunicação , no entanto a solução adotada será visando a reusabilidade, baixo custo de manutenção e o uso de tecnologias que já tenham uma maturidade no mercado. Foram escolhidos os protocolos SOAP e AGI para serem implementados por um \textit{Middleware}, este será responsável em assumir o papel de intermediário entre os sistemas GSAN e Asterisk. Com o intuito de facilitar o entendimento da comunicação entre os sistemas, a seguir será exposto o diagrama de implantação da solução (figura \ref{figura:diagramaImplantacao}) descrita acima, explanado os principais detalhes adotados nesta integração:
 
-\begin{figure}[!htb]
+
+\begin{figure}[H]
 	\centering
 	\includegraphics{figuras/diagrama_implantacao.png}
 	\caption{Diagrama de implantação da solução}
@@ -21,10 +22,11 @@ Conforme ilustrado acima, o sistema GSAN irá prover uma interface de serviços 
 
 
 \section{Tecnologias Utilizadas}
-O processo de integração será composto por tecnologias com paradigmas diferenciados, no entanto para melhorar o entendimento dos detalhes de compatibilidades adotados segue abaixo a tabela 3 das tecnologias utilizadas e versões correspondentes.
+O processo de integração será composto por tecnologias com paradigmas diferenciados, no entanto para melhorar o entendimento dos detalhes de compatibilidades adotados segue abaixo a tabela \ref{tabela:tecnologiasUtilizadas}
+	 das tecnologias utilizadas e versões correspondentes.
 
 
-\begin{table}[htb]
+\begin{table}[H]
 	\center
 	\footnotesize
 	\begin{tabular}{|p{4cm}|p{7cm}|p{2cm}|}
@@ -49,14 +51,14 @@ O processo de integração será composto por tecnologias com paradigmas diferen
 		\hline
 		Asterisk & Software livre que permite a criação de PABX com diversos recursos. & 1.4 \\		
 		\hline
-		Asterisk-Java & Framework para comunicação com o Asterisk via protocolo AGI. & 1.0 \\				
+		Asterisk-Java & Framework para comunicação com o Asterisk via protocolo AGI. & 1.0 \\	
+		\hline			
 	\end{tabular}
+	\caption{Tecnologias utilizadas}
+	\label{tabela:tecnologiasUtilizadas}
+	Fonte – Autoria Própria
 \end{table}
 
-\begin{center}
-	Tabela 3: Tecnologias utilizadas 
-	Fonte: Autoria Própria
-\end{center}
 
 
 \section{Etapas da Integração}

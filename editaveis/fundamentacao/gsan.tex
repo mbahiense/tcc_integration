@@ -8,7 +8,7 @@
 O sistema de código aberto GSAN (Sistema Integrado de Gestão de Serviços de Saneamento) desenvolvido inicialmente pela empresa IPAD (Instituto de Planejamento e Apoio ao Desenvolvimento Tecnológico e Científico) em 2005 por meio do Programa de Modernização do Ministério da Cidades, atualmente mantido e disponibilizado pelo Portal de Software Livre Brasileiro, sendo constantemente melhorado e aperfeiçoado pelos prestadores de serviços e interessados. Propõem-se em atender as principais demandas de gestão de operações comerciais e controle de execução de serviços nas companhias de saneamento do Brasil, que atualmente utilizam o sistema em grande escala, conforme exposto a seguir pela figura \ref{figura:implantacaoSistemaGSAN}:
 
 
-\begin{figure}[!htb]
+\begin{figure}[H]
 	\centering
 	\includegraphics{figuras/implantacaoGSAN.png}
 	\caption{Implantações do Sistema GSAN}	
@@ -35,25 +35,24 @@ O sistema em sua concepção foi dividido nos seguintes módulos descritos abaix
 \end{itemize}
 
 Alguns dos conceitos de saneamento serão abordados neste trabalho, portanto faz-se necessário conhecer e entender como o sistema GSAN aborda essas questões.
-O imóvel no sistema deve possuir relação com os seguintes itens:
+O imóvel no sistema deve possuir relação com os seguintes itens (Tabela \ref{tabela:atributosImovel}):
 
 
-\begin{table}[htb]
+\begin{table}[H]
 	\center
 	\footnotesize
 	\begin{tabular}{|p{3cm}|p{7cm}|p{2.5cm}|} \hline
-		\textbf{Atributo} & \textbf{Descrição} & \textbf{Obrigatório}  \\ \hline
-		Localidade & Um conjunto populacional & Sim \\	\hline
-		Setor Comercial & Conjunto de quadras, semelhante ao bairro & Sim \\ \hline
-		Quadra & Denominado normalmente de "quarteirão" & Sim \\ \hline			
-		Lote &  Uma subdivisão da Quadra & Sim \\ \hline
-		Sub-Lote &  Uma subdivisão da Lote & Sim \\ \hline
+		\textbf{Atributo} 	& \textbf{Descrição}						& \textbf{Obrigatório}  \\ \hline
+		Localidade 			& Um conjunto populacional					& Sim \\	\hline
+		Setor Comercial 	& Conjunto de quadras, semelhante ao bairro & Sim \\ \hline
+		Quadra 				& Denominado normalmente de "quarteirão" 	& Sim \\ \hline			
+		Lote 				&  Uma subdivisão da Quadra 				& Sim \\ \hline
+		Sub-Lote 			&  Uma subdivisão da Lote 					& Sim \\ \hline
 	\end{tabular}
+\caption{Principais Atributos do Imóvel}
+\label{tabela:atributosImovel}
+Fonte – Autoria Própria
 \end{table}
-\begin{center}
-	Tabela 2: Principais Atributos do Imóvel \\
-	Fonte: Autoria Própria
-\end{center}
 
 
 Tais relacionamentos são necessários para constituir a matrícula do imóvel, que forma um código único e representa a localização exata do imóvel.\\
@@ -87,9 +86,9 @@ As solicitações realizadas pelos clientes aos atendentes são denominadas Regi
 O Sistema GSAN foi desenvolvido fundamentalmente utilizando a plataforma JEE (\textit{Java Enterprise Edition}), propriedade da \textit{Oracle Corporation}, em sua versão 5, na época a mais recente. Utiliza os principais serviços e tecnologias oferecidos pela plataforma, como por exemplo, \textit{Enterprise Java Beans} (EJB), \textit{Java Message Service} (JMS) API, \textit{Java Server Pages} 2.1, entre outros.
 O GSAN possui uma arquitetura que implementa diversos padrões de projeto, visando facilitar a manutenibilidade e manter a organização dos componentes, segue abaixo o diagrama de componentes conforme a figura \ref{figura:arquiteturaDetalhada}:
 
-\begin{figure}[t!]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=\paperwidth]{figuras/gsan_arquitetura.png}
+	\includegraphics{figuras/gsanArquitetura.png}
 	\caption{Arquitetura Detalhada do Sistema GSAN}	
 	\label{figura:arquiteturaDetalhada}
 	Fonte – Autoria Própria
@@ -108,7 +107,7 @@ A configuração do ambiente de desenvolvimento se trata de um passo fundamental
 O processo de empacotamento para geração do EAR (\textit{Enterprise Archive}) para disponibilização, utiliza a ferramenta Apache Ant versão 1.6.2, normalmente a versão disponibilizada pela comunidade já possui alguns scripts de build para serem executados, no entanto é preciso configurar os locais adequados para geração do pacote, conforme segue o exemplo abaixo na figura \ref{figura:configuracaoScriptBuild}:
 
 
-\begin{figure}[!htb]
+\begin{figure}[H]
 	\centering
 	\includegraphics{figuras/build_properties.png}
 	\caption{Exemplo de configuração do script build}
@@ -118,7 +117,7 @@ O processo de empacotamento para geração do EAR (\textit{Enterprise Archive}) 
 	
 A execução do script pode ser realizada dentro da IDE executando o seguinte procedimento, após localizar o arquivo build.xml dentro na raiz do projeto, ao clicar com o botão esquerdo e selecionar a opção \textit{Run as > Ant Build}, será acionado a execução da instrução \textit{make} padrão do script, para construção do pacote a ser disponibilizado, conforme visto na figura \ref{figura:execucaoScriptBuild}:	
 		
-\begin{figure}[!htb]
+\begin{figure}[H]
 	\centering
 	\includegraphics{figuras/build_ant.png}
 	\caption{Execução do script de build}	
