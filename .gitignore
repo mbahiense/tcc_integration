@@ -1,0 +1,8 @@
+*.aux
+*.dvi
+*.idx
+*.lof
+*.log
+*.lot
+*.out.ps
+*.out.toc
