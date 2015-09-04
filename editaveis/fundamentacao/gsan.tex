@@ -1,5 +1,5 @@
 \chapter[Fundamentação Teórica]{\textbf{F}undamentação \textbf{T}eórica}
-\addcontentsline{toc}{chapter}{Fundamentação Teórica}
+%\addcontentsline{toc}{chapter}{Fundamentação Teórica}
 
 \textit{Neste capítulo será apresentado o sistema GSAN e software Asterisk, com a intenção de familiarizar o leitor com as notações que serão amplamente utilizadas no decorrer do trabalho.}
 
@@ -10,10 +10,10 @@ O sistema de código aberto GSAN (Sistema Integrado de Gestão de Serviços de S
 
 \begin{figure}[H]
 	\centering
-	\includegraphics{figuras/implantacaoGSAN.png}
 	\caption{Implantações do Sistema GSAN}	
 	\label{figura:implantacaoSistemaGSAN}
-	Fonte – Portal do Software Público Brasileiro, 2014
+	\includegraphics{figuras/implantacaoGSAN.png}
+	\legend {\fontsize{10}{12}\selectfont {Fonte: \citeonline{PORTAL:2014}}.}
 \end{figure}
 
 
@@ -41,6 +41,8 @@ O imóvel no sistema deve possuir relação com os seguintes itens (Tabela \ref{
 \begin{table}[H]
 	\center
 	\footnotesize
+	\caption{Principais Atributos do Imóvel}
+	\label{tabela:atributosImovel}
 	\begin{tabular}{|p{3cm}|p{7cm}|p{2.5cm}|} \hline
 		\textbf{Atributo} 	& \textbf{Descrição}						& \textbf{Obrigatório}  \\ \hline
 		Localidade 			& Um conjunto populacional					& Sim \\	\hline
@@ -49,9 +51,7 @@ O imóvel no sistema deve possuir relação com os seguintes itens (Tabela \ref{
 		Lote 				&  Uma subdivisão da Quadra 				& Sim \\ \hline
 		Sub-Lote 			&  Uma subdivisão da Lote 					& Sim \\ \hline
 	\end{tabular}
-\caption{Principais Atributos do Imóvel}
-\label{tabela:atributosImovel}
-Fonte – Autoria Própria
+	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
 \end{table}
 
 
@@ -88,10 +88,10 @@ O GSAN possui uma arquitetura que implementa diversos padrões de projeto, visan
 
 \begin{figure}[H]
 	\centering
-	\includegraphics{figuras/gsanArquitetura.png}
 	\caption{Arquitetura Detalhada do Sistema GSAN}	
 	\label{figura:arquiteturaDetalhada}
-	Fonte – Autoria Própria
+	\includegraphics{figuras/gsanArquitetura.png}
+	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
 \end{figure}
 
 	
@@ -109,20 +109,20 @@ O processo de empacotamento para geração do EAR (\textit{Enterprise Archive}) 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics{figuras/build_properties.png}
 	\caption{Exemplo de configuração do script build}
 	\label{figura:configuracaoScriptBuild}	
-	Fonte – Autoria Própria
+	\includegraphics{figuras/build_properties.png}
+	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
 \end{figure}
 	
 A execução do script pode ser realizada dentro da IDE executando o seguinte procedimento, após localizar o arquivo build.xml dentro na raiz do projeto, ao clicar com o botão esquerdo e selecionar a opção \textit{Run as > Ant Build}, será acionado a execução da instrução \textit{make} padrão do script, para construção do pacote a ser disponibilizado, conforme visto na figura \ref{figura:execucaoScriptBuild}:	
 		
 \begin{figure}[H]
 	\centering
-	\includegraphics{figuras/build_ant.png}
-	\caption{Execução do script de build}	
+	\caption{Execução do script de build}
 	\label{figura:execucaoScriptBuild}
-	Fonte – Autoria Própria
+	\includegraphics{figuras/build_ant.png}
+	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
 \end{figure}
 
 Para executar a aplicação faz-se necessário a utilização de um servidor de aplicação que implemente as principais interfaces de serviços da plataforma JEE que serão consumidos pela aplicação, neste trabalho foi utilizado o projeto \textit{Open Source Jboss Community} na versão 4.0.1, compatível com as tecnologias utilizadas no GSAN, a configuração deste Servidor de Aplicação Web pode ser consultado nos anexos deste trabalho.
@@ -131,10 +131,10 @@ Para executar o sistema GSAN, utilizando o terminal de comando do sistema operac
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics{figuras/executando_jboss.png}
 	\caption{Executando o sistema GSAN}	
 	\label{figura:execucaoSistemaGSAN}
-	Fonte – Autoria Própria
+	\includegraphics{figuras/executando_jboss.png}	
+	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
 \end{figure}
 
 
@@ -145,10 +145,10 @@ Para acessar o sistema em execução, basta digitar o seguinte endereço no nave
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics{figuras/gsan_online.png}
 	\caption{Acessando página inicial do Sistema}
 	\label{figura:acessoPaginaInicial}	
-	Fonte – Autoria Própria
+	\includegraphics{figuras/gsan_online.png}	
+	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
 \end{figure}
 
 

@@ -1,32 +1,73 @@
-\input{fixos/pacotes}
-\input{fixos/comandos}
-\input{fixos/novosComandos}
+\include{fixos/pacoteseclass}
+\setlrmarginsandblock{3cm}{2cm}{*}
+\setulmarginsandblock{3cm}{2cm}{*}
+\checkandfixthelayout
 
-\input{editaveis/informacoes}
-\input{fixos/informacoes}
-\input{fixos/setup}
+\usepackage{float}
+%\usepackage[a4paper,bottom=2cm,top=3cm,left=3cm,right=2cm]{geometry}
+
+
+% Informações de dados para CAPA e FOLHA DE ROSTO
+\titulo{\uppercase{Call Center Automatizado: Integrando um PABX baseado em Asterisk com o GSAN}}
+\autor{Marcos Roberto Garcia Bahiense Júnior}
+\local{Manaus}
+\data{2015}
+\orientador{Prof M.Sc. Carlos Augusto Mar}
+
+\include{fixos/instituicao/sis}
 
 \begin{document}
-
 \frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+\pretextual
+% Capa
 \imprimircapa
+% Folha de rosto (* indica que haverá a ficha bibliográfica)
 \imprimirfolhaderosto*
 
-%\input{fixos/fichaCatalografica}
-%\input{editaveis/errata}
-%\input{fixos/folhaDeAprovacao}
+% Ficha Bibliográfica
+%\include{fixos/fichabibliografica}
+%\include{editaveis/errata}
+%\include{editaveis/folhadeaprovacao}
+%\imprimirfolhadeaprovacao
+
 \include{editaveis/dedicatoria}
 \include{editaveis/agradecimentos}
-\include{editaveis/epigrafe}
-\include{editaveis/resumo}
-\include{editaveis/abstract}
-\include{fixos/listasAutomaticas}
-\include{editaveis/abreviaturas}
-%\input{editaveis/simbolos}
-\include{fixos/indiceAutomatico}
+%\include{editaveis/epigrafe}
 
+% RESUMOS
+\include{resumo/ptbr}
+\include{resumo/us}
+
+% Lista de ilustrações
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
+% Lista de tabelas
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+
+%\include{editaveis/siglas}
+%\include{editaveis/simbolos}
+
+% Sumário
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
 \textual
-% INTRODU��O 
+
+% ----------------------------------------------------------
+% Introdução
+% ----------------------------------------------------------
 \input{editaveis/inicial/introducao}
 \input{editaveis/inicial/problema}
 \input{editaveis/inicial/objetivo}
@@ -35,39 +76,59 @@
 \input{editaveis/inicial/trabalhosRelacionados}
 \input{editaveis/inicial/metodos}
 
-% FUNDAMENTACAO TEORICA
-\input{editaveis/fundamentacao/gsan}
+% ----------------------------------------------------------
+% PARTE I - Fundamentação
+% ----------------------------------------------------------
+%\part{Preparação da pesquisa}
+\include{editaveis/fundamentacao/gsan}
 \input{editaveis/fundamentacao/asterisk}
 
-% REVISAO BIBLIOGRAFICA
-\input{editaveis/revisao/revisaoBibliografica}
+% Capitulo de revisão de literatura
+\include{editaveis/revisao/revisaoBibliografica}
 
-% INTEGRA��O
+% ----------------------------------------------------------
+% PARTE II - CORE
+% ----------------------------------------------------------
+% INTEGRAÇÃO
 \input{editaveis/integracao/etapas}
 \input{editaveis/integracao/webservices}
 \input{editaveis/integracao/middleware}
 \input{editaveis/integracao/customAsterisk}
 
-% RESULTADOS ALCAN�ADOS
-\input{editaveis/resultado/descricao}
+% ----------------------------------------------------------
+% PARTE III - RESULTADOS ALCANÇADOS
+% ----------------------------------------------------------
+%\part{Resultados}
+\include{editaveis/resultado/descricao}
 \input{editaveis/resultado/avaliacao}
+\include{editaveis/consideracao/consideracoes}
 
-% CONSIDERA��ES FINAIS
-\input{editaveis/consideracao/consideracoes}
 
-% PENDENTE REFERENCIA E ANEXOS 
-
-\bookmarksetup{startatroot} 
-
+% ----------------------------------------------------------
+% Finaliza a parte no bookmark do PDF para que se inicie o bookmark na raiz e adiciona espaço de parte no Sumário
+% ----------------------------------------------------------
+\phantompart
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
 \postextual
 
+% Referências bibliográficas
+\bibliography{bibtex/referencias}
 
-\bibliography{bibliografia} 
-%\bibliographystyle{acm}
-%acm, alpha, ieeetr, pain, sian, abbrv
-%\input{editaveis/apendices}
-%\input{editaveis/anexos}
+% Glossário (Consulte o manual da classe abntex2 para orientações sobre o glossário)
+%\glossary
+
+% Apêndices
+%\include{editaveis/apendices}
+
+% Anexos
+%\include{editaveis/anexos}
+
+%---------------------------------------------------------------------
+% INDICE REMISSIVO
+%---------------------------------------------------------------------
+\phantompart
 \printindex
-
+%---------------------------------------------------------------------
 \end{document}
-

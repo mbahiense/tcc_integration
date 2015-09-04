@@ -1,5 +1,5 @@
 \chapter[Processo de Integração]{\textbf{P}rocesso de \textbf{I}ntegração}
-\addcontentsline{toc}{chapter}{Processo de Integração}
+%\addcontentsline{toc}{chapter}{Processo de Integração}
 
 \textit{Neste capítulo são apresentados os procedimentos para a integração dos sistemas envolvidos, expondo o detalhes de implementação e configuração da solução proposta.}
 
@@ -11,10 +11,10 @@ Após o estudo aprofundado sobre o sistema GSAN e software Asterisk foram identi
 
 \begin{figure}[H]
 	\centering
-	\includegraphics{figuras/diagrama_implantacao.png}
 	\caption{Diagrama de implantação da solução}
-	\label{figura:diagramaImplantacao}	
-	Fonte – Autoria Própria
+	\label{figura:diagramaImplantacao}
+	\includegraphics{figuras/diagrama_implantacao.png}
+	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}	
 \end{figure}
 
 
@@ -29,34 +29,34 @@ O processo de integração será composto por tecnologias com paradigmas diferen
 \begin{table}[H]
 	\center
 	\footnotesize
+	\caption{Tecnologias utilizadas}
+	\label{tabela:tecnologiasUtilizadas}
 	\begin{tabular}{|p{4cm}|p{7cm}|p{2cm}|}
 		\hline
 		\textbf{Software} & \textbf{Finalidade} & \textbf{Versão} \\
 		\hline
 		Java Platform, \textit{Enterprise Edition} 5 (JEE) & Conjunto de Tecnologias e Serviços para implementar soluções da Plataforma Java com estabilidade, segurança e escalabilidade. & 5 \\
 		\hline
-		JBoss & Servidor de aplicação que implementa especificações JEE. & 4.0.1 sp1 \\
+		JBoss 				& Servidor de aplicação que implementa especificações JEE. 								& 4.0.1 sp1 \\
 		\hline
-		Hibernate & Framework utilizado para fazer o mapeamento objeto-relacional. É responsável pela camada de persistência. & 3.1 \\
+		Hibernate 			& Framework utilizado para fazer o mapeamento objeto-relacional. É responsável pela camada de persistência. & 3.1 \\
 		\hline
-		PostgreSQL & Banco de dados relacional. & 9.3.4 \\
+		PostgreSQL 			& Banco de dados relacional. 															& 9.3.4 \\
 		\hline
-		Apache Ant & Geração de \textit{Enterprise Application Resources} (EAR) deploy’s. & 1.6.2 \\
+		Apache Ant 			& Geração de \textit{Enterprise Application Resources} (EAR) deploy’s. 					& 1.6.2 \\
 		\hline
-		JasperReports & Tecnologia utilizada para criação de relatórios em PDF, HTML, XLS, CSV e XM.L & 1.2.2 \\
+		JasperReports 		& Tecnologia utilizada para criação de relatórios em PDF, HTML, XLS, CSV e XM.L 		& 1.2.2 \\
 		\hline
-		Struts & Framework para controle de navegação e validação Web. & 1.1	 \\
+		Struts 				& Framework para controle de navegação e validação Web. 								& 1.1	 \\
 		\hline
-		Disc-OS & Distribuição CentOS 2.6 que implementa interface web para a ferramenta Asterisk. & 2.0-1 \\
+		Disc-OS 			& Distribuição CentOS 2.6 que implementa interface web para a ferramenta Asterisk. 		& 2.0-1 \\
 		\hline
-		Asterisk & Software livre que permite a criação de PABX com diversos recursos. & 1.4 \\		
+		Asterisk 			& Software livre que permite a criação de PABX com diversos recursos. 					& 1.4 \\		
 		\hline
-		Asterisk-Java & Framework para comunicação com o Asterisk via protocolo AGI. & 1.0 \\	
+		Asterisk-Java 		& Framework para comunicação com o Asterisk via protocolo AGI. 							& 1.0 \\	
 		\hline			
 	\end{tabular}
-	\caption{Tecnologias utilizadas}
-	\label{tabela:tecnologiasUtilizadas}
-	Fonte – Autoria Própria
+	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
 \end{table}
 
 
