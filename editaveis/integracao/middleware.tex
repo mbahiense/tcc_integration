@@ -1,19 +1,19 @@
 \subsection{Desenvolver \textit{Middleware}}
 
 O \textit{Middleware} intermediário denominado Integrador será responsável em receber as solicitações realizadas pela URA do Asterisk, após analisar deverá efetuar requisições ao \textit{WebService} do sistema GSAN, que deverá retornar as informações esperadas, até então devolver as informações essenciais ao Asterisk.
-No cenário da integração proposta o sistema Integrador, deverá ser capaz de comunicar-se com o sistema Asterisk via protocolo AGI, para tanto foi utilizado um projeto \textit{Open Source} chamada Asterisk-Java, que fornece bibliotecas para comunicação com o Asterisk utilizando os protocolos comuns ao sistema, no entanto será preciso mapear as chamadas que serão realizadas.
+No cenário da integração proposta o sistema Integrador, deverá ser capaz de comunicar-se com o sistema Asterisk via interface AGI, para tanto foi utilizado um projeto \textit{Open Source} chamada Asterisk-Java, que fornece bibliotecas para comunicação com o Asterisk utilizando os protocolos comuns ao sistema, no entanto será preciso mapear as chamadas que serão realizadas.
 Para cada novo serviço a ser disponibilizado, será necessário declarar uma chave de texto que será utilizada no Asterisk, representando o objeto a ser invocado, adicionados em um novo arquivo chamado \textit{fastagi-mapping.properties} da seguinte maneira, conforme a figura \ref{figura:mapeamenteServicosAGI} abaixo:
 
 \begin{figure}[!htb]
 	\centering
-	\caption{Mapeamento dos serviços para consumo via Agi}
+	\caption{Mapeamento dos serviços para consumo via AGI}
 	\label{figura:mapeamenteServicosAGI}
 	\includegraphics{figuras/mapeamento_servicos_agi.png}
 	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
 \end{figure}
 
 
-Feito isso o integrador já possuirá condições de recepcionar as solicitações originadas pelo \textit{software} Asterisk utilizando o protocolo de comunicação AGI, e direcionar a chamada internamente para uma classe concreta que implemente o protocolo de comunicação utilizado, assim como a lógica de consumo aos novos serviços disponibilizados pelo \textit{WebService} do sistema GSAN.
+Feito isso o integrador já possuirá condições de recepcionar as solicitações originadas pelo \textit{software} Asterisk utilizando a interface de comunicação AGI, e direcionar a chamada internamente para uma classe concreta que implemente o protocolo de comunicação utilizado, assim como a lógica de consumo aos novos serviços disponibilizados pelo \textit{WebService} do sistema GSAN.
 
 Para cada classe concreta a ser disponibilizada será necessário estender a classe \textit{BaseAgiScript} disponibilizada pelo \textit{framework} Asterisk-Java, após estender o comportamento será necessário implementar o método service obtido pela herança da \textit{BaseAgiScript}, tal método será invocado quando a requisição for direcionada ao serviço mapeado, segue abaixo um exemplo de implementação utilizado, conforme algoritmo 1 abaixo:
 
