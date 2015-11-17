@@ -27,7 +27,8 @@ Este terminal é responsável em executar ambos os sistemas envolvidos, no entan
 O terminal possui uma conexão de rede local ativa, para que seja atribuído uma faixa de IP ao sistema operacional hospedeiro e ao convidado.
 Visando garantir o correto funcionamento e a padronização do ambiente de teste foram criados testes de integração reproduzindo uma chamada telefônica programaticamente simulando um ambiente real, para tanto foi necessário utilizar os seguintes recursos o framework JUnit na construção dos testes e o recurso nativo do Asterisk chamado \textit{Local Channel} que permite criar um canal de comunicação com um contexto e extensão específica dentro do sistema Asterisk, ou seja permite acessar diretamente o ponto de integração entre os sistemas.
 
-Foram criados contextos específicos para teste no software Asterisk, conforme visto abaixo;
+Foram criados contextos específicos para teste no software Asterisk, replicando os mesmos contextos utilizados no fluxo da URA visando 
+isolar o comportamento que ocorre no momento da integração sem a necessidade de redirecionamentos entre serviços ou ramais, conforme visto abaixo;
 
 \begin{figure}[H]
 	\centering
@@ -37,14 +38,16 @@ Foram criados contextos específicos para teste no software Asterisk, conforme v
 	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}	
 \end{figure}
 
-
+A distribuição Disc-OS por padrão possui uma configuração de firewall bastante restritiva por questões de segurança, na execução dos testes será preciso obter dados sobre os eventos que ocorrem internamente na ferramenta Asterisk, ou seja os parâmetros de sinalização que indica a ocorrência de falhas, para que não ocorra rejeição nas solicitações realizadas ao Asterisk, será para fins de testes desabilitada as regras do firewall, utilizando o seguinte comando \textit{/etc/init.d/iptables stop}.
 
 \subsection{Elaboração dos Cenários de Teste}
-
-Os cenários de testes representam as possíveis situações cadastrais fictícias e comportamentais vinculadas a um cliente, essencial para realizar um atendimento via sistema. Foram propostos 3 cenários de teste para cada serviço automatizado, visando assegurar o correto comportamento da solução. Abaixo estão descritos os cenários conforme cada serviços proposto:
+Nesta fase foram elaborados possíveis cenários de teste para os três serviços automatizados, são respectivamente Obter 2ª via de conta, Informar Falta de Água e Solicitar Restabelecimento da Ligação de Água. Cada serviço proposto possui um objetivo específico sempre vinculado a um imóvel e/ou cliente.
+Os cenários de testes representam as possíveis situações cadastrais fictícias e comportamentais vinculadas a um cliente, essencial para realizar um atendimento via sistema. Foram propostos 3 cenários de teste para cada serviço citado acima, visando assegurar o correto comportamento da solução. Abaixo estão descritos os cenários conforme cada serviços proposto:
 
 \subsubsection{Obter 2ª Via de Conta}
-Abaixo serão descritos os casos de testes previstos para o serviço Obter 2ª Via de Conta.
+Este serviço tem como objetivo checar se há alguma conta pendente referente ao imóvel informado, caso haja pendência o serviço deve submeter a conta pendente via e-mail para o cliente do imóvel. 
+
+Abaixo serão descritos os casos de testes previstos para o serviço Obter 2ª Via de Conta, foi cadastrado o mesmo endereço de e-mail para os 3 cenários.
 \begin{flushleft}
 	\begin{description}
 		\item \textbf{CENÁRIO 1}: Cliente devidamente cadastrado no Sistema, atualmente usuário de um imóvel que possui ativo a Ligação de Água e Esgoto, com uma conta em atraso. O Cliente deseja obter a conta em aberto, conforme demostrado na figura \ref{figura:2ViaCenario1}.
@@ -58,7 +61,7 @@ Abaixo serão descritos os casos de testes previstos para o serviço Obter 2ª V
 	\end{description}
 	
 	\begin{description}
-		\item \textbf{CENÁRIO 2}: Cliente devidamente cadastrado no Sistema, atualmente sendo usuário de um imóvel que possui a Ligação de Água cortada por falta de pagamento, atualmente com três contas em aberto. O Cliente deseja obter todas as contas em aberto, conforme demostrado na figura \ref{figura:2ViaCenario2}.
+		\item \textbf{CENÁRIO 2}: Cliente devidamente cadastrado no Sistema, atualmente sendo usuário de um imóvel que possui a Ligação de Água cortada por falta de pagamento, atualmente com três contas em aberto. O Cliente deseja obter a conta de maior atraso, conforme demostrado na figura \ref{figura:2ViaCenario2}.
 		\begin{figure}[H]
 			\centering
 			\caption{Obter 2ª via - Cenário de Teste 2}
@@ -83,6 +86,7 @@ Abaixo serão descritos os casos de testes previstos para o serviço Obter 2ª V
 
 
 \subsubsection{Informar Falta de Água}
+Este serviço tem como objetivo formalizar junto ao sistema GSAN um novo Registro de Atendimento referente a Falta de Água para o imóvel informado.
 Abaixo serão descritos os casos de testes previstos para o serviço Informar Falta de Água.
 \begin{flushleft}
 	\begin{description}
@@ -104,8 +108,7 @@ Abaixo serão descritos os casos de testes previstos para o serviço Informar Fa
 			\label{figura:informarFaltaAguaCenario2}
 			\includegraphics{figuras/cenarios/informar_falta_agua/cenario_2.PNG}
 			\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}	
-		\end{figure}
-		
+		\end{figure}		
 	\end{description}
 	
 	\begin{description}
@@ -121,6 +124,7 @@ Abaixo serão descritos os casos de testes previstos para o serviço Informar Fa
 \end{flushleft}	
 
 \subsubsection{Solicitar Restabelecimento da Ligação de Água}
+Este serviço tem como objetivo formalizar junto ao sistema GSAN um novo Registro de Atendimento referente ao Restabelecimento da Ligação de Água para um imóvel informado.
 Abaixo serão descritos os casos de testes previstos para o serviço Solicitar Restabelecimento da Ligação de Água.
 \begin{flushleft}
 	\begin{description}
@@ -160,15 +164,117 @@ Abaixo serão descritos os casos de testes previstos para o serviço Solicitar R
 
 
 \subsection{Execução dos Cenários de Teste}
-A execução dos cenários propostos será feita utilizando os testes automatizados citados na seção anterior, cada resultado será coletado e apresentado. 
-
-TODO: ATUALIZAR COM AS IMAGENS!!
 
 
-\subsection{Análise dos resultados}
-O cenário deve ser totalmente atendimento para que se tenha sucesso no atendimento e posteriormente a situação de \textbf{ATENDINDO}, caso contrário será obtido à situação de \textbf{NÃO ATENDINDO}, caso o atendimento não seja concluído com sucesso o cenário deve conter uma observação, descrevendo o motivo ao qual levou a tal situação.
-Abaixo serão descritos os Cenários dos serviços propostos:
+A execução dos cenários propostos foi realizado utilizando o \textit{framework} de teste JUnit citados na seção anterior, segue abaixo resultado; 
 
+\subsubsection{Obter 2ª Via de Conta}
+ 
+ Após a execução dos cenários de teste implementados para este serviço foi possível notar que 2/3 Cenários concluíram com sucesso e apenas 1/3 falhou em sua execução, conforme demostrado na figura \ref{figura:segundaViaJUnit}.		
+	\begin{figure}[H]
+		\centering
+		\caption{Obter 2ª Via de Conta - Detalhes execução dos testes}
+		\label{figura:segundaViaJUnit}
+		\includegraphics{figuras/cenarios/segunda_via/junit_result.PNG}
+		\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}	
+	\end{figure}
+	
 
+Em cada cenário de teste o sistema deve enviar um e-mail contendo a 2ª via da conta solicitada, a figura \ref{figura:emailRecebido} ilustra a caixa de entrada do E-mail configurado para cada cliente.
+	\begin{figure}[H]
+		\centering
+		\caption{Obter 2ª Via de Conta - E-mail recebido pelo cliente}
+		\label{figura:emailRecebido}
+		\includegraphics{figuras/cenarios/segunda_via/envio_email.PNG}
+		\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}	
+	\end{figure}
+
+	
+\subsubsection{Informar Falta de Água}
+
+ Após a execução dos cenários de teste implementados para este serviço foi possível identificar que todos os 3 cenários previsto executaram com sucesso, conforme demostrado na figura \ref{figura:informarFaltaJUnit}.	
+
+	\begin{figure}[H]
+		\centering
+		\caption{Informar Falta de Água - Detalhes execução dos testes}
+		\label{figura:informarFaltaJUnit}
+		\includegraphics{figuras/cenarios/informar_falta_agua/junit_result.PNG}
+		\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}	
+	\end{figure}
+
+Ao consulta o sistema GSAN, visando identificar se houve a ocorrência da formalização dos Registros de Atendimentos, o primeiro cenário cujo o identificar 1276833 representa a matrícula do imóvel, houve a geração do Registro de Atendimento de número 6594, conforme demonstrado na figura \ref{figura:informarFaltaRA1}.
+
+	\begin{figure}[H]
+		\centering
+		\caption{Informar Falta de Água - RA gerado para o Cenário 1}
+		\label{figura:informarFaltaRA1}
+		\includegraphics{figuras/cenarios/informar_falta_agua/resultado_1.PNG}
+		\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}	
+	\end{figure}
+	
+Para o segundo cenário, cujo o identificador 13702840 representa a matrícula do imóvel, houve a geração do Registro de Atendimento de número 6598, conforme exposto na figura \ref{figura:informarFaltaRA2}.	
+		
+	\begin{figure}[H]
+		\centering
+		\caption{Informar Falta de Água - RA gerado para o Cenário 2}
+		\label{figura:informarFaltaRA2}
+		\includegraphics{figuras/cenarios/informar_falta_agua/resultado_2.PNG}
+		\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}	
+	\end{figure}
+
+Para o terceiro cenário, cujo o identificador 13704001 representa a matrícula do imóvel, também houve a geração do Registro de Atendimento de número 6596, conforme exposto na figura \ref{figura:informarFaltaRA3}.	
+
+\begin{figure}[H]
+	\centering
+	\caption{Informar Falta de Água - RA gerado para o Cenário 3}
+	\label{figura:informarFaltaRA3}
+	\includegraphics{figuras/cenarios/informar_falta_agua/resultado_3.PNG}
+	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}	
+\end{figure}	
+
+		
+\subsubsection{Solicitar Restabelecimento da Ligação de Água}
+
+ Após a execução dos cenários de teste implementados para este serviço foi possível identificar que todos os 3 cenários previsto executaram com sucesso, conforme demostrado na figura \ref{figura:restabelecimentoJUnit}.	
+
+\begin{figure}[H]
+	\centering
+	\caption{Restabelecimento da Ligação de Água - Detalhes execução dos testes}
+	\label{figura:restabelecimentoJUnit}
+	\includegraphics{figuras/cenarios/restabelecimento/junit_result.PNG}
+	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}	
+\end{figure}
+
+Ao consulta o sistema GSAN, visando identificar se houve a ocorrência da formalização dos Registros de Atendimentos, o primeiro cenário cujo o identificar 1239723 representa a matrícula do imóvel, houve a geração do Registro de Atendimento de número 6604, conforme demonstrado na figura \ref{figura:restabelecimentoRA1}.
+
+\begin{figure}[H]
+	\centering
+	\caption{Restabelecimento da Ligação de Água - RA gerado para o Cenário 1}
+	\label{figura:restabelecimentoRA1}
+	\includegraphics{figuras/cenarios/restabelecimento/resultado_1.PNG}
+	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}	
+\end{figure}
+
+Para o segundo cenário, cujo o identificador 80166 representa a matrícula do imóvel, houve a geração do Registro de Atendimento de número 6608, conforme exposto na figura \ref{figura:restabelecimentoRA2}.	
+
+\begin{figure}[H]
+	\centering
+	\caption{Restabelecimento da Ligação de Água - RA gerado para o Cenário 2}
+	\label{figura:restabelecimentoRA2}
+	\includegraphics{figuras/cenarios/informar_falta_agua/resultado_2.PNG}
+	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}	
+\end{figure}
+	
+Para o terceiro cenário, cujo o identificador 13702572 representa a matrícula do imóvel, mesmo o cliente em situação de inadimplência houve a geração do Registro de Atendimento de número 6606, conforme exposto na figura \ref{figura:restabelecimentoRA3}.	
+
+\begin{figure}[H]
+	\centering
+	\caption{Restabelecimento da Ligação de Água - RA gerado para o Cenário 3}
+	\label{figura:restabelecimentoRA3}
+	\includegraphics{figuras/cenarios/informar_falta_agua/resultado_3.PNG}
+	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}	
+\end{figure}	
+
+Os detalhes sobre cada Registro de Atendimento mencionado acima podem ser consultados nos anexos deste trabalho.
 
 
