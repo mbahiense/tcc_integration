@@ -1,13 +1,13 @@
 \chapter[Resultados Alcançados]{\textbf{R}esultados \textbf{A}lcançados}
+%\chapter[Resultados Alcançados]{\textbf{R}esultados \textbf{A}lcançados}
 %\addcontentsline{toc}{chapter}{Resultados Alcançados}
 
 \textit{Será apresentado neste capítulo a execução dos experimentos sob a solução abordada nas seções anteriores, e exposto os resultados que foram alcançados.}
 
-\section{Materiais e Métodos}
-
-Os experimentos sobre a solução de integração dos sistemas, foram necessários grandes esforços tanto no planejamento de um ambiente controlado quanto na elaboração e análise dos cenários de testes envolvidos. Para que os cenários de teste sejam o mais semelhante ao ambiente de produção os mesmo serão executados sobre uma chamada telefônica tendo como originador o suposto cliente com as devidas características. 
 
 \subsection{Ambiente de teste}
+
+Os experimentos sobre a solução de integração dos sistemas, foram necessários grandes esforços tanto no planejamento de um ambiente controlado quanto na elaboração e análise dos cenários de testes envolvidos. Para que os cenários de teste sejam o mais semelhante ao ambiente de produção, os mesmo serão executados sobre uma chamada telefônica tendo como originador o suposto cliente com as devidas características. 
 
 O ambiente para execução dos testes será realizando um terminal cujo as especificações estão descritas abaixo:
 
@@ -22,7 +22,7 @@ O ambiente para execução dos testes será realizando um terminal cujo as espec
 	\legend{\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
 \end{table}
 
-Este terminal é responsável em executar ambos os sistemas envolvidos, no entanto como software Asterisk está disponível somente para plataforma Linux será utilizado o recurso de máquina virtual através do software Virtual Box\footnote{Disponível em \url{https://www.virtualbox.org/}}, para subir uma instância da distribuição Disc-Os conforme citado nas seções anteriores.
+Este terminal é responsável em executar ambos os sistemas envolvidos, no entanto como o software Asterisk está disponível somente para plataforma Linux, é preciso utilizar o recurso de máquina virtual através do software Virtual Box\footnote{Disponível em \url{https://www.virtualbox.org/}}, para subir uma instância da distribuição Disc-Os conforme citado nas seções anteriores.
  
 O terminal possui uma conexão de rede local ativa, para que seja atribuído uma faixa de IP ao sistema operacional hospedeiro e ao convidado.
 Visando garantir o correto funcionamento e a padronização do ambiente de teste foram criados testes de integração reproduzindo uma chamada telefônica programaticamente simulando um ambiente real, para tanto foi necessário utilizar os seguintes recursos o framework JUnit na construção dos testes e o recurso nativo do Asterisk chamado \textit{Local Channel} que permite criar um canal de comunicação com um contexto e extensão específica dentro do sistema Asterisk, ou seja permite acessar diretamente o ponto de integração entre os sistemas.
@@ -40,7 +40,7 @@ isolar o comportamento que ocorre no momento da integração sem a necessidade d
 
 A distribuição Disc-OS por padrão possui uma configuração de firewall bastante restritiva por questões de segurança, na execução dos testes será preciso obter dados sobre os eventos que ocorrem internamente na ferramenta Asterisk, ou seja os parâmetros de sinalização que indica a ocorrência de falhas, para que não ocorra rejeição nas solicitações realizadas ao Asterisk, será para fins de testes desabilitada as regras do firewall, utilizando o seguinte comando \textit{/etc/init.d/iptables stop}.
 
-\subsection{Elaboração dos Cenários de Teste}
+\subsection{Cenários de Teste}
 Nesta fase foram elaborados possíveis cenários de teste para os três serviços automatizados, são respectivamente Obter 2ª via de conta, Informar Falta de Água e Solicitar Restabelecimento da Ligação de Água. Cada serviço proposto possui um objetivo específico sempre vinculado a um imóvel e/ou cliente.
 Os cenários de testes representam as possíveis situações cadastrais fictícias e comportamentais vinculadas a um cliente, essencial para realizar um atendimento via sistema. Foram propostos 3 cenários de teste para cada serviço citado acima, visando assegurar o correto comportamento da solução. Abaixo estão descritos os cenários conforme cada serviços proposto:
 
