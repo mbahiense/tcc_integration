@@ -1,9 +1,9 @@
 \subsection{Desenvolver Suíte de Testes Automatizados}
 
-A suíte de testes automatizados será responsável em garantir o correto funcionamento da integração entre os sistemas envolvidos, ou seja prover um meio onde possa ser testado tanto o Webservice do GSAN quanto a Interface Agi implementada para o Asterisk, para essa situação foram utilizados recursos do JUnit para criação dos cenários, execução dos testes e identificação de falhas, quanto recursos do framework Asterisk-Java para simular e controlar uma chamada telefônica com parâmetros dinâmicos.   
+A suíte de testes automatizados será responsável em garantir o correto funcionamento da integração entre os sistemas envolvidos, ou seja prover um meio onde possa ser testado tanto o Webservice do GSAN quanto a \textit{interface} Agi implementada para o Asterisk, para essa situação foram utilizados recursos do JUnit para criação dos cenários de teste, execução dos testes e identificação de falhas, quanto recursos do \textit{framework} Asterisk-Java para simular e controlar chamadas telefônicas com parametrização dinâmica.   
 
 Cada classe de teste deve implementar uma interface do framework Asterisk-Java chamada \textit{PropertyChangeListener} e posteriormente ser registrada como \textit{Listener} em uma classe da suíte chamada \textit{SuiteAsteriskListener}, que atua como uma escuta de modificações ocorridas em  canais, tais canais que representam as chamadas existentes na ferramenta. 
-A suíte de testes está configurada para sempre antes de executar um teste realiza primeiro o Login na ferramenta Asterisk e ao final da execução do teste efetuar o Logoff, somente após o login é possível iniciar a simulação das chamadas para os contextos de testes, abaixo está demonstrado o funcionamento na forma de diagrama de sequência conforme a figura \ref{figura:diagramaSeq2Via} abaixo;
+A suíte de testes está configurada para sempre antes de executar um teste realiza primeiro o Login na ferramenta Asterisk e ao final da execução do teste efetuar o Logoff, somente após o login é possível iniciar a simulação das chamadas para os contextos de testes, abaixo está demonstrado o funcionamento da suíte de teste conforme o diagrama \ref{figura:diagramaSeq2Via};
 
 \begin{figure}[!htb]
 	\centering
@@ -13,6 +13,13 @@ A suíte de testes está configurada para sempre antes de executar um teste real
 	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
 \end{figure}
 
+Durante a execução de um cenário de teste, é necessário monitorar o comportamento da chamada ou canal internamento na ferramente Asterisk,
+afim de validar o retorno obtido pela requisição e posteriormente evidenciar a ocorrência do comportamento esperado ou de falhas. Com isso se faz necessário habilitar a conexão remota na ferramenta Asterisk, no arquivo \textit{/etc/asterisk/manager.conf}.
+
+A distribuição Disc-OS por padrão possui uma configuração de firewall bastante restritiva por questões de segurança, para que não ocorra rejeição nas solicitações realizadas ao Asterisk, será para fins de testes desabilitada as regras do firewall, utilizando o seguinte comando \textit{/etc/init.d/iptables stop}.
+ 
+ Além de desabilitar as regras de firewall será preciso habilitar a c
+ 
 % Figura para demonstrar a classe de teste - classe_teste_suite.png
 % Para execução dos testes foi necessário realizar algumas customizações na ferramenta Asterisk, 
 % desabilitar o iptables, 

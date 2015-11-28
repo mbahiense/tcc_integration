@@ -15,23 +15,37 @@ Para cada novo serviço a ser disponibilizado, será necessário declarar uma ch
 
 Feito isso o integrador já possuirá condições de recepcionar as solicitações originadas pelo \textit{software} Asterisk utilizando a interface de comunicação AGI, e direcionar a chamada internamente para uma classe concreta que implemente o protocolo de comunicação utilizado, assim como a lógica de consumo aos novos serviços disponibilizados pelo \textit{WebService} do sistema GSAN.
 
-Para cada classe concreta a ser disponibilizada será necessário estender a classe \textit{BaseAgiScript} disponibilizada pelo \textit{framework} Asterisk-Java, após estender o comportamento será necessário implementar o método service obtido pela herança da \textit{BaseAgiScript}, tal método será invocado quando a requisição for direcionada ao serviço mapeado, segue abaixo um exemplo de implementação utilizado, conforme algoritmo 1 abaixo:
+Para cada classe concreta a ser disponibilizada será necessário estender a classe \textit{BaseAgiScript} disponibilizada pelo \textit{framework} Asterisk-Java, após estender o comportamento será necessário implementar o método service obtido pela herança da \textit{BaseAgiScript}, tal método será invocado quando a requisição for direcionada ao serviço mapeado, segue abaixo um exemplo de implementação utilizado, conforme algoritmo \ref{algoritmo:identificaoCliente} abaixo:
 
+% Custom exibição da lista de algoritmos
+\algsetup{
+	linenosize=\small,
+	linenodelimiter=.	
+}
 
-\textbf{Algoritmo 1} - Novo serviço de identificação do cliente (Middleware).\\
-\textbf{Entrada}: O primeiro parâmetro disponibiliza detalhes sobre a atual requisição, já o segundo contém informações e recursos para manipular o canal. (requisição, canal)
-\begin{enumerate}
-	\item $atenderLigação() \hspace{20 mm} \triangleright recepciona a ligação$
-	\item $digitoInformado  \longleftarrow canal [cliente] \hspace{20 mm}	\triangleright	obtém dígitos informados pelo originador$
-	\item \textbf{se} $valorInformado == nulo$ \textbf{então}		 
-	\item  \hspace{7 mm} $tocarAudio(informar\_valor)	\hspace{20 mm}	\triangleright tocar áudio de aviso$
-	\item  \hspace{7 mm} $canal [situacao] \longleftarrow erro	\hspace{20 mm}	\triangleright 	sinaliza para o canal que houve erro$
-	\item \textbf{senão}
-	\item  \hspace{7 mm} $ws \longleftarrow obterWebService()	\hspace{20 mm}	\triangleright	obtém uma instância do webservice cliente$
-	\item  \hspace{7 mm} $retorno \longleftarrow ws.pesquisarImovelOuCliente(valorInformado) 	\hspace{20 mm}	\triangleright faz a requisição para o novo serviço do sistema GSAN$
-	\item  \hspace{7 mm} $tratarRetorno(retorno) \hspace{20 mm}	\triangleright	 faz o tratamento do retorno obtido$
-	\item \textbf{fim}
-\end{enumerate}
+\begin{algorithm}
+	\caption{Novo serviço de identificação do cliente (Middleware).}	
+	\label{algoritmo:identificaoCliente}
+	\begin{algorithmic}[1]
+		\STATE $atenderLigação()$ 		
+		\COMMENT{recepciona a liga}
+		\STATE $digitoInformado \gets canal[cliente]$ 	\COMMENT{Obtém os dígito  informados}
+		\IF{ $valorInformado <> null$ }
+		\STATE $ws \gets obterWebService() $ 
+		\COMMENT{Obtém a instância do WebService}
+		\STATE $retorno \gets ws.pesquisarImovelOuCliente(valorInformado) $
+		\COMMENT{Realiza a requisição}
+		\STATE $ tratarRetorno(retorno) $
+		\COMMENT{Verifica o retorno obtido}
+		\ELSE		
+		\STATE $ tocarAudio(informar\_valor) $
+		\COMMENT{Tocar o áudio de aviso}
+		\STATE $ canal[situacao] \leftarrow erro $
+		\COMMENT{Sinaliza o erro}
+		\ENDIF		
+	\end{algorithmic}
+\end{algorithm}
+
 
 Visando facilitar o consumo dos novos serviços, será gerado o \textit{WebService} cliente a partir do WSDL (\textit{Web Services Description Language}) da interface do serviço disponibilizada no sistema GSAN, utilizando o software chamado WSIMPORT disponibilizado pela \textit{Sun Microsystems}, conforme visto na figura \ref{figura:gerarWSCliente}:
 
