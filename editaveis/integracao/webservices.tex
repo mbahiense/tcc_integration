@@ -1,6 +1,6 @@
-\subsection{Implementação de WebServices no GSAN}
+\subsection{Implementação de Webservices no GSAN}
 
-A estratégia de desenvolver o WebService internamente ao sistema GSAN, foi adotada, visando a possibilidade de reaproveitamento de toda regra de negócio, entidade, controlados dentre os demais artefatos que fazem parte do sistema.  Os novos serviços foram desenvolvidos sob tecnologias compatíveis com as utilizadas no sistema GSAN, utilizando a especificação JAX-WS (\textit{Java API for XML-BasedWeb Services}) para serem consumidos por sistemas externos através de submissões de arquivos do tipo XML, definidas no padrão de comunicação SOAP. Para tratar de conversões de arquivos XML para objetos e vice-versa está sendo utilizada a especificação do padrão JAXB (\textit{Java Architecture for XML Binding}), dessa forma estes serviços serão executados no mesmo servidor de aplicação.
+A estratégia de desenvolver o Webservice internamente ao sistema GSAN, foi adotada, visando a possibilidade de reaproveitamento de toda regra de negócio, entidade, controlados dentre os demais artefatos que fazem parte do sistema.  Os novos serviços foram desenvolvidos sob tecnologias compatíveis com as utilizadas no sistema GSAN, utilizando a especificação JAX-WS (\textit{Java API for XML-Based Web Services}) para serem consumidos por sistemas externos através de submissões de arquivos do tipo XML, definidas no padrão de comunicação SOAP. Para tratar de conversões de arquivos XML para objetos e vice-versa está sendo utilizada a especificação do padrão JAXB (\textit{Java Architecture for XML Binding}), dessa forma estes serviços serão executados no mesmo servidor de aplicação.
 Na prática será necessário importar ao projeto as seguintes bibliotecas descritas abaixo;
 
 % LIBS UTILIZADAS
@@ -25,7 +25,7 @@ Na prática será necessário importar ao projeto as seguintes bibliotecas descr
 
 Após realizar a configuração das bibliotecas necessárias para implementação, foram definidos os seguintes novos serviços para atender as necessidades do \textit{Call Center} (figura \ref{figura:interfaceServicosAutomatizados}):
 
-\begin{figure}[!htb]
+\begin{figure}[H]
 	\centering
 	\caption{Interface dos serviços automatizados.}	
 	\label{figura:interfaceServicosAutomatizados}
@@ -34,11 +34,11 @@ Após realizar a configuração das bibliotecas necessárias para implementaçã
 \end{figure}
 
 
-Para definir a URL (\textit{Uniform Resource Locator}) de acesso ao \textit{WebService} será preciso atualizar o arquivo web.xml, declarando a servlet padrão definida na especificação do JAX-WS para esse propósito, conforme a figura \ref{figura:declaracaoServlet}:
+Para definir a URL (\textit{Uniform Resource Locator}) de acesso ao \textit{Webservice} será preciso atualizar o arquivo web.xml, declarando a servlet padrão definida na especificação do JAX-WS para esse propósito, conforme a figura \ref{figura:declaracaoServlet}:
 
-\begin{figure}[!htb]
+\begin{figure}[H]
 	\centering
-	\caption{Declaração da servlet do WebService.}	
+	\caption{Declaração da servlet do Webservice.}	
 	\label{figura:declaracaoServlet}
 	\includegraphics{figuras/declarando_servlet.png}
 	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
@@ -47,7 +47,7 @@ Para definir a URL (\textit{Uniform Resource Locator}) de acesso ao \textit{WebS
 
 Feito isso, será preciso disponibilizar os novos serviços, definindo a classe concreta de implementação e o padrão de acesso que será adotado para a interface criada, para que as solicitações sejam interceptadas adequadamente redirecionadas ao \textit{EndPoints} corretos, com isso será necessário criar o arquivo com a seguinte nomenclatura \textit{sun-jaxws.xml}, localizado dentro do diretório WEB\_INF da aplicação, segue abaixo o conteúdo do arquivo, conforme a figura \ref{figura:declaracaoEndPoint}:
 
-\begin{figure}[!htb]
+\begin{figure}[H]
 	\centering
 	\caption{Declaração do \textit{EndPoint} dos serviços.}	
 	\label{figura:declaracaoEndPoint}

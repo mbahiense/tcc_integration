@@ -1,10 +1,10 @@
 \subsection{Desenvolver \textit{Middleware}}
 
-O \textit{Middleware} intermediário denominado Integrador será responsável em receber as solicitações realizadas pela URA do Asterisk, após analisar deverá efetuar requisições ao \textit{WebService} do sistema GSAN, que deverá retornar as informações esperadas, até então devolver as informações essenciais ao Asterisk.
+O \textit{Middleware} intermediário denominado Integrador será responsável em receber as solicitações realizadas pela URA do Asterisk, após analisa-las deverá efetuar requisições ao \textit{WebService} do sistema GSAN, que deverá retornar as informações esperadas, até então devolver as informações essenciais ao Asterisk.
 No cenário da integração proposta o sistema Integrador, deverá ser capaz de comunicar-se com o sistema Asterisk via interface AGI, para tanto foi utilizado um projeto \textit{Open Source} chamada Asterisk-Java, que fornece bibliotecas para comunicação com o Asterisk utilizando os protocolos comuns ao sistema, no entanto será preciso mapear as chamadas que serão realizadas.
 Para cada novo serviço a ser disponibilizado, será necessário declarar uma chave de texto que será utilizada no Asterisk, representando o objeto a ser invocado, adicionados em um novo arquivo chamado \textit{fastagi-mapping.properties} da seguinte maneira, conforme a figura \ref{figura:mapeamenteServicosAGI} abaixo:
 
-\begin{figure}[!htb]
+\begin{figure}[H]
 	\centering
 	\caption{Mapeamento dos serviços para consumo via AGI}
 	\label{figura:mapeamenteServicosAGI}
@@ -15,7 +15,7 @@ Para cada novo serviço a ser disponibilizado, será necessário declarar uma ch
 
 Feito isso o integrador já possuirá condições de recepcionar as solicitações originadas pelo \textit{software} Asterisk utilizando a interface de comunicação AGI, e direcionar a chamada internamente para uma classe concreta que implemente o protocolo de comunicação utilizado, assim como a lógica de consumo aos novos serviços disponibilizados pelo \textit{WebService} do sistema GSAN.
 
-Para cada classe concreta a ser disponibilizada será necessário estender a classe \textit{BaseAgiScript} disponibilizada pelo \textit{framework} Asterisk-Java, após estender o comportamento será necessário implementar o método service obtido pela herança da \textit{BaseAgiScript}, tal método será invocado quando a requisição for direcionada ao serviço mapeado, segue abaixo um exemplo de implementação utilizado, conforme algoritmo \ref{algoritmo:identificaoCliente} abaixo:
+Para cada classe concreta a ser disponibilizada será necessário estender a classe \textit{BaseAgiScript} disponibilizada pelo \textit{framework} Asterisk-Java, após estender o comportamento será necessário implementar o método \textit{service} obtido pela herança da \textit{BaseAgiScript}, tal método será invocado quando a requisição for direcionada ao serviço mapeado, segue abaixo um exemplo de implementação utilizado, conforme algoritmo \ref{algoritmo:identificaoCliente} abaixo:
 
 % Custom exibição da lista de algoritmos
 \algsetup{
@@ -49,7 +49,7 @@ Para cada classe concreta a ser disponibilizada será necessário estender a cla
 
 Visando facilitar o consumo dos novos serviços, será gerado o \textit{WebService} cliente a partir do WSDL (\textit{Web Services Description Language}) da interface do serviço disponibilizada no sistema GSAN, utilizando o software chamado WSIMPORT disponibilizado pela \textit{Sun Microsystems}, conforme visto na figura \ref{figura:gerarWSCliente}:
 
-\begin{figure}[!htb]
+\begin{figure}[H]
 	\centering
 	\caption{Geração do código fonte para consumo do WebService.}	
 	\label{figura:gerarWSCliente}
@@ -60,7 +60,7 @@ Visando facilitar o consumo dos novos serviços, será gerado o \textit{WebServi
 Descrição dos parâmetros utilizados:
 
 \begin{description}
-	\item \textbf{\textit{–Xendorsed}}: Necessário para realizar a substituição dos padrões endossados do sistema, ou seja, utiliza a versão correta da JDK para realizar o parser.
+	\item \textbf{\textit{–Xendorsed}}: Necessário para realizar a substituição dos padrões endossados do sistema, ou seja, utiliza a versão correta da JDK para realizar o \textit{parser}.
 	\item \textbf{\textit{–Xnocompile}}: Utilizado para gerar o código fonte não compilado, ou seja, o arquivo na extensão .java.
 	\item \textbf{\textit{-d}}: Informado para determinar o diretório para onde os arquivos devem ser gerados, no exemplo o diretório se chama "GSAN\_URA".
 	\item Por último a URL que disponibiliza o WSDL dos serviços. 
@@ -70,7 +70,7 @@ Descrição dos parâmetros utilizados:
 
 Com isso será gerado o código fonte de consumo dos serviços atualmente declarados na interface do \textit{EndPoint}, para cada modificação na interface será necessário realizar o procedimento novamente. O sistema Integrador deve ser disponibilizado em um terminal, que seja visível ao Asterisk, para que o mesmo consiga realizar requisições aos objetos mapeados anteriormente, neste trabalho o Integrador será executado no mesmo hospedeiro do Asterisk, conforme visto na figura \ref{figura:executarIntegrador} abaixo:
 
-\begin{figure}[!htb]
+\begin{figure}[H]
 	\centering
 	\caption{Executando o sistema Integrador.}	
 	\label{figura:executarIntegrador}

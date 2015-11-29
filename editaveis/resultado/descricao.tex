@@ -1,13 +1,13 @@
-\chapter[Resultados Alcançados]{\textbf{R}esultados \textbf{A}lcançados}
+\chapter[Experimentação Utilizando a Suíte de Testes Automatizados]{\textbf{E}xperimentação \textbf{U}Utilizando a \textbf{S}uíte de \textbf{T}estes \textbf{A}utomatizados}
 %\chapter[Resultados Alcançados]{\textbf{R}esultados \textbf{A}lcançados}
 %\addcontentsline{toc}{chapter}{Resultados Alcançados}
 
 \textit{Será apresentado neste capítulo a execução dos experimentos sob a solução abordada nas seções anteriores, e exposto os resultados que foram alcançados.}
 
 
-\subsection{Ambiente de teste}
+\subsection{Preparação do Ambiente de teste}
 
-Os experimentos sobre a solução de integração dos sistemas, foram necessários grandes esforços tanto no planejamento de um ambiente controlado quanto na elaboração e análise dos cenários de testes envolvidos. Para que os cenários de teste sejam o mais semelhante ao ambiente de produção, os mesmo serão executados sobre uma chamada telefônica tendo como originador o suposto cliente com as devidas características. 
+Os experimentos sobre a solução de integração dos sistemas, foram necessários grandes esforços tanto no planejamento de um ambiente controlado quanto na elaboração e análise dos cenários de testes envolvidos. Para que os cenários de teste sejam o mais semelhante ao ambiente de produção, os mesmos serão executados sobre uma chamada telefônica tendo como originador o suposto cliente com as devidas características. 
 
 O ambiente para execução dos testes será realizando um terminal cujo as especificações estão descritas abaixo:
 
@@ -24,8 +24,8 @@ O ambiente para execução dos testes será realizando um terminal cujo as espec
 
 Este terminal é responsável em executar ambos os sistemas envolvidos, no entanto como o software Asterisk está disponível somente para plataforma Linux, é preciso utilizar o recurso de máquina virtual através do software Virtual Box\footnote{Disponível em \url{https://www.virtualbox.org/}}, para subir uma instância da distribuição Disc-Os conforme citado nas seções anteriores.
  
-O terminal possui uma conexão de rede local ativa, para que seja atribuído uma faixa de IP ao sistema operacional hospedeiro e ao convidado.
-Visando garantir o correto funcionamento e a padronização do ambiente de teste foram criados testes de integração reproduzindo uma chamada telefônica programaticamente simulando um ambiente real, para tanto foi necessário utilizar os seguintes recursos o framework JUnit na construção dos testes e o recurso nativo do Asterisk chamado \textit{Local Channel} que permite criar um canal de comunicação com um contexto e extensão específica dentro do sistema Asterisk, ou seja permite acessar diretamente o ponto de integração entre os sistemas.
+O terminal possui uma conexão de rede local ativa, para que seja atribuído um endereço IP ao sistema operacional hospedeiro e ao convidado.
+Visando garantir o correto funcionamento e a padronização do ambiente de teste foram criados testes de integração reproduzindo uma chamada telefônica programaticamente simulando um ambiente real, para tanto foi necessário utilizar os seguintes recursos o \textit{framework} JUnit na construção dos testes e o recurso nativo do Asterisk chamado \textit{Local Channel} que permite criar um canal de comunicação com um contexto e extensão específica dentro do sistema Asterisk, ou seja permite acessar diretamente o ponto de integração entre os sistemas.
 
 Foram criados contextos específicos para teste no software Asterisk, replicando os mesmos contextos utilizados no fluxo da URA visando 
 isolar o comportamento que ocorre no momento da integração sem a necessidade de redirecionamentos entre serviços ou ramais, conforme visto abaixo;
@@ -41,12 +41,12 @@ isolar o comportamento que ocorre no momento da integração sem a necessidade d
 
 \subsection{Cenários de Teste}
 Nesta fase foram elaborados possíveis cenários de teste para os três serviços automatizados, são respectivamente Obter 2ª via de conta, Informar Falta de Água e Solicitar Restabelecimento da Ligação de Água. Cada serviço proposto possui um objetivo específico sempre vinculado a um imóvel e/ou cliente.
-Os cenários de testes representam as possíveis situações cadastrais fictícias e comportamentais vinculadas a um cliente, essencial para realizar um atendimento via sistema. Foram propostos 3 cenários de teste para cada serviço citado acima, visando assegurar o correto comportamento da solução. Abaixo estão descritos os cenários conforme cada serviços proposto:
+Os cenários de testes representam as possíveis situações cadastrais fictícias e comportamentais vinculadas a um cliente, essencial para realizar um atendimento via sistema. Foram propostos 3 cenários de teste para cada serviço citado acima, visando assegurar o correto comportamento da solução. Abaixo estão descritos os cenários conforme cada serviço proposto:
 
 \subsubsection{Obter 2ª Via de Conta}
 Este serviço tem como objetivo checar se há alguma conta pendente referente ao imóvel informado, caso haja pendência o serviço deve submeter a conta pendente via e-mail para o cliente do imóvel. 
 
-Abaixo serão descritos os casos de testes previstos para o serviço Obter 2ª Via de Conta, foi cadastrado o mesmo endereço de e-mail para os 3 cenários.
+Abaixo serão descritos os casos de testes previstos para o serviço obter 2ª Via de Conta, foi cadastrado o mesmo endereço de e-mail para os 3 cenários.
 \begin{flushleft}
 	\begin{description}
 		\item \textbf{CENÁRIO 1}: Cliente devidamente cadastrado no Sistema, atualmente usuário de um imóvel que possui ativo a Ligação de Água e Esgoto, com uma conta em atraso. O Cliente deseja obter a conta em aberto, conforme demostrado na figura \ref{figura:2ViaCenario1}.
