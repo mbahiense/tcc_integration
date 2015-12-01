@@ -1,4 +1,4 @@
-\subsection{Desenvolver Suíte de Testes Automatizados}
+\subsection{Desenvolvimento da Suíte de Testes Automatizados}
 
 A suíte de testes automatizados possui a responsabilidade de garantir o correto funcionamento da integração entre os sistemas envolvidos, ou seja prover um meio onde possa ser testado o Webservice do GSAN e o Middleware juntamente com o Asterisk. 
 Neste cenário foram utilizados recursos do JUnit e Asterisk-Java. O \textit{framework} JUnit \ref{key:annotation} foi utilizado para criação dos cenários de teste, execução dos testes e identificação de falhas. Para estabelecer uma conexão com o Asterisk, criar e monitorar chamadas telefônicas com parametrização dinâmica foram utilizados recursos do \textit{framework} Asterisk-Java \ref{key:asteriskjava}.  
@@ -55,7 +55,7 @@ Abaixo segue o exemplo de configuração para adição de um novo usuário para 
 \hspace{10 mm}\textit{permit=0.0.0.0/0.0.0.0} \hspace{10 mm} $\triangleright$ Define o endereço IP que será aceito \\
 
 
-A distribuição Disc-OS por padrão possui uma configuração de \textit{firewall} bastante restritiva por questões de segurança, para que não ocorra rejeição nas solicitações realizadas ao Asterisk, será para fins de testes desabilitada as regras do firewall, utilizando o seguinte comando \textit{/etc/init.d/iptables stop}.
+A distribuição Disc-OS por padrão possui uma configuração de \textit{firewall} bastante restritiva por questões de segurança, para que não ocorra rejeição nas solicitações realizadas ao Asterisk, será para fins de testes desabilitada as regras do \textit{firewall}, utilizando o seguinte comando \textit{/etc/init.d/iptables stop}.
  
 A suíte de testes contém a implementação dos testes de integração para os três serviços automatizados que são obter 2º via de conta, informar falta de água e solicitar restabelecimento da ligação de água, além de testes unitários para verificação da rotina de enviar e-mail e checagem da disponibilidade do Webservice.
 
