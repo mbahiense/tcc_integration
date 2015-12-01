@@ -1,4 +1,4 @@
-\chapter[Experimentação Utilizando a Suíte de Testes Automatizados]{\textbf{E}xperimentação \textbf{U}Utilizando a \textbf{S}uíte de \textbf{T}estes \textbf{A}utomatizados}
+\chapter[Experimentação Utilizando a Suíte de Testes Automatizados]{\textbf{E}xperimentação \textbf{U}tilizando a \textbf{S}uíte de \textbf{T}estes \textbf{A}utomatizados}
 %\chapter[Resultados Alcançados]{\textbf{R}esultados \textbf{A}lcançados}
 %\addcontentsline{toc}{chapter}{Resultados Alcançados}
 
@@ -7,7 +7,9 @@
 
 \subsection{Preparação do Ambiente de teste}
 
-Os experimentos sobre a solução de integração dos sistemas, foram necessários grandes esforços tanto no planejamento de um ambiente controlado quanto na elaboração e análise dos cenários de testes envolvidos. Para que os cenários de teste sejam o mais semelhante ao ambiente de produção, os mesmos serão executados sobre uma chamada telefônica tendo como originador o suposto cliente com as devidas características. 
+Os experimentos sobre a solução de integração dos sistemas, foram planejados em um ambiente controlado quanto na elaboração e análise dos cenários de testes envolvidos. 
+
+Para que os cenários de teste sejam o mais semelhante ao ambiente de produção, os mesmos serão executados sobre uma chamada telefônica tendo como originador o suposto cliente com as devidas características. 
 
 O ambiente para execução dos testes será realizando um terminal cujo as especificações estão descritas abaixo:
 
@@ -27,7 +29,7 @@ Este terminal é responsável em executar ambos os sistemas envolvidos, no entan
 O terminal possui uma conexão de rede local ativa, para que seja atribuído um endereço IP ao sistema operacional hospedeiro e ao convidado.
 Visando garantir o correto funcionamento e a padronização do ambiente de teste foram criados testes de integração reproduzindo uma chamada telefônica programaticamente simulando um ambiente real, para tanto foi necessário utilizar os seguintes recursos o \textit{framework} JUnit na construção dos testes e o recurso nativo do Asterisk chamado \textit{Local Channel} que permite criar um canal de comunicação com um contexto e extensão específica dentro do sistema Asterisk, ou seja permite acessar diretamente o ponto de integração entre os sistemas.
 
-Foram criados contextos específicos para teste no software Asterisk, replicando os mesmos contextos utilizados no fluxo da URA visando 
+Foram criados contextos\ref{key:contexto} específicos para teste no software Asterisk, replicando os mesmos contextos utilizados no fluxo da URA visando 
 isolar o comportamento que ocorre no momento da integração sem a necessidade de redirecionamentos entre serviços ou ramais, conforme visto abaixo;
 
 \begin{figure}[H]

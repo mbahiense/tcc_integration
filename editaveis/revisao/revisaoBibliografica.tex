@@ -30,7 +30,16 @@ A ferramenta de código aberto Asterisk\footnote{Disponível em \url{http://www.
 O protocolo SOAP\footnote{Disponível em  \url{http://www.w3.org/TR/soap}} (Simple Object Access Protocol) tem o objetivo de possibilitar a troca de informações estruturadas em Linguagem de Marcação Extensível (XML), para sistemas distribuídos. A negociação e transmissão de mensagens foram baseadas em outros em outros protocolos de serviços como o HTTP (Hypertext Transfer Protocol) e RPC (Remote Procedure Call), possibilitando a utilização para realizar integrações entre softwares.
 
 \subsection{Asterisk Gateway Interface}
-O software Asterisk possui uma interface de comunicação chamado AGI (\textit{Asterisk Gateway Interface}) \cite{asteriskAgi}, que tem como objetivo prover uma maior flexibilidade para adaptar soluções de linguagens diferentes, com esta interface se torna possível a comunicação com recursos externos através de requisição semelhantes ao CGI(\textit{Common Gateway Interface}) de servidores web, onde as requisições são originadas pelo próprio Asterisk, existem diversos frameworks que implementam essa interface de comunicação, para este trabalho  será utilizado o Asterisk-Java\footnote{Disponível em: \url{http://www.asterisk-java.org}}, por ser escrito em sob a plataforma Java e compatível com as tecnologias que foram utilizadas para a comunicação com o WebService do sistema GSAN.
+O software Asterisk possui uma interface de comunicação chamado AGI (\textit{Asterisk Gateway Interface}) \cite{asteriskAgi}, que tem como objetivo prover uma maior flexibilidade para adaptar soluções de linguagens diferentes, com esta interface se torna possível a comunicação com recursos externos através de requisição semelhantes ao CGI(\textit{Common Gateway Interface}) de servidores web, onde as requisições são originadas pelo próprio Asterisk, existem diversos \textit{frameworks} que implementam essa interface de comunicação, para este trabalho será utilizado o Asterisk-Java\footnote{Disponível em: \url{http://www.asterisk-java.org}}\label{key:asteriskjava}, por ser escrito em sob a plataforma Java e compatível com as tecnologias que foram utilizadas para a comunicação com o WebService do sistema GSAN.
+O \textit{framework} Asterisk-Java possui diversos recursos disponíveis para comunicação com a ferramenta Asterisk, a seguir pode ser visto alguns dos principais propostos pelo framework;
+
+\begin{itemize}
+	\item Comunicação AGI - A classe BaseAgiScript.
+	\item Comunicação HTTP - A classe ManagerConnection
+	\item Ouvintes - As interfaces AsteriskServerListener e PropertyChangeListener.
+	\item Controladores - A classes AsteriskServer e DefaultAsteriskServer
+\end{itemize}
+
 
 \subsection{WebServices}
 O WebService\footnote{Disponível em \url{http://www.oracle.com/technetwork/java/javaee/tech/webservices-139501.html}} se trata de uma solução que permite que sistemas diferentes se comuniquem através requisições de protocolo HTTP a recursos identificados por um URI (\textit{Uniform Resource Identifier}) identifico a Web convencional, descritos e definidos usando XML (\textit{Extensible Markup Language}).
@@ -48,5 +57,14 @@ O Disc-OS\footnote{Disponível em \url{http://sourceforge.net/projects/disc-os/}
 O codec (COder/DEcoder) se trata de processo de codificação e decodificação da voz humana a ser transmitidas entre a origem e destino em meio digital \cite{VIEIRA:2007}.
 
 \subsection{JUnit Framework}
-O JUnit framework destina-se a garantia da qualidade do software, viabilizando a construção dos mais diversos tipos de testes através 
-do seu arcabouço de recursos disponíveis, por ser software livre e adotado como padrão nas principais IDE de desenvolvimento Java, ganhou grande popularidade nas comunidades de desenvolvedores. O desenvolvimento de testes unitários tem sido adotado como métricas de qualidade na entrega do produto de software. 
+O JUnit framework\footnote{Disponível em \url{http://junit.org/}} destina-se a garantia da qualidade do software, viabilizando a construção dos mais diversos tipos de testes através 
+do seu arcabouço de recursos disponíveis, por ser software livre e adotado como padrão nas principais IDE de desenvolvimento Java, ganhou grande popularidade nas comunidades de desenvolvedores. O desenvolvimento de testes unitários tem sido adotado como métricas de qualidade na entrega do produto de software.
+O \textit{framework} tornou a escrita de testes um processo fácil e intuitivo, fazendo uso de recurso da plataforma Java chamado \textit{Annotation}\label{key:annotation}, trouxe a possibilidade de padronizar os métodos de testes apenas adicionando anotações sobres os mesmo, segue abaixo algumas anotações comumente utilizadas;
+
+\begin{itemize}
+	\item @Test - Anotação que representa um método de teste.
+	\item @Before - Anotação indica que o método anotado será executado sempre antes de um método de teste.
+ 	\item @After - Anotação indica que o método anotado será executado sempre após a um método de teste.
+\end{itemize}
+
+O JUnit possui um objeto chamado \textit{Assert}, que contém uma série de validações possíveis para checagem do resultado esperado pelo teste.

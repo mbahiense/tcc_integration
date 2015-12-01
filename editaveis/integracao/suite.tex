@@ -1,13 +1,32 @@
 \subsection{Desenvolver Suíte de Testes Automatizados}
 
-A suíte de testes automatizados possui a responsabilidade de garantir o correto funcionamento da integração entre os sistemas envolvidos, ou seja prover um meio onde possa ser testado o Webservice do GSAN e o Middleware juntamente com o Asterisk, neste cenário foram utilizados recursos do JUnit para criação dos cenários de teste, execução dos testes e identificação de falhas, quanto recursos do \textit{framework} Asterisk-Java para estabelecer a conexão com o Asterisk, criando e monitorando chamadas telefônicas com parametrização dinâmica.   
+A suíte de testes automatizados possui a responsabilidade de garantir o correto funcionamento da integração entre os sistemas envolvidos, ou seja prover um meio onde possa ser testado o Webservice do GSAN e o Middleware juntamente com o Asterisk. 
+Neste cenário foram utilizados recursos do JUnit e Asterisk-Java. O \textit{framework} JUnit \ref{key:annotation} foi utilizado para criação dos cenários de teste, execução dos testes e identificação de falhas. Para estabelecer uma conexão com o Asterisk, criar e monitorar chamadas telefônicas com parametrização dinâmica foram utilizados recursos do \textit{framework} Asterisk-Java \ref{key:asteriskjava}.  
 
-Os testes criados utilizando o \textit{framework} JUnit, podem ser executados a qualquer momento, seja manualmente pela própria IDE de desenvolvimento quanto de forma automatizada por algum ambiente de integração contínua, que realiza a inspeção de qualidade disparando a execução dos testes, visando garantir o correto comportamento do sistema na construção de uma entrega ou \textit{release}.
+A execução dos testes através do \textit{framework} JUnit podem ser realizada a qualquer momento, seja manualmente pela IDE de desenvolvimento ou automatizada por algum ambiente de Integração Contínua\footnote{Integração Contínua adotada na Engenharia de Software refere-se a uma prática de unir todo o trabalho desenvolvido várias vezes ao dia em uma estrutura principal.}. Dessa forma é possível realizar a inspeção da qualidade do software, visando garantir o correto comportamento dos sistemas na construção de uma entrega ou \textit{release}.
 
-A suíte de teste é composta por classes constantes com a parametrização necessária para configuração da conexão com o Asterisk, classe de serviço para realizar o \textit{Login}, \textit{Logoff} e iniciar uma chamada telefônica, conta também com uma classe utilitária que permite registrar ouvintes em chamadas telefônicas gerada. Dessa forma é possível estabelecer uma conexão com o Asterisk, realizar chamadas telefônica para contexto locais da ferramenta e acompanhar o comportamento apresentado.
+A suíte de teste é composta pelos seguintes classes;
+\begin{itemize}
+	\item Constantes - Contém a parametrização necessária para configuração da conexão com a ferramenta Asterisk.
+	\item Serviço - Permite efetuar o \textit{Login}, \textit{Logoff} e iniciar uma chamada telefônica.
+	\item Testes - Implementa a lógica do cenário de teste.
+	\item Utilitária - Realiza o registro de ouvintes em chamadas telefônicas.
+\end{itemize}
 
-Cada classe de teste deve implementar uma interface do \textit{framework} Asterisk-Java chamada \textit{PropertyChangeListener} e posteriormente ser registrada como \textit{Listener} em uma classe da suíte chamada \textit{SuiteAsteriskListener}, que atua como um ouvinte de modificações que ocorrem nos canais, tais canais representam as chamadas telefônicas existentes na ferramenta. 
-A classe de teste deve ser configurada para sempre antes de executar um teste realiza primeiro o \textit{Login} na ferramenta Asterisk e ao final da execução do teste efetuar o \textit{Logoff}, somente após o \textit{Login} é possível iniciar a simulação das chamadas para os contextos de testes, abaixo está demonstrado o funcionamento da suíte de teste automatizado integrado a uma classe de teste conforme a figura \ref{figura:diagramaSeq2Via};
+
+Com o intuito de unir os recursos do \textit{framework} JUnit com os do Asterisk-Java, cada classe de teste deve seguir um padrão no momento da implementação, conforme descrito a seguir;
+
+\begin{enumerate}
+	\item Configurar o método de Teste anotado com \textit{@Test}.
+	\item Configurar o método de \textit{Login} anotado com \textit{@Before}.
+	\item Configurar o método de \textit{Logoff} anotado com \textit{@After}.
+	\item Implementar uma interface chamada \textit{PropertyChangeListener}.	
+\end{enumerate}
+
+Por meio desta padronização na classe de teste, permite que a mesma seja executada pelo \textit{framework} JUnit e se comunique com a ferramenta Asterisk por meio do \textit{framework} Asterisk-Java.
+
+O diagrama sequência demostrado na figura \ref{figura:diagramaSeq2Via} ilustra o funcionamento da classe de teste do serviço Obter 2ª via de conta, trabalhando em conjunto com a suíte de teste.
+Inicialmente é solicitado o \textit{Login} na ferramenta Asterisk, em seguida é realizado a criação da chamada telefônica e passada como parâmetro chamado \textit{action} juntamente com um tempo limite de esperar para o método \textit{sendAction}, após a confirmação do retorno a classe de teste solicita o método chamado \textit{addListener} com intuito de ser registrada como ouvinte das mudanças que ocorrem nos canais abertos, a suíte de teste faz o registro do \textit{listener} junto ao Asterisk que ao identificar alguma mudança no canal executa uma notificação através do método \textit{propertyChange} contendo os detalhes do evento para a classe ouvinte registrada, atráves da informação contido no evento a classe de teste pode identificar o comportamento apresentado pelo canal e posteriormente remove o registro de ouvinte e realiza o \textit{Logoff}, chamando respectivamente os métodos \textit{removeListener} e \textit{Logoff}.
 
 \begin{figure}[H]
 	\centering
@@ -16,9 +35,6 @@ A classe de teste deve ser configurada para sempre antes de executar um teste re
 	\includegraphics{figuras/diagramaSequenciaObter2Via.png}
 	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
 \end{figure}
-
-O diagrama demostrado na figura \ref{figura:diagramaSeq2Via} ilustra o funcionamento da classe de teste para o serviço Obter 2ª via de conta, trabalhando em conjunto com a suíte de teste, inicialmente é realizado o \textit{Login} com a ferramenta Asterisk, para obter o objeto \textit{manager} que permite a comunicação com o Asterisk, logo em seguida é criada a chamada telefônica e passada como \textit{action} juntamente com um tempo limite de esperar para o método \textit{sendAction}, tal ação é destinada ao Asterisk para estabelecer a criação do canal de comunicação, após a confirmação do retorno a classe de teste chama o método \textit{addListener} com intuito de ser registrada como ouvinte das mudanças que ocorrem nos canais abertos, a suíte de teste faz o registro do \textit{listener} junto ao Asterisk,
-quando o Asterisk identifica mudança no canal dispara uma notificação através do método \textit{propertyChange} com detalhes do evento para a classe ouvinte registrada, com essa informação a classe de teste pode identificar o comportamento apresentado pelo canal, ao final a classe de teste remove o registro de ouvinte e realiza o \textit{Logoff}, chamando respectivamente os métodos \textit{removeListener} e \textit{logoff}.
 
 
 Durante a execução de um cenário de teste, é necessário monitorar o comportamento da chamada ou canal internamento na ferramente Asterisk,
