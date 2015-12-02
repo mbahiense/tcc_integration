@@ -1,17 +1,16 @@
 \subsection{Implementação de Webservices no GSAN}
 
-A estratégia de desenvolver o Webservice internamente ao sistema GSAN, foi adotada, visando a possibilidade de reaproveitamento de toda regra de negócio, entidade, controlados dentre os demais artefatos que fazem parte do sistema.  Os novos serviços foram desenvolvidos sob tecnologias compatíveis com as utilizadas no sistema GSAN, utilizando a especificação JAX-WS (\textit{Java API for XML-Based Web Services}) para serem consumidos por sistemas externos através de submissões de arquivos do tipo XML, definidas no padrão de comunicação SOAP. Para tratar de conversões de arquivos XML para objetos e vice-versa está sendo utilizada a especificação do padrão JAXB (\textit{Java Architecture for XML Binding}), dessa forma estes serviços serão executados no mesmo servidor de aplicação.
+A estratégia de desenvolver o Webservice internamente ao sistema GSAN, foi adotada visando a possibilidade de reaproveitamento das regra de negócio, entidade, controlados dentre os demais artefatos que fazem parte do sistema.  Os novos serviços foram desenvolvidos sob tecnologias compatíveis com as utilizadas no sistema GSAN, utilizando a especificação JAX-WS\footnote{JAX-WS - \textit{Java API for XML-Based Web Services}}  para serem consumidos por sistemas externos através de submissões de arquivos do tipo XML, definidas no padrão de comunicação SOAP. Para tratar de conversões de arquivos XML para objetos e vice-versa está sendo utilizada a especificação do padrão JAXB\footnote{JAXB - \textit{Java Architecture for XML Binding}}, dessa forma estes serviços serão executados no mesmo servidor de aplicação.
 Na prática será necessário importar ao projeto as seguintes bibliotecas descritas abaixo;
 
 % LIBS UTILIZADAS
-\begin{description}
-	\item Prover suporte a configuração do End-Points (Serviços);
+ Prover suporte a configuração do End-Points (Serviços);
 	\begin{itemize}
 		\item jaxws-api-2.2.jar
 		\item jaxws-rt.jar
 		\item jaxws-tools.jar		
 	\end{itemize}
-	\item Fornecer suporte ao tratamento de serialização dos XML;
+	Fornecer suporte ao tratamento de serialização\footnote{Serialização refere-se ao processo de conversão de um objeto em bytes.} dos XML;
 	\begin{itemize}
 		\item jaxb-impl.jar
 		\item jaxb-xjc.jar
@@ -21,7 +20,7 @@ Na prática será necessário importar ao projeto as seguintes bibliotecas descr
 		\item streambuffer.jar
 		\item woodstox-core-asl.jar		
 	\end{itemize}
-\end{description}
+
 
 Após realizar a configuração das bibliotecas necessárias para implementação, foram definidos os seguintes novos serviços para atender as necessidades do \textit{Call Center} (figura \ref{figura:interfaceServicosAutomatizados}):
 
