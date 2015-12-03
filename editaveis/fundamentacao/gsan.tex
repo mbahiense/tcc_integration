@@ -1,8 +1,9 @@
 \chapter[Fundamentação Teórica]{\textbf{F}undamentação \textbf{T}eórica}
 %\addcontentsline{toc}{chapter}{Fundamentação Teórica}
 
-\textit{Neste capítulo será apresentado os sistemas GSAN e Asterisk, com a intenção de familiarizar o leitor com as notações que serão amplamente utilizadas no decorrer do trabalho.}
+%\textit{Neste capítulo será apresentado os sistemas GSAN e Asterisk, com a intenção de %familiarizar o leitor com as notações que serão amplamente utilizadas no decorrer do %trabalho.}
 
+\textit{Neste capítulo será apresentado o conceito dos sistemas e \textit{frameworks} utilizados neste trabalho, com a intenção de familiarizar o leitor com as notações que serão amplamente utilizadas no decorrer do trabalho.}
 
 \section{GSAN}
 O sistema de código aberto GSAN\label{key:GSAN-TEORIA} (Sistema Integrado de Gestão de Serviços de Saneamento) desenvolvido inicialmente pela empresa IPAD (Instituto de Planejamento e Apoio ao Desenvolvimento Tecnológico e Científico) em 2005 por meio do Programa de Modernização do Ministério da Cidades, atualmente mantido e disponibilizado pelo Portal de Software Livre Brasileiro, sendo constantemente melhorado e aperfeiçoado pelos prestadores de serviços e interessados. 
@@ -160,4 +161,18 @@ A credencial de acesso criada por padrão é: \\
 \textbf{Login}: admin \\
 \textbf{Senha}: gcom \\
 Após inserir a credencial de acesso acima teremos acesso as todas as funcionalidades dos módulos do sistema GSAN.
+
+
+\subsection{GSAN - Detalhamento Técnico }
+
+O GSAN por ser um sistema de informação adaptável a empresas de pequeno, médio e grande porte, contemplando soluções dos mais diversos requisitos, entre eles Cadastramento, Micromedição, Faturamento, Arrecadação, Cobrança, Negativação e Atendimento ao Cliente. Fornecendo de forma razoavelmente flexível as configurações e detalhes operacionais das rotinas, disponível em ambiente Web utilizando recursos de tecnologias software livre.
+
+Para realização de melhorias no sistema GSAN faz-se necessário o ter conhecimento sobre os principais frameworks utilizados, a linguagem de programação utilizada e alguns conceitos de Saneamento que serão abordados.
+Dos principais \textit{frameworks} utilizados, destaco o uso dos seguintes: \\
+
+\textbf{Hibernate\footnote{Disponível em \url{http://www.hibernate.org}}}: Trata-se de um robusto framework de persistência de objetos relacionais, que fornece facilmente meios para realizar o mapeamento das entidades do sistema e diminui a complexidade de acesso a base de dados.\\
+
+\textbf{Apache Struts\footnote{Disponível em \url{http://struts.apache.org/}}}: Tem como característica principal a sua utilização na construção de controladores utilizando o padrão \textit{Model View Control} (MVC) que se trata da separação das camadas utilizadas em uma aplicação, fornecendo uma maior organização no código fonte e contribui para futuras manutenções \cite{fowler2003}. 
+
+O sistema GSAN faz uso da plataforma Java, lançado na versão Java Develop Kit (JDK) 1.5, utilizando recursos especificados pela \textit{Java Enterprise Edition} (JEE) \cite{PORTAL:2014}, essencialmente o container \textit{Enterprise Java Bean} (EJB), \textit{Java Server Pages }(JSP) e \textit{Servlets} que são executadas dentro de um servidor de aplicação Java EE.
 
