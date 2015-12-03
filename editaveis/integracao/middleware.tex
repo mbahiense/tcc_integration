@@ -1,8 +1,9 @@
-\subsection{Implementação do \textit{Middleware}}
+\subsection{Implementação do Middleware}
 
-O \textit{Middleware} intermediário denominado Integrador será responsável em receber as solicitações realizadas pela URA do Asterisk, após analisa-las deverá efetuar requisições ao \textit{WebService} do sistema GSAN, que deverá retornar as informações esperadas, até então devolver as informações essenciais ao Asterisk.
-No cenário da integração proposta o sistema Integrador, deverá ser capaz de comunicar-se com o sistema Asterisk via interface AGI, para tanto foi utilizado um projeto \textit{Open Source} chamada Asterisk-Java, que fornece bibliotecas para comunicação com o Asterisk utilizando os protocolos comuns ao sistema, no entanto será preciso mapear as chamadas que serão realizadas.
-Para cada novo serviço a ser disponibilizado, será necessário declarar uma chave de texto que será utilizada no Asterisk, representando o objeto a ser invocado, adicionados em um novo arquivo chamado \textit{fastagi-mapping.properties} da seguinte maneira, conforme a figura \ref{figura:mapeamenteServicosAGI} abaixo:
+O \textit{Middleware} intermediário denominado Integrador será responsável em receber as solicitações realizadas pela URA do Asterisk, após analisá-las deverá efetuar requisições ao \textit{WebService} do sistema GSAN, afim de obter as informações, logo em seguida tratá-las e então devolver as informações essenciais ao Asterisk.
+O \textit{Middleware} é capaz de comunicar-se com os sistemas GSAN e Asterisk. A comunicação com o sistema GSAN é realizada por uma implementação cliente do \textit{Webservice} disponibilizado, já a comunicação com o Asterisk é realizada por uma interface de comunicação chamada AGI \ref{key:asteriskjava}, neste trabalho foi utilizado o \textit{framework} \textit{Open Source} chamado Asterisk-Java, que fornece recursos para comunicação com o Asterisk utilizando os protocolos comuns ao sistema.
+
+Para cada novo serviço a ser tratado pelo Middleware, é necessário declarar uma chave de texto que será utilizada no Asterisk, que representa o objeto a ser invocado, adicionados em um novo arquivo chamado \textit{fastagi-mapping.properties} da seguinte maneira, conforme a figura \ref{figura:mapeamenteServicosAGI} abaixo:
 
 \begin{figure}[H]
 	\centering
@@ -13,9 +14,9 @@ Para cada novo serviço a ser disponibilizado, será necessário declarar uma ch
 \end{figure}
 
 
-Feito isso o integrador já possuirá condições de recepcionar as solicitações originadas pelo \textit{software} Asterisk utilizando a interface de comunicação AGI, e direcionar a chamada internamente para uma classe concreta que implemente o protocolo de comunicação utilizado, assim como a lógica de consumo aos novos serviços disponibilizados pelo \textit{WebService} do sistema GSAN.
+Dessa forma o \textit{Middleware} tem condições de recepcionar as solicitações originadas pelo \textit{software} Asterisk utilizando a interface de comunicação AGI, e direcionar a chamada internamente para uma classe concreta que contém a lógica de consumo aos novos serviços disponibilizados pelo \textit{WebService} do sistema GSAN.
 
-Para cada classe concreta a ser disponibilizada será necessário estender a classe \textit{BaseAgiScript} disponibilizada pelo \textit{framework} Asterisk-Java, após estender o comportamento será necessário implementar o método \textit{service} obtido pela herança da \textit{BaseAgiScript}, tal método será invocado quando a requisição for direcionada ao serviço mapeado, segue abaixo um exemplo de implementação utilizado, conforme algoritmo \ref{algoritmo:identificaoCliente} abaixo:
+Para cada classe concreta a ser disponibilizada é necessário estender a classe \textit{BaseAgiScript} disponibilizada pelo \textit{framework} Asterisk-Java, em seguida é preciso implementar o método \textit{service} obtido pela herança da \textit{BaseAgiScript}, tal método será invocado quando a requisição for direcionada ao serviço mapeado no arquivo \textit{fastagi-mapping.properties}, segue abaixo um exemplo de implementação utilizado, conforme o algoritmo \ref{algoritmo:identificaoCliente} abaixo:
 
 % Custom exibição da lista de algoritmos
 \algsetup{
@@ -24,12 +25,12 @@ Para cada classe concreta a ser disponibilizada será necessário estender a cla
 }
 
 \begin{algorithm}
-	\caption{Novo serviço de identificação do cliente (Middleware).}	
+	\caption{Novo serviço de identificação do cliente (\textit{Middleware}).}	
 	\label{algoritmo:identificaoCliente}
 	\begin{algorithmic}[1]
 		\STATE $atenderLigação()$ 		
-		\COMMENT{recepciona a liga}
-		\STATE $digitoInformado \gets canal[cliente]$ 	\COMMENT{Obtém os dígito  informados}
+		\COMMENT{Recepciona a liga}
+		\STATE $digitoInformado \gets canal[cliente]$ 	\COMMENT{Obtém os dígitos informados}
 		\IF{ $valorInformado <> null$ }
 		\STATE $ws \gets obterWebService() $ 
 		\COMMENT{Obtém a instância do WebService}
@@ -47,7 +48,7 @@ Para cada classe concreta a ser disponibilizada será necessário estender a cla
 \end{algorithm}
 
 
-Visando facilitar o consumo dos novos serviços, será gerado o \textit{WebService} cliente a partir do WSDL (\textit{Web Services Description Language}) da interface do serviço disponibilizada no sistema GSAN, utilizando o software chamado WSIMPORT disponibilizado pela \textit{Sun Microsystems}, conforme visto na figura \ref{figura:gerarWSCliente}:
+Visando facilitar o consumo dos novos serviços, será gerado o \textit{WebService} cliente a partir do WSDL\footnote{WSDL - \textit{Web Services Description Language}} da interface do serviço disponibilizada no sistema GSAN, utilizando o software chamado WSIMPORT disponibilizado pela \textit{Sun Microsystems}, conforme visto na figura \ref{figura:gerarWSCliente}:
 
 \begin{figure}[H]
 	\centering
@@ -68,7 +69,7 @@ Descrição dos parâmetros utilizados:
 
 
 
-Com isso será gerado o código fonte de consumo dos serviços atualmente declarados na interface do \textit{EndPoint}, para cada modificação na interface será necessário realizar o procedimento novamente. O sistema Integrador deve ser disponibilizado em um terminal, que seja visível ao Asterisk, para que o mesmo consiga realizar requisições aos objetos mapeados anteriormente, neste trabalho o Integrador será executado no mesmo hospedeiro do Asterisk, conforme visto na figura \ref{figura:executarIntegrador} abaixo:
+Com isso será gerado o código fonte de consumo dos serviços atualmente declarados na interface do \textit{EndPoint}, para cada modificação na interface será necessário realizar o procedimento novamente. O \textit{Middleware} deve ser disponibilizado em um terminal, que seja acessível ao Asterisk, para que o mesmo consiga realizar requisições aos objetos mapeados anteriormente, neste trabalho o \textit{Middleware} foi executado no mesmo hospedeiro do Asterisk, conforme visto na figura \ref{figura:executarIntegrador} abaixo:
 
 \begin{figure}[H]
 	\centering
@@ -79,13 +80,13 @@ Com isso será gerado o código fonte de consumo dos serviços atualmente declar
 \end{figure}
 
 
-A instrução realizada acima executa a classe principal do \textit{framework} Asterisk-Java a \textit{ org.asteriskjava.fastagi.DefaultAgiServer}, inicializando o serviço de comunicação via AGI, sob a JVM (\textit{Java Virtual Machine}) da plataforma Java, passando como \textit{classpath} as seguintes bibliotecas: 
+A instrução realizada acima executa a classe principal do \textit{framework} Asterisk-Java a \textit{ org.asteriskjava.fastagi.DefaultAgiServer}, inicializando o serviço de comunicação via AGI, sob a JVM\footnote{JVM - \textit{Java Virtual Machine}} da plataforma Java, passando como \textit{Classpath}\footnote{Classpath refere-se a uma variável de ambiente que indica o local onde as dependências estão localizadas.} as seguintes bibliotecas: 
 %Citar classpath - pendente
 
 \begin{itemize}
-	\item \textbf{\textit{asterisk-java.jar}}: biblioteca do framework utilizado para se comunicar com o Asterisk.
-	\item \textbf{\textit{integrador.jar}}: o sistema integrador que integra as aplicações.
-	\item \textbf{\textit{mail.jar}} e \textbf{\textit{activation.jar}}: ambos necessários no envio de email, para os casos de 2ª via de conta.	
+	\item \textbf{\textit{asterisk-java.jar}}: biblioteca do \textit{framework} utilizado para se comunicar com o Asterisk.
+	\item \textbf{\textit{integrador.jar}}: o \textit{Middleware} que integra as aplicações.
+	\item \textbf{\textit{mail.jar}} e \textbf{\textit{activation.jar}}: ambos necessários no envio de e-mail, para os casos de Obter 2ª via de conta.	
 \end{itemize}
 
 Após estes passos o sistema Integrador já estará apto a receber solicitações do Asterisk e realizar requisições para o Sistema GSAN.
