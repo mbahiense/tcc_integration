@@ -25,7 +25,7 @@ Para a configuração da Unidade de Resposta Audível, será preciso definir cla
 \end{figure}
 
 
-Dessa forma o cliente terá a opção de falar com o atendente logo no primeiro menu de atendimento e nos demais sub fluxos, comportamento exigido conforme o artigo 4 da Lei nº 8.078 \cite{leiAtendimentoAoConsumidor}, que fixa normas gerais sobre o Serviço de Atendimento ao Consumidor, após realizar o passo de identificação o mesmo terá acesso as opções de serviços automatizados via integração caso ocorra tudo com êxito, caso não seja possível identificar o cliente será redirecionado para o Falar com Atendente.
+Dessa forma o cliente tem a opção de falar com o atendente logo no primeiro menu de atendimento e nos demais sub fluxos, comportamento exigido conforme o artigo 4 da Lei nº 8.078 \cite{leiAtendimentoAoConsumidor}, que fixa normas gerais sobre o Serviço de Atendimento ao Consumidor, após realizar o passo de identificação o mesmo terá acesso as opções de serviços automatizados via integração caso ocorra tudo com êxito, caso não seja possível identificar o cliente será redirecionado para o Falar com Atendente.
 A interface \textit{Web} do Disc-OS permite realizar a configuração da URA, de forma bem intuitiva, inclusive definir tempos de espera, direcionamento para outros Ramais entre outras configurações que tornam o processo de configuração muito mais prático, no entanto para configurar o fluxo da URA realizando a comunicação via AGI com o \textit{Middleware} será preciso realizar o procedimento manual de configuração, segue abaixo a configuração utilizada para criação do contexto de PESQUISAR\_CLIENTE utilizada para identificar o cliente, descrito no arquivo \textit{/etc/asterisk/extensions.conf}, conforme representado pelo algoritmo \ref{algoritmo:FluxoIdentificaoCliente} abaixo:
 
 
@@ -56,8 +56,8 @@ A interface \textit{Web} do Disc-OS permite realizar a configuração da URA, de
 
 
 Neste trecho é declarado o contexto [PESQUISAR\_CLIENTE], cuja prioridade 1 será anteder a ligação e logo em seguida emitir um áudio chamado \textit{"beep"}, foi defini o tempo limite de espera para o primeiro dígito de 7 segundos e o tempo limite de espera para a discagem dos dígitos de 3 segundos, será lido os valores informados pelo Originador da chamada e atribuída a variável CLIENTE\_IMOVEL, após isto será realizada uma requisição via interface de comunicação  AGI para o \textit{Middleware}, solicitando o serviço mapeando em pesquisar.imovel.cliente.agi, dependendo do retorno deste serviço será realizado um redirecionamento da ligação para um contexto específico, para consultar a configuração completa da URA encontra-se disponível nos anexos deste trabalho.
-Para tanto, será necessário customizar os arquivos de áudio para serem tocados, conforme as operações disponíveis forem acessadas. Para efetuar a gravação do áudio foi utilizado um recurso do Asterisk, discando para *77, existe um contexto que utiliza aplicativos nativos para realiza a gravação no formato WAV e o disponibiliza no diretório \textit{/var/lib/asterisk/sounds/custom/} para utilização.
-Após as configurações básicas, será preciso ter um dispositivo para efetuar as chamadas e conseguir se comunicar com a URA, neste cenário existe um recurso chamado de \textit{Softphone}, são programas que tornam o computador em um Ramal IP, possibilitando realizar e receber chamadas, com essa finalidade foi utilizado o Zoiper\footnote{Disponível em \url{https://www.zoiper.com/}}, conforme visto na figura \ref{figura:zoiper}:
+Para tanto, é necessário customizar os arquivos de áudio para serem tocados, conforme as operações disponíveis forem acessadas. Para efetuar a gravação do áudio foi utilizado um recurso do Asterisk, discando para *77, existe um contexto que utiliza aplicativos nativos para realiza a gravação no formato WAV e o disponibiliza no diretório \textit{/var/lib/asterisk/sounds/custom/} para utilização.
+Após as configurações básicas, é preciso ter um dispositivo para efetuar as chamadas e conseguir se comunicar com a URA, neste cenário existe um recurso chamado de \textit{Softphone}, são programas que tornam o computador em um Ramal IP, possibilitando realizar e receber chamadas, com essa finalidade foi utilizado o Zoiper\footnote{Disponível em \url{https://www.zoiper.com/}}, conforme visto na figura \ref{figura:zoiper}:
 
 \begin{figure}[H]
 	\centering
@@ -78,4 +78,4 @@ Para adicionar o ramal é preciso definir qual será o protocolo utilizado e ins
 	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
 \end{figure}
 
-Após realizar todos estes passos será possível acessar os serviços disponibilizados pela URA, através do Zoiper efetuar as chamadas para percorrer os fluxos previamente definidos.
+Após realizar todos estes passos é possível acessar os serviços disponibilizados pela URA, através do Zoiper efetuar as chamadas para percorrer os fluxos previamente definidos.
