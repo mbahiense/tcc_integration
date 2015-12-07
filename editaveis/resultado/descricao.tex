@@ -24,7 +24,7 @@ O ambiente para execução dos testes será realizando um terminal cujo as espec
 	\legend{\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
 \end{table}
 
-Este terminal é responsável em executar ambos os sistemas envolvidos, no entanto como o software Asterisk está disponível somente para plataforma Linux, é preciso utilizar o recurso de máquina virtual através do software Virtual Box\footnote{Disponível em \url{https://www.virtualbox.org/}}, para subir uma instância da distribuição Disc-Os conforme citado nas seções anteriores.
+Este terminal é responsável em executar ambos os sistemas envolvidos, no entanto como o software Asterisk está disponível somente para plataforma Linux, é preciso utilizar o recurso de máquina virtual através do software Virtual Box\footnote{Disponível em \url{https://www.virtualbox.org/}}, para executar uma instância da distribuição Disc-Os conforme citado nas seções anteriores.
  
 O terminal possui uma conexão de rede local ativa, para que seja atribuído um endereço IP ao sistema operacional hospedeiro e ao convidado.
 Visando garantir o correto funcionamento e a padronização do ambiente de teste foram criados testes de integração reproduzindo uma chamada telefônica programaticamente simulando um ambiente real, para tanto foi necessário utilizar os seguintes recursos o \textit{framework} JUnit na construção dos testes e o recurso nativo do Asterisk chamado \textit{Local Channel} que permite criar um canal de comunicação com um contexto e extensão específica dentro do sistema Asterisk, ou seja permite acessar diretamente o ponto de integração entre os sistemas.
