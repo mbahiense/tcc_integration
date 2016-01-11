@@ -6,19 +6,24 @@
 
 \section{Arquitetura da Solução}
 
-Após o estudo aprofundado sobre o sistema GSAN e software Asterisk foram identificadas diversas formas de realizar a integração, entre os sistemas pelo fato da existência de vários protocolos possíveis de comunicação, no entanto a solução adotada será visando a reusabilidade, baixo custo de manutenção e o uso de tecnologias que já tenham uma maturidade no mercado. Foram escolhidos os protocolos SOAP e AGI para serem implementados por um \textit{Middleware}, este é responsável em assumir o papel de intermediário entre os sistemas GSAN e Asterisk. Com o intuito de facilitar o entendimento da comunicação entre os sistemas, a seguir será exposto o diagrama de implantação da solução (figura \ref{figura:diagramaImplantacao}) descrita acima, explanado os principais detalhes adotados nesta integração:
+Após o estudo sobre o sistema GSAN e software Asterisk foram identificadas diversas formas de realizar a integração, entre os sistemas pelo fato da existência de vários protocolos possíveis de comunicação, no entanto a solução adotada será visando a reusabilidade, baixo custo de manutenção e o uso de tecnologias que já tenham uma maturidade no mercado. Foram escolhidos os protocolos SOAP\footnote{SOAP - \textit{Simple Object Access Protocol}} e AGI\footnote{AGI - \textit{Asterisk Gateway Interface}} para serem implementados por um \textit{Middleware}, este é responsável em assumir o papel de intermediário entre os sistemas GSAN e Asterisk. O Middleware faz uso do protocolo SOAP para se comunicar com o sistema GSAN, já para a comunicação com o sistema \textit{Asterisk} utiliza a interface de comunicação AGI, dessa forma o \textit{Middleware} abstrai as disparidades entre as plataformas dos sistemas. No sistema Asterisk foi implementado o recurso chamado URA, Unidade de Resposta Audível tornando possível programar um fluxo pré-determinado de atendimento das solicitações recepcionadas por chamadas telefônicas.
+
+Com o intuito de facilitar o entendimento da comunicação entre os sistemas, a seguir será exposto o diagrama de implantação da solução descrita acima, explanado os principais detalhes adotados nesta integração:
 
 
 \begin{figure}[H]
 	\centering
 	\caption{Diagrama de implantação da solução}
 	\label{figura:diagramaImplantacao}
-	\includegraphics{figuras/diagrama_implantacao.png}
-	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}	
+	\begin{subfigure}[H]{\textwidth}
+		\centering
+		\includegraphics{figuras/diagrama_implantacao.png}
+		\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}	
+	\end{subfigure}
 \end{figure}
 
 
-Conforme ilustrado acima, o sistema GSAN prover uma interface de serviços na forma de \textit{Webservices} utilizando o protocolo de comunicação SOAP\footnote{SOAP - \textit{Simple Object Access Protocol}}, tais serviços são consumidos através do \textit{Middleware} intermediário que também prover uma interface AGI de serviços, para então serem consumidos pelo Asterisk e posteriormente responder as solicitações da Unidade de Resposta Audível.
+Conforme ilustrado acima na figura \ref{figura:diagramaImplantacao}, o sistema GSAN prover uma interface de serviços na forma de \textit{Webservices} utilizando o protocolo de comunicação SOAP\footnote{SOAP - \textit{Simple Object Access Protocol}}, tais serviços são consumidos através do \textit{Middleware} intermediário que também prover uma interface AGI de serviços, para então serem consumidos pelo Asterisk e posteriormente responder as solicitações da Unidade de Resposta Audível.
 
 O processo de integração é composto por tecnologias com paradigmas diferenciados, no entanto para melhorar o entendimento dos detalhes de compatibilidades adotados segue abaixo a tabela \ref{tabela:tecnologiasUtilizadas} das tecnologias utilizadas e versões correspondentes.
 

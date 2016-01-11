@@ -1,7 +1,7 @@
 \subsection{Implementação do Middleware}
 
-O \textit{Middleware} intermediário denominado Integrador será responsável em receber as solicitações realizadas pela URA do Asterisk, após analisá-las deverá efetuar requisições ao \textit{WebService} do sistema GSAN, afim de obter as informações, logo em seguida tratá-las e então devolver as informações essenciais ao Asterisk.
-O \textit{Middleware} é capaz de comunicar-se com os sistemas GSAN e Asterisk. A comunicação com o sistema GSAN é realizada por uma implementação cliente do \textit{Webservice} disponibilizado, já a comunicação com o Asterisk é realizada por uma interface de comunicação chamada AGI \ref{key:asteriskjava}, neste trabalho foi utilizado o \textit{framework} \textit{Open Source} chamado Asterisk-Java, que fornece recursos para comunicação com o Asterisk utilizando os protocolos comuns ao sistema.
+O \textit{Middleware} intermediário denominado Integrador será responsável em receber as solicitações realizadas pela URA do Asterisk, após analisá-las deverá efetuar requisições ao \textit{WebService} do sistema GSAN, a fim de obter as informações, logo em seguida tratá-las e então devolver as informações essenciais ao Asterisk.
+O \textit{Middleware} é capaz de comunicar-se com os sistemas GSAN e Asterisk. A comunicação com o sistema GSAN é realizada por uma implementação cliente do \textit{Webservice} disponibilizado, já a comunicação com o Asterisk é realizada por uma interface de comunicação chamada AGI, neste trabalho foi utilizado o \textit{framework} \textit{Open Source} chamado Asterisk-Java, que fornece recursos para comunicação com o Asterisk utilizando os protocolos comuns ao sistema.
 
 Para cada novo serviço a ser tratado pelo Middleware, é necessário declarar uma chave de texto que será utilizada no Asterisk, que representa o objeto a ser invocado, adicionados em um novo arquivo chamado \textit{fastagi-mapping.properties} da seguinte maneira, conforme a figura \ref{figura:mapeamenteServicosAGI} abaixo:
 
@@ -9,9 +9,13 @@ Para cada novo serviço a ser tratado pelo Middleware, é necessário declarar u
 	\centering
 	\caption{Mapeamento dos serviços para consumo via AGI}
 	\label{figura:mapeamenteServicosAGI}
-	\includegraphics{figuras/mapeamento_servicos_agi.png}
-	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
+	\begin{subfigure}[H]{\textwidth}
+		\centering
+		\includegraphics{figuras/mapeamento_servicos_agi.png}
+		\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}	
+	\end{subfigure}
 \end{figure}
+
 
 
 Dessa forma o \textit{Middleware} tem condições de recepcionar as solicitações originadas pelo \textit{software} Asterisk utilizando a interface de comunicação AGI, e direcionar a chamada internamente para uma classe concreta que contém a lógica de consumo aos novos serviços disponibilizados pelo \textit{WebService} do sistema GSAN.
@@ -54,8 +58,11 @@ Visando facilitar o consumo dos novos serviços, será gerado o \textit{WebServi
 	\centering
 	\caption{Geração do código fonte para consumo do WebService.}	
 	\label{figura:gerarWSCliente}
-	\includegraphics{figuras/gerar_wscliente.png}
-	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
+	\begin{subfigure}[H]{\textwidth}
+		\centering
+		\includegraphics{figuras/gerar_wscliente.png}
+		\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}	
+	\end{subfigure}
 \end{figure}
 
 Descrição dos parâmetros utilizados:
@@ -75,8 +82,11 @@ Com isso será gerado o código fonte de consumo dos serviços atualmente declar
 	\centering
 	\caption{Executando o sistema Integrador.}	
 	\label{figura:executarIntegrador}
-	\includegraphics{figuras/executar_integrador.png}
-	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
+	\begin{subfigure}[H]{\textwidth}
+		\centering
+		\includegraphics{figuras/executar_integrador.png}
+		\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}	
+	\end{subfigure}
 \end{figure}
 
 

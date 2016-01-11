@@ -15,8 +15,11 @@ Propõem-se em atender as principais demandas de gestão de operações comercia
 	\centering
 	\caption{Implantações do Sistema GSAN}	
 	\label{figura:implantacaoSistemaGSAN}
-	\includegraphics{figuras/implantacaoGSAN.png}
-	\legend {\fontsize{10}{12}\selectfont {Fonte: \citeonline{PORTAL:2014}}.}
+	\begin{subfigure}[H]{\textwidth}
+		\centering
+		\includegraphics{figuras/implantacaoGSAN.png}
+		\legend {\fontsize{10}{12}\selectfont {Fonte: \citeonline{PORTAL:2014}}.}
+	\end{subfigure}
 \end{figure}
 
 
@@ -89,8 +92,11 @@ O GSAN possui uma arquitetura que implementa diversos padrões de projeto, visan
 	\centering
 	\caption{Arquitetura Detalhada do Sistema GSAN}	
 	\label{figura:arquiteturaDetalhada}
-	\includegraphics{figuras/gsanArquiteturaMenor.png}
-	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
+	\begin{subfigure}[H]{\textwidth}
+		\centering
+		\includegraphics{figuras/gsanArquiteturaMenor.png}
+		\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
+	\end{subfigure}
 \end{figure}
 
 	
@@ -116,19 +122,27 @@ O processo de empacotamento para geração do EAR (\textit{Enterprise Archive}) 
 	\centering
 	\caption{Exemplo de configuração do \textit{script} build}
 	\label{figura:configuracaoScriptBuild}	
-	\includegraphics{figuras/build_properties.png}
-	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
+	\begin{subfigure}[H]{\textwidth}
+		\centering
+		\includegraphics{figuras/build_properties.png}
+		\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
+	\end{subfigure}
 \end{figure}
 	
 A execução do \textit{script} pode ser realizada dentro da IDE executando o seguinte procedimento, após localizar o arquivo \textit{build.xml} dentro na raiz do projeto, ao clicar com o botão esquerdo e selecionar a opção \textit{Run as > Ant Build}, será acionado a execução da instrução \textit{make} padrão do \textit{script}, para construção do pacote a ser disponibilizado, conforme visto na figura \ref{figura:execucaoScriptBuild}:	
 		
+
 \begin{figure}[H]
 	\centering
 	\caption{Execução do \textit{script} de build}
 	\label{figura:execucaoScriptBuild}
+	\begin{subfigure}[H]{\textwidth}
+		\centering
 	\includegraphics{figuras/build_ant.png}
 	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
-\end{figure}
+	\end{subfigure}
+\end{figure}		
+		
 
 Para executar a aplicação faz-se necessário a utilização de um servidor de aplicação que implemente as principais interfaces de serviços da plataforma JEE que serão consumidos pela aplicação, neste trabalho foi utilizado o projeto \textit{Open Source Jboss Community} na versão 4.0.1, compatível com as tecnologias utilizadas no GSAN, a configuração deste Servidor de Aplicação Web pode ser consultado nos anexos deste trabalho.
 Para executar o sistema GSAN, utilizando o terminal de comando do sistema operacional (\textit{Command Prompt}) basta digitar run e pressionar a tecla Enter será iniciado o servidor de aplicação e executará o sistema GSAN, visto na figura \ref{figura:execucaoSistemaGSAN}:
@@ -138,9 +152,13 @@ Para executar o sistema GSAN, utilizando o terminal de comando do sistema operac
 	\centering
 	\caption{Executando o sistema GSAN}	
 	\label{figura:execucaoSistemaGSAN}
+	\begin{subfigure}[H]{\textwidth}
+		\centering
 	\includegraphics{figuras/executando_jboss.png}	
 	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
-\end{figure}
+	\end{subfigure}
+\end{figure}	
+
 
 
 A solução adotada para banco de dados neste trabalho será o PostgreSQL na versão 9.3.4 e PgAdmin versão 1.18.1 como SGBD (Sistema de Gerenciamento de Banco de Dados), no próprio site existe o guia de instalação para desenvolvedores tornando esse passo bem intuitivo.
@@ -151,10 +169,13 @@ Para acessar o sistema em execução, basta digitar o seguinte endereço no nave
 \begin{figure}[H]
 	\centering
 	\caption{Acessando página inicial do Sistema}
-	\label{figura:acessoPaginaInicial}	
+	\label{figura:acessoPaginaInicial}
+	\begin{subfigure}[H]{\textwidth}
+		\centering
 	\includegraphics{figuras/gsan_online.png}	
 	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
-\end{figure}
+	\end{subfigure}
+\end{figure}	
 
 
 A credencial de acesso criada por padrão é: \\

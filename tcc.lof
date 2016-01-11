@@ -1,0 +1,41 @@
+\select@language {brazil}
+\contentsline {figure}{\numberline {1}{\ignorespaces Gr\IeC {\'a}fico da Quantidade de Reclama\IeC {\c c}\IeC {\~o}es Mensais da CAJ\relax }}{16}{figure.caption.13}
+\contentsline {figure}{\numberline {2}{\ignorespaces Implanta\IeC {\c c}\IeC {\~o}es do Sistema GSAN\relax }}{18}{figure.caption.16}
+\contentsline {figure}{\numberline {3}{\ignorespaces Arquitetura Detalhada do Sistema GSAN\relax }}{21}{figure.caption.18}
+\contentsline {figure}{\numberline {4}{\ignorespaces Exemplo de configura\IeC {\c c}\IeC {\~a}o do \textit {script} build\relax }}{23}{figure.caption.19}
+\contentsline {figure}{\numberline {5}{\ignorespaces Execu\IeC {\c c}\IeC {\~a}o do \textit {script} de build\relax }}{23}{figure.caption.20}
+\contentsline {figure}{\numberline {6}{\ignorespaces Executando o sistema GSAN\relax }}{24}{figure.caption.21}
+\contentsline {figure}{\numberline {7}{\ignorespaces Acessando p\IeC {\'a}gina inicial do Sistema\relax }}{25}{figure.caption.22}
+\contentsline {figure}{\numberline {8}{\ignorespaces Acessando p\IeC {\'a}gina inicial da Interface WEB do Disc-OS\relax }}{28}{figure.caption.23}
+\contentsline {figure}{\numberline {9}{\ignorespaces Diagrama de implanta\IeC {\c c}\IeC {\~a}o da solu\IeC {\c c}\IeC {\~a}o\relax }}{35}{figure.caption.24}
+\contentsline {figure}{\numberline {10}{\ignorespaces Interface dos servi\IeC {\c c}os automatizados.\relax }}{38}{figure.caption.26}
+\contentsline {figure}{\numberline {11}{\ignorespaces Declara\IeC {\c c}\IeC {\~a}o da servlet do Webservice.\relax }}{38}{figure.caption.27}
+\contentsline {figure}{\numberline {12}{\ignorespaces Declara\IeC {\c c}\IeC {\~a}o do \textit {EndPoint} dos servi\IeC {\c c}os.\relax }}{39}{figure.caption.28}
+\contentsline {figure}{\numberline {13}{\ignorespaces Mapeamento dos servi\IeC {\c c}os para consumo via AGI\relax }}{40}{figure.caption.29}
+\contentsline {figure}{\numberline {14}{\ignorespaces Gera\IeC {\c c}\IeC {\~a}o do c\IeC {\'o}digo fonte para consumo do WebService.\relax }}{41}{figure.caption.30}
+\contentsline {figure}{\numberline {15}{\ignorespaces Executando o sistema Integrador.\relax }}{42}{figure.caption.31}
+\contentsline {figure}{\numberline {16}{\ignorespaces Cadastro de um Ramal SIP.\relax }}{43}{figure.caption.32}
+\contentsline {figure}{\numberline {17}{\ignorespaces Diagrama do Fluxo da Unidade de Resposta Aud\IeC {\'\i }vel\relax }}{44}{figure.caption.33}
+\contentsline {figure}{\numberline {18}{\ignorespaces Softphone Zoiper sendo executado\relax }}{46}{figure.caption.34}
+\contentsline {figure}{\numberline {19}{\ignorespaces Configurar Ramal no Zoiper\relax }}{46}{figure.caption.35}
+\contentsline {figure}{\numberline {20}{\ignorespaces Diagrama de sequ\IeC {\^e}ncia utilizando a su\IeC {\'\i }te de teste.\relax }}{49}{figure.caption.36}
+\contentsline {figure}{\numberline {21}{\ignorespaces Declara\IeC {\c c}\IeC {\~a}o dos contextos de teste no Asterisk\relax }}{52}{figure.caption.38}
+\contentsline {figure}{\numberline {22}{\ignorespaces Obter 2\IeC {\textordfeminine } via - Cen\IeC {\'a}rio de Teste 1\relax }}{53}{figure.caption.39}
+\contentsline {figure}{\numberline {23}{\ignorespaces Obter 2\IeC {\textordfeminine } via - Cen\IeC {\'a}rio de Teste 2\relax }}{54}{figure.caption.40}
+\contentsline {figure}{\numberline {24}{\ignorespaces Obter 2\IeC {\textordfeminine } via - Cen\IeC {\'a}rio de Teste 3\relax }}{54}{figure.caption.41}
+\contentsline {figure}{\numberline {25}{\ignorespaces Informar Falta de \IeC {\'A}gua - Cen\IeC {\'a}rio de Teste 1\relax }}{55}{figure.caption.42}
+\contentsline {figure}{\numberline {26}{\ignorespaces Informar Falta de \IeC {\'A}gua - Cen\IeC {\'a}rio de Teste 2\relax }}{56}{figure.caption.43}
+\contentsline {figure}{\numberline {27}{\ignorespaces Informar Falta de \IeC {\'A}gua - Cen\IeC {\'a}rio de Teste 3\relax }}{56}{figure.caption.44}
+\contentsline {figure}{\numberline {28}{\ignorespaces Restabelecimento da Liga\IeC {\c c}\IeC {\~a}o de \IeC {\'A}gua - Cen\IeC {\'a}rio de Teste 1\relax }}{57}{figure.caption.45}
+\contentsline {figure}{\numberline {29}{\ignorespaces Restabelecimento da Liga\IeC {\c c}\IeC {\~a}o de \IeC {\'A}gua - Cen\IeC {\'a}rio de Teste 2\relax }}{57}{figure.caption.46}
+\contentsline {figure}{\numberline {30}{\ignorespaces Restabelecimento da Liga\IeC {\c c}\IeC {\~a}o de \IeC {\'A}gua - Cen\IeC {\'a}rio de Teste 3\relax }}{58}{figure.caption.47}
+\contentsline {figure}{\numberline {31}{\ignorespaces Obter 2\IeC {\textordfeminine } Via de Conta - Detalhes execu\IeC {\c c}\IeC {\~a}o dos testes\relax }}{58}{figure.caption.48}
+\contentsline {figure}{\numberline {32}{\ignorespaces Obter 2\IeC {\textordfeminine } Via de Conta - E-mail recebido pelo cliente\relax }}{59}{figure.caption.49}
+\contentsline {figure}{\numberline {33}{\ignorespaces Informar Falta de \IeC {\'A}gua - Detalhes execu\IeC {\c c}\IeC {\~a}o dos testes\relax }}{59}{figure.caption.50}
+\contentsline {figure}{\numberline {34}{\ignorespaces Informar Falta de \IeC {\'A}gua - RA gerado para o Cen\IeC {\'a}rio 1\relax }}{60}{figure.caption.51}
+\contentsline {figure}{\numberline {35}{\ignorespaces Informar Falta de \IeC {\'A}gua - RA gerado para o Cen\IeC {\'a}rio 2\relax }}{60}{figure.caption.52}
+\contentsline {figure}{\numberline {36}{\ignorespaces Informar Falta de \IeC {\'A}gua - RA gerado para o Cen\IeC {\'a}rio 3\relax }}{61}{figure.caption.53}
+\contentsline {figure}{\numberline {37}{\ignorespaces Restabelecimento da Liga\IeC {\c c}\IeC {\~a}o de \IeC {\'A}gua - Detalhes execu\IeC {\c c}\IeC {\~a}o dos testes\relax }}{61}{figure.caption.54}
+\contentsline {figure}{\numberline {38}{\ignorespaces Restabelecimento da Liga\IeC {\c c}\IeC {\~a}o de \IeC {\'A}gua - RA gerado para o Cen\IeC {\'a}rio 1\relax }}{62}{figure.caption.55}
+\contentsline {figure}{\numberline {39}{\ignorespaces Restabelecimento da Liga\IeC {\c c}\IeC {\~a}o de \IeC {\'A}gua - RA gerado para o Cen\IeC {\'a}rio 2\relax }}{62}{figure.caption.56}
+\contentsline {figure}{\numberline {40}{\ignorespaces Restabelecimento da Liga\IeC {\c c}\IeC {\~a}o de \IeC {\'A}gua - RA gerado para o Cen\IeC {\'a}rio 3\relax }}{63}{figure.caption.57}

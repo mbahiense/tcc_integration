@@ -35,7 +35,8 @@
 \usepackage{ufc-abntex2}
 \usepackage{algorithm}			% Para escrever algoritmos
 \usepackage{algorithmic}		% Para escrever algoritmos
-
+\usepackage{caption}			% Remove as imagens do appencia da lista
+\usepackage{subcaption}
 
 % Modificando o idioma do título de Algoritmos.
 \makeatletter
@@ -46,6 +47,9 @@
 % Modificando o comentário do algoritmo
 %\renewcommand{\algorithmiccomment}[1]{\hskip2em$\triangleright$ #1}	
 \renewcommand{\algorithmiccomment}[1]{\hfill \(\triangleright\) #1}
+
+% comando configurar a legenda da sub-figura.
+\captionsetup[subfigure]{labelfont=bf,textfont=normalfont,singlelinecheck=off,justification=raggedright}
 		
 % ---
 % Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2

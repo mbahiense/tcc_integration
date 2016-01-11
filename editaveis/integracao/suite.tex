@@ -14,7 +14,7 @@ A suíte de teste é composta pelos seguintes classes;
 \end{itemize}
 
 
-Com o intuito de unir os recursos do \textit{framework} JUnit com os do Asterisk-Java, cada classe de teste deve seguir um padrão no momento da implementação, conforme descrito a seguir;
+Com o intuito de unir os recursos do \textit{framework} JUnit com os do Asterisk-Java, cada classe de teste deve seguir um padrão no momento da implementação, conforme descrito a seguir:
 
 \begin{enumerate}
 	\item Configurar o método de Teste anotado com \textit{@Test}.
@@ -26,19 +26,23 @@ Com o intuito de unir os recursos do \textit{framework} JUnit com os do Asterisk
 Por meio desta padronização na classe de teste, permite que a mesma seja executada pelo \textit{framework} JUnit e se comunique com a ferramenta Asterisk por meio do \textit{framework} Asterisk-Java.
 
 O diagrama sequência demostrado na figura \ref{figura:diagramaSeq2Via} ilustra o funcionamento da classe de teste do serviço Obter 2ª via de conta, trabalhando em conjunto com a suíte de teste.
-Inicialmente é solicitado o \textit{Login} na ferramenta Asterisk, em seguida é realizado a criação da chamada telefônica e passada como parâmetro chamado \textit{action} juntamente com um tempo limite de esperar para o método \textit{sendAction}, após a confirmação do retorno a classe de teste solicita o método chamado \textit{addListener} com intuito de ser registrada como ouvinte das mudanças que ocorrem nos canais abertos, a suíte de teste faz o registro do \textit{listener} junto ao Asterisk que ao identificar alguma mudança no canal executa uma notificação através do método \textit{propertyChange} contendo os detalhes do evento para a classe ouvinte registrada, atráves da informação contido no evento a classe de teste pode identificar o comportamento apresentado pelo canal e posteriormente remove o registro de ouvinte e realiza o \textit{Logoff}, chamando respectivamente os métodos \textit{removeListener} e \textit{Logoff}.
+
+Esse modelo é atributo a todos os testes de integração desenvolvidos na suíte de testes, onde inicialmente é realizado o processo de Login junto a ferramenta Asterisk, em seguida é criada a chamada utilizando o método \textit{sendAction}, e registrado o ouvinte através do método \textit{addListener}, quando o Asterisk identifica mudança nas propriedades da chamada do ouvinte registrado, dispara o método \textit{propertyChange} contendo os detalhes do evento, com esses detalhes o teste por determinar o ocorrência e sucesso ou error e posteriormente remove o registro de ouvinte e realiza o \textit{Logoff}, chamando respectivamente os métodos \textit{removeListener} e \textit{Logoff}.
 
 \begin{figure}[H]
 	\centering
 	\caption{Diagrama de sequência utilizando a suíte de teste.}
 	\label{figura:diagramaSeq2Via}
-	\includegraphics{figuras/diagramaSequenciaObter2Via.png}
-	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
+	\begin{subfigure}[H]{\textwidth}
+		\centering
+		\includegraphics{figuras/diagramaSequenciaObter2Via.png}
+		\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}	
+	\end{subfigure}
 \end{figure}
 
 
-Durante a execução de um cenário de teste, é necessário monitorar o comportamento da chamada ou canal internamento na ferramente Asterisk,
-afim de validar o retorno obtido pela requisição e posteriormente evidenciar a ocorrência do comportamento esperado ou de falhas. Com isso se faz necessário habilitar a conexão remota na ferramenta Asterisk. O arquivo \textit{/etc/asterisk/manager.conf} contém as propriedades necessárias para serem configuradas, abaixo é demostrado a configuração realizada para execução dos testes automatizados;
+Durante a execução de um cenário de teste, é necessário monitorar o comportamento da chamada ou canal internamente na ferramenta Asterisk,
+a fim de validar o retorno obtido pela requisição e posteriormente evidenciar a ocorrência do comportamento esperado ou de falhas. Com isso se faz necessário habilitar a conexão remota na ferramenta Asterisk. O arquivo \textit{/etc/asterisk/manager.conf} contém as propriedades necessárias para serem configuradas, a seguir é demostrada a configuração realizada para execução dos testes automatizados:
 \\
 \hspace{10 mm}\textit{[general]} 			\hspace{10 mm} $\triangleright$ Contexto geral de conexão.\\
 \hspace{10 mm}\textit{enabled=yes}  		\hspace{10 mm} $\triangleright$ Habilitar a conexão remota.\\
@@ -46,7 +50,7 @@ afim de validar o retorno obtido pela requisição e posteriormente evidenciar a
 \hspace{10 mm}\textit{displayconnects=yes}  \hspace{10 mm} $\triangleright$ Define a exibição das conexões no console.\\
 \hspace{10 mm}\textit{permit=0.0.0.0/0.0.0.0} \hspace{10 mm} $\triangleright$ Define o endereço IP que será aceito.\\
 
-Abaixo segue o exemplo de configuração para adição de um novo usuário para conexão remota;
+Abaixo segue o exemplo de configuração para adição de um novo usuário para conexão remota:
 \\
 \hspace{10 mm}\textit{[manager]} 	\hspace{10 mm} $\triangleright$ Nome do novo usuário.\\
 \hspace{10 mm}\textit{secret=pa55w0rd} \hspace{10 mm} $\triangleright$ Senha do novo usuário \\
@@ -57,6 +61,7 @@ Abaixo segue o exemplo de configuração para adição de um novo usuário para 
 
 A distribuição Disc-OS por padrão possui uma configuração de \textit{firewall} bastante restritiva por questões de segurança, para que não ocorra rejeição nas solicitações realizadas ao Asterisk, será para fins de testes desabilitada as regras do \textit{firewall}, utilizando o seguinte comando \textit{/etc/init.d/iptables stop}.
  
-A suíte de testes contém a implementação dos testes de integração para os três serviços automatizados que são obter 2º via de conta, informar falta de água e solicitar restabelecimento da ligação de água, além de testes unitários para verificação da rotina de enviar e-mail e checagem da disponibilidade do Webservice.
+A suíte de testes contém a implementação dos testes de integração para os três serviços automatizados que são obter 2º via de conta, informar falta de água e solicitar restabelecimento da ligação de água, além de testes unitários para verificação da rotina de enviar e-mail e checagem da disponibilidade do \textit{Webservice}.
+A vantagem principal obtida por meio da suíte de testes se trata da possibilidade de tornar o processo de identificação de falhas padronizado, já sua desvantagem se trata da complexidade na etapa de configuração.
 
 

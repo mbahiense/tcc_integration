@@ -1,0 +1,24 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: tcc.aux
+A level-1 auxiliary file: editaveis/folhadeaprovacao.aux
+A level-1 auxiliary file: editaveis/dedicatoria.aux
+A level-1 auxiliary file: editaveis/agradecimentos.aux
+A level-1 auxiliary file: resumo/ptbr.aux
+A level-1 auxiliary file: resumo/us.aux
+A level-1 auxiliary file: editaveis/fundamentacao/gsan.aux
+A level-1 auxiliary file: editaveis/revisao/revisaoBibliografica.aux
+A level-1 auxiliary file: editaveis/resultado/descricao.aux
+A level-1 auxiliary file: editaveis/consideracao/consideracoes.aux
+A level-1 auxiliary file: editaveis/apendices.aux
+The style file: abntex2-alf.bst
+Database file #1: abntex2-options.bib
+Database file #2: bibtex/referencias.bib
+You can't pop an empty literal stack for entry ALMEIDA:2011
+while executing---line 2146 of file abntex2-alf.bst
+You can't pop an empty literal stack for entry CAMPOS:2007
+while executing---line 2146 of file abntex2-alf.bst
++---------------------------------------------------------+
+| Estilo bibliográfico abntex2-alf.bst versão v-1.9.5           |
+| Em caso de dúvidas ou problemas com este estilo procure |
+| http://www.abntex.net.br/                               |
++---------------------------------------------------------+
+(There were 2 error messages)
