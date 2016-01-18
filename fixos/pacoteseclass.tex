@@ -38,7 +38,7 @@
 \usepackage{caption}			% Remove as imagens do appencia da lista
 \usepackage{subcaption}
 \usepackage{setspace} 			% Definir o espaçamento entrelinhas
-
+\usepackage{tocloft} 			% Ajustar identação do sumario.
 
 % Modificando o idioma do título de Algoritmos.
 \makeatletter
@@ -111,10 +111,18 @@
 % Controle do espaçamento entre um parágrafo e outro:
 \setlength{\parskip}{0.2cm}  % tente também \onelineskip
 
-%\addto\captionsenglish{% Replace "english" with the language you use
+
+%\addto\captionsbrazil{% 
 %	\renewcommand{\contentsname}%
 %	{SUMÁRIO}%
 %}
+
+\usepackage{titlesec}
+\usepackage{titletoc}
+
+
+
+
 
 
 % ---

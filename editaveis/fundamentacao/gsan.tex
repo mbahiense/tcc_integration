@@ -1,4 +1,4 @@
-\chapter[Fundamentação Teórica]{\textbf{F}undamentação \textbf{T}eórica}
+\chapter[Fundamentação Teórica]{\textbf{\uppercase{Fundamentação Teórica}}}
 %\addcontentsline{toc}{chapter}{Fundamentação Teórica}
 
 %\textit{Neste capítulo será apresentado os sistemas GSAN e Asterisk, com a intenção de %familiarizar o leitor com as notações que serão amplamente utilizadas no decorrer do %trabalho.}
@@ -26,7 +26,7 @@ Propõem-se em atender as principais demandas de gestão de operações comercia
 Conforme demonstrado acima o sistema está em funcionamento em aproximadamente 1 mil municípios brasileiros, concentrado principalmente na região Norte e Nordeste do Brasil.
 Atualmente o sistema está preparado para atender companhias de pequeno e médio porte, provendo soluções flexíveis através de parametrizações em tabelas de banco de dados, adequando-se a realidades distintas e tornando-se referência em software para o setor de saneamento básico brasileiro. 
 
-\subsection{GSAN Conceitos}
+\subsection{\textbf{GSAN CONCEITOS}}
 
 O sistema em sua concepção foi dividido nos seguintes módulos descritos abaixo:
 \begin{itemize}
@@ -83,7 +83,7 @@ O relacionamento entre Clientes e Imóveis no sistema pode ocorrer das seguintes
 As solicitações realizadas pelos clientes aos atendentes são denominadas Registros de Atendimentos pelo sistema, comumente chamada de RA, para cada tipo de solicitação seja ela Solicitar Ligação, Solicitar Corte, Informar Falta de Água entre outras, o sistema possui tipos de serviços que devem ser realizados para atender à solicitação, a execução destes serviços é representado por uma  entidade denominada Ordem de Serviço, comumente chamada de OS, o sistema permite que seja configurada a criação de OS automáticas para determinadas solicitações, tornando menos burocrático a formalização das reclamações recebidas.
 
 
-\subsection{GSAN Arquitetura}
+\subsection{\textbf{GSAN ARQUITETURA}}
 	
 O Sistema GSAN foi desenvolvido fundamentalmente utilizando a plataforma JEE\footnote{JEE - \textit{Java Enterprise Edition}}, propriedade da \textit{Oracle Corporation}, em sua versão 5, na época a mais recente. Utiliza os principais serviços e tecnologias oferecidos pela plataforma, como por exemplo, EJB\footnote{EJB - \textit{Enterprise Java Beans}}, JMS\footnote{JMS - \textit{Java Message Service}} e JSP\footnote{JSP - \textit{Java Server Pages}} 2.1.
 O GSAN possui uma arquitetura que implementa diversos padrões de projeto, visando facilitar a manutenibilidade e manter a organização dos componentes, segue abaixo o diagrama de componentes conforme a figura \ref{figura:arquiteturaDetalhada}:
@@ -111,7 +111,7 @@ O sistema GSAN foi projetado para ser independente da solução de Banco de Dado
 A aplicação dos Padrões de Projetos renomados, tornar o código mais organizado e entendível, facilitando futuras manutenções, a utilização do padrão MVC\footnote{MVC - \textit{Model View Controller}} como estrutura arquitetural faz com que exista isolamento entre as camadas de Modelo, Visualização e Controle da aplicação, tornando a organização de pacotes bem estruturada.
 	
 	
-\subsection{GSAN Configuração}
+\subsection{\textbf{GSAN CONFIGURAÇÃO}}
 A configuração do ambiente de desenvolvimento se trata de um passo fundamental para execução deste trabalho prático. Primeiramente será preciso obter a versão do sistema que se encontra disponível no site do Portal do Software Livre, que atualmente disponibiliza o código fonte do sistema GSAN e demais arquivos de configuração do ambiente, no \textit{github}\footnote{Disponível em \url{http://www.github.com}} para a comunidade de desenvolvedores e interessados. 
 
 Com o código fonte em mãos é necessário o auxílio de uma IDE\footnote{IDE - \textit{Integrated Development Environment}} de desenvolvimento para realizar a manutenção e construção dos novos serviços, foi utilizado neste trabalho a IDE Eclipse Juno para realizar esta tarefa, o processo de configuração da IDE pode ser visto descrito nos anexos deste trabalho.
@@ -184,7 +184,7 @@ A credencial de acesso criada por padrão é: \\
 Após inserir a credencial de acesso acima teremos acesso as todas as funcionalidades dos módulos do sistema GSAN.
 
 
-\subsection{GSAN - Detalhamento Técnico }
+\subsection{\textbf{GSAN - DETALHAMENTO TÉCNICO}}
 
 O GSAN por ser um sistema de informação adaptável a empresas de pequeno, médio e grande porte, contemplando soluções dos mais diversos requisitos, entre eles Cadastramento, Micromedição, Faturamento, Arrecadação, Cobrança, Negativação e Atendimento ao Cliente. Fornecendo de forma razoavelmente flexível as configurações e detalhes operacionais das rotinas, disponível em ambiente Web utilizando recursos de tecnologias software livre.
 
