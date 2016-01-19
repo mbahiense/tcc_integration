@@ -10,16 +10,17 @@
 
 
 % Informações de dados para CAPA e FOLHA DE ROSTO 
-\titulo{\uppercase{Call Center Automatizado}: integrando um PABX baseado em asterisk com o GSAN}
-\autor{\uppercase{Marcos Roberto Garcia Bahiense Júnior}}
-\local{MANAUS}
-\data{2015}
+\titulo{\textbf{\uppercase{Call Center Automatizado}: integrando um PABX baseado em asterisk com o GSAN}}
+\autor{\uppercase{\textbf{Marcos Roberto Garcia Bahiense Júnior}}}
+\local{\textbf{MANAUS}}
+\data{\textbf{2015}}
 \orientador{Prof Carlos Augusto Mar, M.Sc.}
 
 \include{fixos/instituicao/sis}
 
 \begin{document}
 \frenchspacing 
+
 
 % ----------------------------------------------------------
 % ELEMENTOS PRÉ-TEXTUAIS
@@ -31,11 +32,10 @@
 \imprimirfolhaderosto*
 
 % Ficha Bibliográfica
-\include{fixos/fichabibliografica}
+%\include{fixos/fichabibliografica}
 %\include{editaveis/errata}
 \include{editaveis/folhadeaprovacao}
 \imprimirfolhadeaprovacao
-
 
 \include{editaveis/agradecimentos}
 %\include{editaveis/epigrafe}
@@ -46,13 +46,14 @@
 
 % Lista de ilustrações
 \pdfbookmark[0]{\listfigurename}{lof}
+\renewcommand{\listfigurename}{\textbf{\fontsize{12}{12}\selectfont {LISTA DE ILUSTRAÇÕES}}}
 \renewcommand\figurename{\textbf{Figura}}
 \listoffigures*
 \cleardoublepage
 
 
 % Lista de tabelas
-\renewcommand{\listtablename}{Lista de Quadros}
+\renewcommand{\listtablename}{\textbf{\fontsize{12}{12}\selectfont {LISTA DE QUADROS}}}
 \renewcommand\tablename{\textbf{Quadro}}
 \pdfbookmark[0]{\listtablename}{lot}
 \listoftables*

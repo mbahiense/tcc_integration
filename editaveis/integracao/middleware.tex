@@ -20,7 +20,7 @@ Para cada novo serviço a ser tratado pelo Middleware, é necessário declarar u
 
 Dessa forma o \textit{Middleware} tem condições de recepcionar as solicitações originadas pelo \textit{software} Asterisk utilizando a interface de comunicação AGI, e direcionar a chamada internamente para uma classe concreta que contém a lógica de consumo aos novos serviços disponibilizados pelo \textit{WebService} do sistema GSAN.
 
-Para cada classe concreta a ser disponibilizada é necessário estender a classe \textit{BaseAgiScript} disponibilizada pelo \textit{framework} Asterisk-Java, em seguida é preciso implementar o método \textit{service} obtido pela herança da \textit{BaseAgiScript}, tal método será invocado quando a requisição for direcionada ao serviço mapeado no arquivo \textit{fastagi-mapping.properties}, segue abaixo um exemplo de implementação utilizado, conforme a figura \ref{figura:fluxoIdentificacaoClienteAsterisk} abaixo:
+Para cada classe concreta a ser disponibilizada é necessário estender a classe \textit{BaseAgiScript} disponibilizada pelo \textit{framework} Asterisk-Java, em seguida é preciso implementar o método \textit{service} obtido pela herança da \textit{BaseAgiScript}, tal método será invocado quando a requisição for direcionada ao serviço mapeado no arquivo \textit{fastagi-mapping.properties}, segue abaixo um exemplo de implementação utilizado, conforme a figura \ref{figura:fluxoIdentificacaoCliente} abaixo:
 
 % Custom exibição da lista de algoritmos
 %\algsetup{
@@ -53,12 +53,11 @@ Para cada classe concreta a ser disponibilizada é necessário estender a classe
 
 \begin{figure}[H]
 	%\centering
-	\caption{\textbf{Fluxo de Identificação de Cliente no Asterisk.}}	
-	\label{figura:fluxoIdentificacaoClienteAsterisk}
-	\includegraphics{figuras/algoritmo_2.png}
+	\caption{\textbf{Fluxo de Identificação de Cliente no Middleware.}}	
+	\label{figura:fluxoIdentificacaoCliente}
+	\includegraphics{figuras/algoritmo_1.png}
 	\\[6pt]
 	\fontsize{10}{12}\selectfont {Fonte: Autoria Própria.}
-
 \end{figure}
 %	\legend{\fontsize{10}{12}\selectfont {Fonte: Autoria Própria.}}
 
