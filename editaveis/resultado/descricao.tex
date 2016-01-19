@@ -15,16 +15,16 @@ O ambiente para execução dos testes ocorreu sobre um terminal cujo as especifi
 
 \begin{table}[htb]
 	\footnotesize
-	\caption{Recursos computacionais utilizados}
+	\caption{\textbf{Recursos computacionais utilizados}}
 	\label{tabela:recursosUtilizados}
 	\begin{tabular}{|p{3.5cm}|p{3cm}|p{2cm}|p{4cm}|} \hline
 		\textbf{SISTEMA OPER.} 	& \textbf{PROCESSADOR} 				& \textbf{MEMÓRIA} 	& \textbf{ARMAZENAMENTO}  \\ \hline
 		Windows 7 64 bits 		& Intel Core i7-3520M CPU@2.9GHz 	& 8GB DDR3			& 1TB 5400 rpm \\ \hline
-	\end{tabular}
-	\legend{\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
+	\end{tabular}\\[6pt]
+	\fontsize{10}{12}\selectfont {Fonte: Autoria Própria.}
 \end{table}
 
-Este terminal é responsável em executar ambos os sistemas envolvidos, no entanto como o software Asterisk está disponível somente para plataforma Linux, é preciso utilizar o recurso de máquina virtual através do software Virtual Box\footnote{Disponível em \url{https://www.virtualbox.org/}}, para executar uma instância da distribuição Disc-Os conforme citado nas seções anteriores.
+Este terminal é responsável em executar ambos os sistemas envolvidos, no entanto como o software Asterisk está disponível somente para plataforma Linux, é preciso utilizar o recurso de máquina virtual através do software Virtual Box\footnote{Virtual Box - Software que provê formas de virtualização de terminais.}, para executar uma instância da distribuição Disc-Os conforme citado nas seções anteriores.
  
 O terminal possui uma conexão de rede local ativa, para que seja atribuído um endereço IP ao sistema operacional hospedeiro e ao convidado.
 
@@ -37,7 +37,7 @@ isolar o comportamento que ocorre no momento da integração sem a necessidade d
 
 \begin{figure}[H]
 	\centering
-	\caption{Declaração dos contextos de teste no Asterisk}
+	\caption{\textbf{Declaração dos contextos de teste no Asterisk}}
 	\label{figura:contextoTeste}
 	\begin{subfigure}[H]{\textwidth}
 		\centering
@@ -61,7 +61,7 @@ Abaixo são descritos os casos de testes previstos para o serviço obter 2ª Via
 		
 		\begin{figure}[H]
 			\centering
-			\caption{Obter 2ª via - Cenário de Teste 1}
+			\caption{\textbf{Obter 2ª via - Cenário de Teste 1}}
 			\label{figura:2ViaCenario1}
 			\begin{subfigure}[H]{\textwidth}
 				\centering
@@ -75,7 +75,7 @@ Abaixo são descritos os casos de testes previstos para o serviço obter 2ª Via
 		\item \textbf{CENÁRIO 2}: Cliente devidamente cadastrado no Sistema, atualmente sendo usuário de um imóvel que possui a Ligação de Água cortada por falta de pagamento, atualmente com três contas em aberto. O Cliente deseja obter a conta de maior atraso, conforme demostrado na figura \ref{figura:2ViaCenario2}.
 		\begin{figure}[H]
 			\centering
-			\caption{Obter 2ª via - Cenário de Teste 2}
+			\caption{\textbf{Obter 2ª via - Cenário de Teste 2}}
 			\label{figura:2ViaCenario2}
 			\begin{subfigure}[H]{\textwidth}
 				\centering
@@ -89,7 +89,7 @@ Abaixo são descritos os casos de testes previstos para o serviço obter 2ª Via
 		\item \textbf{CENÁRIO 3}: Cliente sem e-mail cadastrado no Sistema, atualmente sendo proprietário por dois imóveis que possuem ativo a Ligação de Água, possuindo várias contas pendentes para cada imóvel. O Cliente pretende obter todas as contas de todos os imóveis, conforme demostrado na figura \ref{figura:2ViaCenario3}.
 		\begin{figure}[H]
 			\centering
-			\caption{Obter 2ª via - Cenário de Teste 3}
+			\caption{\textbf{Obter 2ª via - Cenário de Teste 3}}
 			\label{figura:2ViaCenario3}
 			\begin{subfigure}[H]{\textwidth}
 				\centering
@@ -110,7 +110,7 @@ Abaixo são descritos os casos de testes previstos para o serviço Informar Falt
 		\item \textbf{CENÁRIO 1}: Cliente devidamente cadastrado no Sistema, atualmente locatário de um imóvel que possui ativo a Ligação de Água e Esgoto, com pendência de duas contas, com problemas no abastecimento de água. O Cliente pretende informar a falta de água para o imóvel, conforme demostrado na figura \ref{figura:informarFaltaAguaCenario1}.
 		\begin{figure}[H]
 			\centering
-			\caption{Informar Falta de Água - Cenário de Teste 1}
+			\caption{\textbf{Informar Falta de Água - Cenário de Teste 1}}
 			\label{figura:informarFaltaAguaCenario1}
 			\begin{subfigure}[H]{\textwidth}
 				\centering
@@ -124,7 +124,7 @@ Abaixo são descritos os casos de testes previstos para o serviço Informar Falt
 		\item \textbf{CENÁRIO 2}: Cliente sem e-mail cadastrado no Sistema, atualmente usuário de um único imóvel que possui ativo a Ligação de Água, com situação de adimplência, com problemas no abastecimento de água. O Cliente pretende informar a falta de água para o único imóvel, conforme demostrado na figura \ref{figura:informarFaltaAguaCenario1}.
 		\begin{figure}[H]
 			\centering
-			\caption{Informar Falta de Água - Cenário de Teste 2}
+			\caption{\textbf{Informar Falta de Água - Cenário de Teste 2}}
 			\label{figura:informarFaltaAguaCenario2}
 			\begin{subfigure}[H]{\textwidth}
 				\centering
@@ -138,7 +138,7 @@ Abaixo são descritos os casos de testes previstos para o serviço Informar Falt
 		\item \textbf{CENÁRIO 3}: Cliente devidamente cadastrado no Sistema, atualmente proprietário de dois imóveis, que possuem a Ligação de Água ativa, em situação de inadimplência. O Cliente deseja informar problemas no abastecimento de água do imóvel específico onde reside, conforme demostrado na figura \ref{figura:informarFaltaAguaCenario3}.
 		\begin{figure}[H]
 			\centering
-			\caption{Informar Falta de Água - Cenário de Teste 3}
+			\caption{\textbf{Informar Falta de Água - Cenário de Teste 3}}
 			\label{figura:informarFaltaAguaCenario3}
 			\begin{subfigure}[H]{\textwidth}
 				\centering
@@ -157,7 +157,7 @@ Abaixo são descritos os casos de testes previstos para o serviço Solicitar Res
 		\item \textbf{CENÁRIO 1}: Cliente devidamente cadastrado no Sistema, atualmente proprietário de um único imóvel que possui a Ligação de Água interrompida por corte, em situação recente de adimplência. O Cliente deseja solicitar restabelecimento da ligação para o imóvel, conforme demostrado na figura \ref{figura:restabelecimentoLigacaoCenario1}.
 		\begin{figure}[H]
 			\centering
-			\caption{Restabelecimento da Ligação de Água - Cenário de Teste 1}
+			\caption{\textbf{Restabelecimento da Ligação de Água - Cenário de Teste 1}}
 			\label{figura:restabelecimentoLigacaoCenario1}
 			\begin{subfigure}[H]{\textwidth}
 				\centering
@@ -171,7 +171,7 @@ Abaixo são descritos os casos de testes previstos para o serviço Solicitar Res
 		\item \textbf{CENÁRIO 2}: Cliente devidamente cadastrado no Sistema, atualmente usuário de um único imóvel que possui a Ligação de Água interrompida por corte, em situação recente de adimplência. O Cliente deseja solicitar restabelecimento da ligação para o imóvel, conforme demostrado na figura \ref{figura:restabelecimentoLigacaoCenario2}.
 		\begin{figure}[H]
 			\centering
-			\caption{Restabelecimento da Ligação de Água - Cenário de Teste 2}
+			\caption{\textbf{Restabelecimento da Ligação de Água - Cenário de Teste 2}}
 			\label{figura:restabelecimentoLigacaoCenario2}
 			\begin{subfigure}[H]{\textwidth}
 				\centering
@@ -185,7 +185,7 @@ Abaixo são descritos os casos de testes previstos para o serviço Solicitar Res
 		\item \textbf{CENÁRIO 3}: Cliente devidamente cadastrado no Sistema, atualmente proprietário de um imóvel, que possui Ligação de Água interrompida por corte, devido a falta de pagamento das várias contas em aberto. O Cliente deseja solicitar restabelecimento da ligação para o imóvel sem realizar a negociação das faturas, conforme demostrado na figura \ref{figura:restabelecimentoLigacaoCenario3}.
 		\begin{figure}[H]
 			\centering
-			\caption{Restabelecimento da Ligação de Água - Cenário de Teste 3}
+			\caption{\textbf{Restabelecimento da Ligação de Água - Cenário de Teste 3}}
 			\label{figura:restabelecimentoLigacaoCenario3}
 			\begin{subfigure}[H]{\textwidth}
 				\centering
@@ -208,7 +208,7 @@ A execução dos cenários propostos foi realizado utilizando o \textit{framewor
  Após a execução dos cenários de teste implementados para este serviço foi possível notar que 2/3 Cenários concluíram com sucesso e apenas 1/3 falhou em sua execução, a falha ocorreu no cenário 3 devido o cliente não possuir e-mail cadastrado no sistema, conforme demostrado na figura \ref{figura:segundaViaJUnit}.	
  \begin{figure}[H]
  	\centering
-		\caption{Obter 2ª Via de Conta - Detalhes execução dos testes}
+		\caption{\textbf{Obter 2ª Via de Conta - Detalhes execução dos testes}}
 		\label{figura:segundaViaJUnit}
  	\begin{subfigure}[H]{\textwidth}
  		\centering
@@ -221,7 +221,7 @@ A execução dos cenários propostos foi realizado utilizando o \textit{framewor
 Em cada cenário de teste o sistema deve enviar um e-mail contendo a 2ª via da conta solicitada, a figura \ref{figura:emailRecebido} ilustra a caixa de entrada do E-mail configurado para cada cliente.
 \begin{figure}[H]
 	\centering
-	\caption{Obter 2ª Via de Conta - E-mail recebido pelo cliente}
+	\caption{\textbf{Obter 2ª Via de Conta - E-mail recebido pelo cliente}}
 	\label{figura:emailRecebido}
 	\begin{subfigure}[H]{\textwidth}
 		\centering
@@ -237,7 +237,7 @@ Em cada cenário de teste o sistema deve enviar um e-mail contendo a 2ª via da 
 
 	\begin{figure}[H]
 		\centering
-		\caption{Informar Falta de Água - Detalhes execução dos testes}
+		\caption{\textbf{Informar Falta de Água - Detalhes execução dos testes}}
 		\label{figura:informarFaltaJUnit}
 		\begin{subfigure}[H]{\textwidth}
 			\centering
@@ -250,7 +250,7 @@ Ao consulta o sistema GSAN, visando identificar se houve a ocorrência da formal
 
 \begin{figure}[H]
 	\centering
-		\caption{Informar Falta de Água - RA gerado para o Cenário 1}
+		\caption{\textbf{Informar Falta de Água - RA gerado para o Cenário 1}}
 		\label{figura:informarFaltaRA1}
 	\begin{subfigure}[H]{\textwidth}
 		\centering
@@ -264,7 +264,7 @@ Para o segundo cenário, cujo o identificador 13702840 representa a matrícula d
 		
 \begin{figure}[H]
 	\centering
-	\caption{Informar Falta de Água - RA gerado para o Cenário 2}
+	\caption{\textbf{Informar Falta de Água - RA gerado para o Cenário 2}}
 	\label{figura:informarFaltaRA2}
 	\begin{subfigure}[H]{\textwidth}
 		\centering
@@ -277,7 +277,7 @@ Para o terceiro cenário, cujo o identificador 13704001 representa a matrícula 
 
 \begin{figure}[H]
 	\centering
-	\caption{Informar Falta de Água - RA gerado para o Cenário 3}
+	\caption{\textbf{Informar Falta de Água - RA gerado para o Cenário 3}}
 	\label{figura:informarFaltaRA3}
 	\begin{subfigure}[H]{\textwidth}
 		\centering
@@ -293,7 +293,7 @@ Para o terceiro cenário, cujo o identificador 13704001 representa a matrícula 
 
 \begin{figure}[H]
 	\centering
-	\caption{Restabelecimento da Ligação de Água - Detalhes execução dos testes}
+	\caption{\textbf{Restabelecimento da Ligação de Água - Detalhes execução dos testes}}
 	\label{figura:restabelecimentoJUnit}
 	\begin{subfigure}[H]{\textwidth}
 		\centering
@@ -306,7 +306,7 @@ Ao consulta o sistema GSAN, visando identificar se houve a ocorrência da formal
 
 \begin{figure}[H]
 	\centering
-	\caption{Restabelecimento da Ligação de Água - RA gerado para o Cenário 1}
+	\caption{\textbf{Restabelecimento da Ligação de Água - RA gerado para o Cenário 1}}
 	\label{figura:restabelecimentoRA1}
 	\begin{subfigure}[H]{\textwidth}
 		\centering
@@ -320,7 +320,7 @@ Para o segundo cenário, cujo o identificador 80166 representa a matrícula do i
 
 \begin{figure}[H]
 	\centering
-	\caption{Restabelecimento da Ligação de Água - RA gerado para o Cenário 2}
+	\caption{\textbf{Restabelecimento da Ligação de Água - RA gerado para o Cenário 2}}
 	\label{figura:restabelecimentoRA2}
 	\begin{subfigure}[H]{\textwidth}
 		\centering
@@ -334,7 +334,7 @@ Para o terceiro cenário, cujo o identificador 13702572 representa a matrícula 
 
 \begin{figure}[H]
 	\centering
-	\caption{Restabelecimento da Ligação de Água - RA gerado para o Cenário 3}
+	\caption{\textbf{Restabelecimento da Ligação de Água - RA gerado para o Cenário 3}}
 	\label{figura:restabelecimentoRA3}
 	\begin{subfigure}[H]{\textwidth}
 		\centering

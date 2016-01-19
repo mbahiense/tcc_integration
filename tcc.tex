@@ -1,4 +1,5 @@
 \include{fixos/pacoteseclass}
+
 \setlrmarginsandblock{3cm}{2cm}{*}
 \setulmarginsandblock{3cm}{2cm}{*}
 \setheaderspaces{1.5cm}{*}{*}
@@ -45,18 +46,22 @@
 
 % Lista de ilustrações
 \pdfbookmark[0]{\listfigurename}{lof}
+\renewcommand\figurename{\textbf{Figura}}
 \listoffigures*
 \cleardoublepage
 
+
 % Lista de tabelas
+\renewcommand{\listtablename}{Lista de Quadros}
+\renewcommand\tablename{\textbf{Quadro}}
 \pdfbookmark[0]{\listtablename}{lot}
 \listoftables*
 \cleardoublepage
 
 % Lista de Algoritmos
-\pdfbookmark[0]{Lista de Algoritmos}{lot}
-\listofalgorithms
-\cleardoublepage
+%\pdfbookmark[0]{Lista de Algoritmos}{lot}
+%\listofalgorithms
+%\cleardoublepage
 
 %\include{editaveis/siglas}
 %\include{editaveis/simbolos}
@@ -88,11 +93,11 @@
 % PARTE I - Fundamentação
 % ----------------------------------------------------------
 %\part{Preparação da pesquisa}
-\include{editaveis/fundamentacao/gsan}
+\input{editaveis/fundamentacao/gsan}
 \input{editaveis/fundamentacao/asterisk}
 
 % Capitulo de revisão de literatura
-\include{editaveis/revisao/revisaoBibliografica}
+\input{editaveis/revisao/revisaoBibliografica}
 
 
 % ----------------------------------------------------------

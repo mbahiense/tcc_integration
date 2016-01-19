@@ -35,11 +35,12 @@
 \usepackage{ufc-abntex2}
 \usepackage{algorithm}			% Para escrever algoritmos
 \usepackage{algorithmic}		% Para escrever algoritmos
-\usepackage{caption}			% Remove as imagens do appencia da lista
+%\usepackage[font=small,labelfont=bf]{caption}			% Remove as imagens do appencia da lista
 \usepackage{subcaption}
 \usepackage{setspace} 			% Definir o espaçamento entrelinhas
 \usepackage{tocloft} 			% Ajustar identação do sumario.
-
+\usepackage{fancyvrb}
+\usepackage{caption}
 % Modificando o idioma do título de Algoritmos.
 \makeatletter
 \renewcommand{\listalgorithmname}{Lista de Algoritmos}
@@ -49,11 +50,11 @@
 % Modificando o comentário do algoritmo
 %\renewcommand{\algorithmiccomment}[1]{\hskip2em$\triangleright$ #1}	
 \renewcommand{\algorithmiccomment}[1]{\hfill \(\triangleright\) #1}
-
 % comando configurar a legenda da sub-figura.
 \captionsetup[subfigure]{labelfont=bf,textfont=normalfont,singlelinecheck=off,justification=raggedright}
-		
-% ---
+\captionsetup{tablename=Quadro}
+\captionsetup[figure]{labelfont=bf,font=small}
+% {}---
 % Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
 % ---
 \usepackage{lipsum}				% para geração de dummy text
@@ -112,18 +113,11 @@
 \setlength{\parskip}{0.2cm}  % tente também \onelineskip
 
 
-%\addto\captionsbrazil{% 
-%	\renewcommand{\contentsname}%
-%	{SUMÁRIO}%
-%}
-
-\usepackage{titlesec}
-\usepackage{titletoc}
-
-
-
-
-
+%\usepackage{titlesec}
+%\usepackage{titletoc}
+	%\begin{Verbatim}[showspaces=false,fontsize=\small]
+	%Fonte: Autoria Própria.
+	%\end{Verbatim}
 
 % ---
 % compila o indice

@@ -13,7 +13,7 @@ Propõem-se em atender as principais demandas de gestão de operações comercia
 
 \begin{figure}[H]
 	\centering
-	\caption{Implantações do Sistema GSAN}	
+	\caption{\textbf{Implantações do Sistema GSAN}}	
 	\label{figura:implantacaoSistemaGSAN}
 	\begin{subfigure}[H]{\textwidth}
 		\centering
@@ -43,10 +43,10 @@ O sistema em sua concepção foi dividido nos seguintes módulos descritos abaix
 Alguns dos conceitos de saneamento serão abordados neste trabalho, portanto faz-se necessário conhecer e entender como o sistema GSAN aborda essas questões.
 
 O imóvel no sistema deve possuir relação com os seguintes itens (Tabela \ref{tabela:atributosImovel}):
+
 \begin{table}[H]
-	\center
 	\footnotesize
-	\caption{Principais atributos do imóvel}
+	\caption{\textbf{Principais atributos do imóvel}}
 	\label{tabela:atributosImovel}
 	\begin{tabular}{|p{3cm}|p{7cm}|p{2.5cm}|} \hline
 		\textbf{Atributo} 	& \textbf{Descrição}						& \textbf{Obrigatório}  \\ \hline
@@ -55,8 +55,8 @@ O imóvel no sistema deve possuir relação com os seguintes itens (Tabela \ref{
 		Quadra 				& Denominado normalmente de "quarteirão" 	& Sim \\ 	\hline			
 		Lote 				&  Uma subdivisão da Quadra 				& Sim \\ 	\hline
 		Sub-Lote 			&  Uma subdivisão da Lote 					& Sim \\ 	\hline
-	\end{tabular}
-	\legend {\fontsize{10}{12}\selectfont {Fonte: Autoria Própria}.}
+	\end{tabular}\\[6pt]
+	\fontsize{10}{12}\selectfont {Fonte: Autoria Própria.}
 \end{table}
 
 
@@ -90,7 +90,7 @@ O GSAN possui uma arquitetura que implementa diversos padrões de projeto, visan
 
 \begin{figure}[H]
 	\centering
-	\caption{Arquitetura Detalhada do Sistema GSAN}	
+	\caption{\textbf{Arquitetura Detalhada do Sistema GSAN}}	
 	\label{figura:arquiteturaDetalhada}
 	\begin{subfigure}[H]{\textwidth}
 		\centering
@@ -112,7 +112,7 @@ A aplicação dos Padrões de Projetos renomados, tornar o código mais organiza
 	
 	
 \subsection{\textbf{GSAN CONFIGURAÇÃO}}
-A configuração do ambiente de desenvolvimento se trata de um passo fundamental para execução deste trabalho prático. Primeiramente será preciso obter a versão do sistema que se encontra disponível no site do Portal do Software Livre, que atualmente disponibiliza o código fonte do sistema GSAN e demais arquivos de configuração do ambiente, no \textit{github}\footnote{Disponível em \url{http://www.github.com}} para a comunidade de desenvolvedores e interessados. 
+A configuração do ambiente de desenvolvimento se trata de um passo fundamental para execução deste trabalho prático. Primeiramente será preciso obter a versão do sistema que se encontra disponível no site do Portal do Software Livre, que atualmente disponibiliza o código fonte do sistema GSAN e demais arquivos de configuração do ambiente, no \textit{github}\footnote{Github - Comunidade de código fonte.} para a comunidade de desenvolvedores e interessados. 
 
 Com o código fonte em mãos é necessário o auxílio de uma IDE\footnote{IDE - \textit{Integrated Development Environment}} de desenvolvimento para realizar a manutenção e construção dos novos serviços, foi utilizado neste trabalho a IDE Eclipse Juno para realizar esta tarefa, o processo de configuração da IDE pode ser visto descrito nos anexos deste trabalho.
 
@@ -120,7 +120,7 @@ O processo de empacotamento para geração do EAR (\textit{Enterprise Archive}) 
 
 \begin{figure}[H]
 	\centering
-	\caption{Exemplo de configuração do \textit{script} build}
+	\caption{\textbf{Exemplo de configuração do \textit{script} build}}
 	\label{figura:configuracaoScriptBuild}	
 	\begin{subfigure}[H]{\textwidth}
 		\centering
@@ -134,7 +134,7 @@ A execução do \textit{script} pode ser realizada dentro da IDE executando o se
 
 \begin{figure}[H]
 	\centering
-	\caption{Execução do \textit{script} de build}
+	\caption{\textbf{Execução do \textit{script} de build}}
 	\label{figura:execucaoScriptBuild}
 	\begin{subfigure}[H]{\textwidth}
 		\centering
@@ -150,7 +150,7 @@ Para executar o sistema GSAN, utilizando o terminal de comando do sistema operac
 
 \begin{figure}[H]
 	\centering
-	\caption{Executando o sistema GSAN}	
+	\caption{\textbf{Executando o sistema GSAN}}	
 	\label{figura:execucaoSistemaGSAN}
 	\begin{subfigure}[H]{\textwidth}
 		\centering
@@ -168,7 +168,7 @@ Para acessar o sistema em execução, basta digitar o seguinte endereço no nave
 
 \begin{figure}[H]
 	\centering
-	\caption{Acessando página inicial do Sistema}
+	\caption{\textbf{Acessando página inicial do Sistema}}
 	\label{figura:acessoPaginaInicial}
 	\begin{subfigure}[H]{\textwidth}
 		\centering
@@ -191,9 +191,9 @@ O GSAN por ser um sistema de informação adaptável a empresas de pequeno, méd
 Para realização de melhorias no sistema GSAN faz-se necessário o ter conhecimento sobre os principais frameworks utilizados, a linguagem de programação utilizada e alguns conceitos de Saneamento que serão abordados.
 Dos principais \textit{frameworks} utilizados, destaco o uso dos seguintes: \\
 
-\textbf{Hibernate\footnote{Disponível em \url{http://www.hibernate.org}}}: Trata-se de um robusto framework de persistência de objetos relacionais, que fornece facilmente meios para realizar o mapeamento das entidades do sistema e diminui a complexidade de acesso a base de dados.\\
+\textbf{Hibernate\footnote{Hibernate - Framework de mapeamento objeto relacional.}}: Trata-se de um robusto framework de persistência de objetos relacionais, que fornece facilmente meios para realizar o mapeamento das entidades do sistema e diminui a complexidade de acesso a base de dados.\\
 
-\textbf{Apache Struts\footnote{Disponível em \url{http://struts.apache.org/}}}: Tem como característica principal a sua utilização na construção de controladores utilizando o padrão \textit{Model View Control} (MVC) que se trata da separação das camadas utilizadas em uma aplicação, fornecendo uma maior organização no código fonte e contribui para futuras manutenções \cite{fowler2003}. 
+\textbf{Apache Struts\footnote{Apache Struts - Framework Web para desenvolvimento em camadas.}}: Tem como característica principal a sua utilização na construção de controladores utilizando o padrão \textit{Model View Control} (MVC) que se trata da separação das camadas utilizadas em uma aplicação, fornecendo uma maior organização no código fonte e contribui para futuras manutenções \cite{fowler2003}. 
 
 O sistema GSAN faz uso da plataforma Java, lançado na versão Java Develop Kit (JDK) 1.5, utilizando recursos especificados pela \textit{Java Enterprise Edition} (JEE) \cite{PORTAL:2014}, essencialmente o container \textit{Enterprise Java Bean} (EJB), \textit{Java Server Pages }(JSP) e \textit{Servlets} que são executadas dentro de um servidor de aplicação Java EE.
 
