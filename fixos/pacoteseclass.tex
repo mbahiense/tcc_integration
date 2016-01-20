@@ -40,6 +40,7 @@
 %\usepackage{setspace} 			% Definir o espaçamento entrelinhas
 %\usepackage{tocloft} 			% Ajustar identação do sumario.
 \usepackage{fancyvrb}
+%\usepackage{fancyhdr}
 \usepackage{caption}
 % Modificando o idioma do título de Algoritmos.
 \makeatletter
@@ -124,7 +125,8 @@
 	{\textbf{\fontsize{12}{12}\selectfont {SUMÁRIO}}}
 }
 
-
+% modify header style for remove indicate chapter
+\pagestyle{myheadings}
 
 % ---
 % compila o indice
