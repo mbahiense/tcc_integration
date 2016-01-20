@@ -2,7 +2,7 @@
 	
 	\partapendices
 
-\chapter{Processo de configuração da JDK na IDE de desenvolvimento}
+\chapter{\fontsize{12}{1} \selectfont{\textbf{\uppercase{Processo de configuração da JDK na IDE de desenvolvimento}}}}
 
 O sistema GSAN roda sob a JDK (\textit{Java Develop Kit}) 5, disponível atualmente no site da Oracle Coportarion, sendo necessário configurar a IDE com a versão correta para compilar o projeto, podemos configurar facilmente acessando a opção no menu superior \textit{Window > Preferences > Java > Installed JREs} em seguida será preciso adicionar uma nova JVM (\textit{Java Virtual Machine}) selecionando a opção Add e selecionar a opção Standard VM, conforme visto na figura \ref{figura:anexo1};
 
@@ -47,7 +47,7 @@ A própria IDE já preenche o JRE name, caso isso não ocorra será necessário 
 
 Feito isso precisa somente pressionar o botão de \textit{Finish}, para confirmar a importação do projeto para a IDE de desenvolvimento.
 
-\chapter{Configurar variável de ambiente do servidor de aplicação Jboss}
+\chapter{\fontsize{12}{1} \selectfont{\textbf{\uppercase{Configurar variável de ambiente do servidor de aplicação Jboss}}}}
 
 Neste trabalho foi utilizado o projeto \textit{Open Source Jboss Community} na versão 4.0.1, compatível com as tecnologias utilizadas no GSAN, para utilizá-lo será preciso declarar uma variável de ambiente no sistema operacional, por padrão nomeado de JBOSS\_HOME contendo a localização do diretório do servidor de aplicação, no exemplo abaixo representado por \textit{C:/pessoal/jboss/jboss-4.0.1sp1}, conforme visto na figura \ref{figura:anexo4};
 
@@ -66,7 +66,7 @@ Neste trabalho foi utilizado o projeto \textit{Open Source Jboss Community} na v
 Após a criação desta variável de ambiente, será preciso atualizar a variável de ambiente chamada PATH que reúne as variáveis utilizadas no sistema operacional, adicionando ao final o seguinte texto \textit{\%JBOSS\_HOME\%/bin;} para que o sistema operacional consiga localizar o diretório /bin do servidor de aplicação que contém o script de inicialização do servidor chamado \textit{run.bat} para sistemas Windows e \textit{run.sh} para sistemas Unix, neste script é possível modificar os parâmetros utilizados na execução do servidor de aplicação sob a JVM para a alocação de memória assim como habilitar a utilização de técnicas de debug remoto das aplicações.
 
 
-\chapter{Configuração do Fluxo da URA}
+\chapter{\fontsize{12}{1} \selectfont{\textbf{\uppercase{Configuração do Fluxo da URA}}}}
 Segue abaixo a configuração do fluxo completo da URA, configurado no seguinte arquivo de configuração \textit{/etc/asterisk/extension.conf};
 \\[8pt]
 ; Declarando o contexto de boas vindas para executar o áudio ‘inicial’ \\
@@ -209,7 +209,7 @@ exten => s,1,PlayBack(custom/ligacao\_redirecionada) \\
 exten => s,2,Dial(SIP/ATENDENTE) \\
 
 
-\chapter{Registros de Atendimentos Gerados}
+\chapter{\fontsize{12}{1} \selectfont{\textbf{\uppercase{Registros de Atendimentos Gerados}}}}
 
 A execução dos cenários de testes resultaram na criação dos seguintes Registros de Atendimentos no sistema GSAN,
 a seguir pode ser consultado o detalhamento sobre os Registros de Atendimentos gerados para o serviço Informar Falta de Água.
