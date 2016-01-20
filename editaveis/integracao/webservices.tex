@@ -1,4 +1,4 @@
-\subsection{\textbf{\uppercase{Implementação de Webservices no GSAN}}}
+\subsection{\fontsize{12}{1} \selectfont{\textbf{\uppercase{Implementação de Webservices no GSAN}}}}
 
 A estratégia de desenvolver o Webservice internamente ao sistema GSAN, foi adotada visando a possibilidade de reaproveitamento das regras de negócio, entidade, controlados dentre os demais artefatos que fazem parte do sistema.  Os novos serviços foram desenvolvidos sob tecnologias compatíveis com as utilizadas no sistema GSAN, utilizando a especificação JAX-WS\footnote{JAX-WS - \textit{Java API for XML-Based Web Services}}  para serem consumidos por sistemas externos através de submissões de arquivos do tipo XML, definidas no padrão de comunicação SOAP. Para tratar de conversões de arquivos XML para objetos e vice-versa está sendo utilizada a especificação do padrão JAXB\footnote{JAXB - \textit{Java Architecture for XML Binding}}, dessa forma estes serviços são executados no mesmo servidor de aplicação.
 Na prática é necessário importar ao projeto as seguintes bibliotecas descritas abaixo;
