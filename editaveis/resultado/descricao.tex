@@ -51,7 +51,7 @@ isolar o comportamento que ocorre no momento da integração sem a necessidade d
 Nesta fase foram elaborados possíveis cenários de teste para os três serviços automatizados, são respectivamente Obter 2ª via de conta, Informar Falta de Água e Solicitar Restabelecimento da Ligação de Água. Cada serviço proposto possui um objetivo específico sempre vinculado a um imóvel e/ou cliente.
 Os cenários de testes representam as possíveis situações cadastrais fictícias e comportamentais vinculadas a um cliente, essencial para realizar um atendimento via sistema. Foram propostos 3 cenários de teste para cada serviço, visando assegurar o correto comportamento da solução. Abaixo estão descritos os cenários conforme cada serviço proposto:
 
-\subsection{\fontsize{12}{1} \selectfont{\textbf{\uppercase{Obter 2\textordfeminine \space Via de Conta}}}}
+\subsection{\fontsize{12}{1} \selectfont{\textbf{Obter 2\textordfeminine \space Via de Conta}}}
 Este serviço tem como objetivo checar se há alguma conta pendente referente ao imóvel informado, caso haja pendência o serviço deve submeter a conta pendente via e-mail para o cliente do imóvel. 
 
 Abaixo são descritos os casos de testes previstos para o serviço obter 2ª Via de Conta, foi cadastrado o mesmo endereço de e-mail para os 3 cenários.
@@ -102,7 +102,7 @@ Abaixo são descritos os casos de testes previstos para o serviço obter 2ª Via
 \end{flushleft}
 
 
-\subsection{\fontsize{12}{1} \selectfont{\textbf{\uppercase{Informar Falta de Água}}}}
+\subsection{\fontsize{12}{1} \selectfont{\textbf{Informar Falta de Água}}}
 Este serviço tem como objetivo formalizar junto ao sistema GSAN um novo Registro de Atendimento referente a Falta de Água para o imóvel informado.
 Abaixo são descritos os casos de testes previstos para o serviço Informar Falta de Água.
 \begin{flushleft}
@@ -149,7 +149,7 @@ Abaixo são descritos os casos de testes previstos para o serviço Informar Falt
 	\end{description}
 \end{flushleft}	
 
-\subsection{\fontsize{12}{1} \selectfont{\textbf{\uppercase{Solicitar Restabelecimento da Ligação de Água}}}}
+\subsection{\fontsize{12}{1} \selectfont{\textbf{Solicitar Restabelecimento da Ligação de Água}}}
 Este serviço tem como objetivo formalizar junto ao sistema GSAN um novo Registro de Atendimento referente ao Restabelecimento da Ligação de Água para um imóvel informado.
 Abaixo são descritos os casos de testes previstos para o serviço Solicitar Restabelecimento da Ligação de Água.
 \begin{flushleft}
@@ -198,12 +198,12 @@ Abaixo são descritos os casos de testes previstos para o serviço Solicitar Res
 \end{flushleft}	
 
 
-\section{\fontsize{12}{1} \selectfont{\textbf{\uppercase{Execução dos Cenários de Teste}}}}
+\section{\fontsize{12}{1} \selectfont{\textbf{Execução dos Cenários de Teste}}}
 
 
 A execução dos cenários propostos foi realizado utilizando o \textit{framework} de teste JUnit citados na seção anterior, segue abaixo resultado; 
 
-\subsection{\fontsize{12}{1} \selectfont{\textbf{\uppercase{Obter 2\textordfeminine  \space Via de Conta}}}}
+\subsection{\fontsize{12}{1} \selectfont{\textbf{Obter 2\textordfeminine  \space Via de Conta}}}
  
  Após a execução dos cenários de teste implementados para este serviço foi possível notar que 2/3 Cenários concluíram com sucesso e apenas 1/3 falhou em sua execução, a falha ocorreu no cenário 3 devido o cliente não possuir e-mail cadastrado no sistema, conforme demostrado na figura \ref{figura:segundaViaJUnit}.	
  \begin{figure}[H]
@@ -231,7 +231,7 @@ Em cada cenário de teste o sistema deve enviar um e-mail contendo a 2ª via da 
 \end{figure}
 
 	
-\subsection{\fontsize{12}{1} \selectfont{\textbf{\uppercase{Informar Falta de Água}}}}
+\subsection{\fontsize{12}{1} \selectfont{\textbf{Informar Falta de Água}}}
 
  Após a execução dos cenários de teste implementados para este serviço foi possível identificar que todos os 3 cenários previstos executaram com sucesso, conforme demostrado na figura \ref{figura:informarFaltaJUnit}.	
 
@@ -287,7 +287,7 @@ Para o terceiro cenário, cujo o identificador 13704001 representa a matrícula 
 \end{figure}
 
 		
-\subsection{\fontsize{12}{1} \selectfont{\textbf{\uppercase{Solicitar Restabelecimento da Ligação de Água}}}}
+\subsection{\fontsize{12}{1} \selectfont{\textbf{Solicitar Restabelecimento da Ligação de Água}}}
 
  Após a execução dos cenários de teste implementados para este serviço foi possível identificar que todos os 3 cenários previsto executaram com sucesso, conforme demostrado na figura \ref{figura:restabelecimentoJUnit}.	
 

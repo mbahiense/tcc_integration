@@ -1,4 +1,4 @@
-\subsection{\fontsize{12}{1} \selectfont{\textbf{\uppercase{Implementação do Middleware}}}}
+\subsection{\fontsize{12}{1} \selectfont{\textbf{Implementação do Middleware}}}
 
 O \textit{Middleware} intermediário denominado Integrador será responsável em receber as solicitações realizadas pela URA do Asterisk, após analisá-las deverá efetuar requisições ao \textit{WebService} do sistema GSAN, a fim de obter as informações, logo em seguida tratá-las e então devolver as informações essenciais ao Asterisk.
 O \textit{Middleware} é capaz de comunicar-se com os sistemas GSAN e Asterisk. A comunicação com o sistema GSAN é realizada por uma implementação cliente do \textit{Webservice} disponibilizado, já a comunicação com o Asterisk é realizada por uma interface de comunicação chamada AGI, neste trabalho foi utilizado o \textit{framework} \textit{Open Source} chamado Asterisk-Java, que fornece recursos para comunicação com o Asterisk utilizando os protocolos comuns ao sistema.
