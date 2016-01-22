@@ -1,15 +1,15 @@
 Anotações para corrigir o TCC:
 
 OK - Lista de Ilustrações ( Figuras ) 
- - Modificar o título das Apêndices e verificar o tamanho no sumario. ( maiusculo o page separator)
+OK - Modificar o título das Apêndices e verificar o tamanho no sumario. ( maiusculo o page separator)
 OK - Verificar o local fonte 12 - ok 
 OK - por o resumo justificado e com quebra de linha enter o key word - ok
 OK - Seções de 3 nível em Maiusculo e Minusculo - ok
 OK - verificar quebra de paragráfo o tamanho. - ok
- - entre seções espaçamento de 1.5 cm
- - page 31,32 footnote no final da page
- - figura 16 alinha a fonte
+OK - entre seções espaçamento de 1.5 cm
+OK - page 31,32 footnote no final da page
+OK - figura 16 alinha a fonte
  - verfificar o alinhamento do texto para justificado o cenários de testes
- - modificar as datas e alinhamento justificado referencias
- - modificar a numeracao das figuras do appendice	
-  - Capa nao conta mudar introdução para página 11
+OK - modificar as datas e alinhamento justificado referencias
+OK - modificar a numeracao das figuras do appendice	
+OK - Capa nao conta mudar introdução para página 11

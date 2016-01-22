@@ -1,10 +1,10 @@
-\chapter[Middleware: GSAN e Asterisk]{\fontsize{12}{1} \selectfont{\textbf{\uppercase{Middleware: Gsan e Asterisk}}}}
+\chapter[Middleware: GSAN e Asterisk]{\textbf{\uppercase{Middleware: Gsan e Asterisk}}}
 %\addcontentsline{toc}{chapter}{Processo de Integração}
 
 \textit{Neste capítulo são apresentados os procedimentos para a integração dos sistemas envolvidos, expondo o detalhes de implementação e configuração da solução proposta.}
 
 
-\section{\fontsize{12}{1} \selectfont\textbf{\uppercase{Arquitetura da Solução}}{}}
+\section{\uppercase{Arquitetura da Solução}}
 
 Após o estudo sobre o sistema GSAN e software Asterisk foram identificadas diversas formas de realizar a integração, entre os sistemas pelo fato da existência de vários protocolos possíveis de comunicação, no entanto a solução adotada será visando a reusabilidade, baixo custo de manutenção e o uso de tecnologias que já tenham uma maturidade no mercado. Foram escolhidos os protocolos SOAP\footnote{SOAP - \textit{Simple Object Access Protocol}} e AGI\footnote{AGI - \textit{Asterisk Gateway Interface}} para serem implementados por um \textit{Middleware}, este é responsável em assumir o papel de intermediário entre os sistemas GSAN e Asterisk. O Middleware faz uso do protocolo SOAP para se comunicar com o sistema GSAN, já para a comunicação com o sistema \textit{Asterisk} utiliza a interface de comunicação AGI, dessa forma o \textit{Middleware} abstrai as disparidades entre as plataformas dos sistemas. No sistema Asterisk foi implementado o recurso chamado URA, Unidade de Resposta Audível tornando possível programar um fluxo pré-determinado de atendimento das solicitações recepcionadas por chamadas telefônicas.
 
@@ -64,7 +64,7 @@ O processo de integração é composto por tecnologias com paradigmas diferencia
 
 
 
-\section{\fontsize{12}{1} \selectfont{\textbf{\uppercase{Etapas da Integração}}}}
+\section{\uppercase{Etapas da Integração}}
 O processo de integração entre os sistemas está dividido em quatro etapas principais, das quais são necessárias para compor a solução escolhida, conforme definido abaixo e descrito nas sessões seguintes:
 
 \begin{itemize}

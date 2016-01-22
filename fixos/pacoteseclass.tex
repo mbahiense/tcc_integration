@@ -40,11 +40,13 @@
 %\usepackage{setspace} 			% Definir o espaçamento entrelinhas
 %\usepackage{tocloft} 			% Ajustar identação do sumario.
 \usepackage{fancyvrb}
-%\usepackage{fancyhdr}
 \usepackage{caption}
- \usepackage{ragged2e}
-% Modificando o idioma do título de Algoritmos.
+\usepackage{ragged2e} 
+\usepackage{titlesec} % mudar o stylo das seções e espaçamento.
 
+\usepackage[bottom]{footmisc} % Alinha as anotações de rodapé no bottom da page
+
+% Tratamento para Algoritmos ( Não existe ainda no guia da Fucapi.)
 \makeatletter
 \renewcommand{\listalgorithmname}{Lista de Algoritmos}
 \makeatother
@@ -53,15 +55,12 @@
 % Modificando o comentário do algoritmo
 %\renewcommand{\algorithmiccomment}[1]{\hskip2em$\triangleright$ #1}	
 \renewcommand{\algorithmiccomment}[1]{\hfill \(\triangleright\) #1}
-% comando configurar a legenda da sub-figura.
+
+
+% comando configurar a legenda da sub-figura alinhado na esquerda!
 \captionsetup[subfigure]{labelfont=bf,textfont=normalfont,singlelinecheck=off,justification=raggedright}
 \captionsetup{tablename=Quadro}
 \captionsetup[figure]{labelfont=bf,font=small}
-% {}---
-% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
-% ---
-\usepackage{lipsum}				% para geração de dummy text
-% ---
 
 % ---
 % Pacotes de citações
@@ -127,10 +126,51 @@
 	{\textbf{\fontsize{12}{12}\selectfont {SUMÁRIO}}}
 }
 
-% modify header style for remove indicate chapter
+% Modificar o stilo do header removendo o indicador de capítulo.
 \pagestyle{myheadings}
 
 \addto{\captionsbrazil}{\renewcommand{\bibname}{\textbf{\fontsize{12}{12}\selectfont {REFERÊNCIAS}}}}
+
+% Modificando os stilos de Capítulos 
+\renewcommand{\chapnamefont}{\normalsize \bfseries \sffamily}
+\renewcommand{\chaptitlefont}{\normalsize \bfseries  \sffamily }
+\renewcommand{\chapnumfont}{\normalsize \bfseries \sffamily}
+
+% Modificando os stilos das seções e sub seções.
+\titleformat*{\section}{\normalsize \bfseries \sffamily}
+\titleformat*{\subsection}{\normalsize \bfseries \sffamily}
+\titleformat*{\subsubsection}{\normalsize \bfseries \sffamily}
+%\titleformat*{\paragraph}{\normalsize \bfseries}
+%\titleformat*{\subparagraph}{\normalsize \bfseries}
+
+
+% Modificando o espaçamento entre as seções e subseções.
+\titlespacing*{\section}{0}{1.5cm}{1.5cm}
+\titlespacing*{\subsection}{0}{1.5cm}{1.5cm}
+
+
+% Modificando o comando para nomear a página de apendices conforme a norma da Fucapi
+\renewcommand{\partapendices}{
+	\clearpage
+	\pagestyle{empty}
+	\vspace*{\fill}
+	\begin{center}
+		\begin{minipage}{0.2\textwidth}
+			\bfseries\fontsize{12}{1}\selectfont{APÊNDICES}
+		\end{minipage}
+	\end{center}
+	\vfill
+	\clearpage
+	}
+
+
+% Algumas informações adicionais.
+% Após modificar o espaçamento entre as seções e subseções para 1.5 cm
+% Começou a dar erro na geração no entanto ainda gera o pdf.
+% As subsections precisam estar em negrito por conta da norma, se for removido a geração no sumário fica diferente.
+% Assim que encontrar uma solução melhor para o sumário remover as configurações dentro das tags de subsection (uppercase e negrito)
+
+
 % ---
 % compila o indice
 % ---
