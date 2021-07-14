@@ -1,4 +1,4 @@
-# Proposta de Integração sistema entra o Sistema GSAN x Asterisk (URA)
+# Proposta de integração entre GSAN x Asterisk (URA)
 
 Este trabalho apresenta uma proposta de integração do sistema GSAN (Sistema Integrado de Gestão de Serviços de Saneamento) com uma ferramenta de PABX (Private Automatic Branch Exchange) Asterisk, que permita o atendimento automático de chamadas telefônicas via tecnologia VoIP para reduzir parte dos atendimento destinados à solicitação de 2ª via de conta, falta de água e restabelecimento da ligação.
 
